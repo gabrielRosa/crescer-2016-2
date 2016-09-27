@@ -17,9 +17,21 @@ public class Elfo{
     public String getNome(){
         return this.nome;
     }
-    
-    public void atirarFlecha(){
+
+    public boolean atirarFlecha(){
+        if(flecha.getQuantidade()<=0){
+            return false;
+        }
         flecha.setQuantidade(flecha.getQuantidade()-1);
         xp++;
+        return true;
+    }
+
+    public void caçarDwarves(Dwarves dwarves){
+        if(dwarves.getVida()>0){
+            if(this.atirarFlecha()){
+                dwarves.setVida(dwarves.getVida()-10);
+            }
+        }
     }
 }
