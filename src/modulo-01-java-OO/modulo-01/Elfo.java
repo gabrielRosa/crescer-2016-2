@@ -18,6 +18,10 @@ public class Elfo{
         return this.nome;
     }
 
+    public int numeroFlechas(){
+        return flecha.getQuantidade();
+    }
+
     public boolean atirarFlecha(){
         if(flecha.getQuantidade()<=0){
             return false;
