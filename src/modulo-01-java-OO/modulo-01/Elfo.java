@@ -38,8 +38,17 @@ public class Elfo{
         return this.arco;
     }
 
+    @Override
     public String toString(){
-        return this.nome + " possui " + this.flecha.getQuantidade()+" flechas e " + this.xp+ " níveis de experiência.";
+        boolean flechaNoSingular = this.flecha.getQuantidade() < 2;
+        boolean experienciaNoSingular = this.xp < 2;
+        return String.format("%s possui %d %s e %d %s de experiência.",
+            this.nome,
+            this.flecha.getQuantidade(),
+            flechaNoSingular ? "flecha" : "flechas",
+            this.xp,
+            experienciaNoSingular ? "nível" : "níveis");
+        //return this.nome + " possui " + this.flecha.getQuantidade() + " flecha(s) e " + this.xp + " nível(s) de experiência.";
     }
 
     public void atirarFlecha(Dwarf dwarf){
