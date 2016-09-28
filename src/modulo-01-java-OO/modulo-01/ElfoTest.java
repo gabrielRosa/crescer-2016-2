@@ -85,7 +85,8 @@ public class ElfoTest
         //assert
         assertEquals("Elfo possui 42 flechas e 0 níveis de experiência.", ret);
     }
-        @Test 
+
+    @Test 
     public void testDoToStringComAtirarFlecha(){
         //arrange
         Elfo legolas = new Elfo("Elfo");
@@ -95,5 +96,34 @@ public class ElfoTest
         //assert
         assertEquals("Elfo possui 41 flechas e 1 níveis de experiência.", ret);
     }
-    
+
+    @Test 
+    public void testNovoConstrutorNomeE100Flechas(){
+        //arrange
+        Elfo legolas = new Elfo("Elfo",100);
+        //act
+        int flechas = legolas.getFlecha().getQuantidade();
+        //assert
+        assertEquals(100, flechas);
+    }
+
+    @Test 
+    public void testNovoConstrutorNomeE0Flechas(){
+        //arrange
+        Elfo legolas = new Elfo("Elfo",0);
+        //act
+        int flechas = legolas.getFlecha().getQuantidade();
+        //assert
+        assertEquals(0, flechas);
+    }
+
+    @Test 
+    public void testNovoConstrutorNomeEFlechasTesteDoNome(){
+        //arrange
+        Elfo legolas = new Elfo("Elfo",0);
+        //act
+        //assert
+        assertEquals("Elfo", legolas.getNome());
+    }
+
 }

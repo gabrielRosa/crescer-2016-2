@@ -11,6 +11,13 @@ public class Elfo{
         this.xp =0;
     }
 
+    public Elfo(String nome, int quantidadeFlecha){
+        this.nome=nome;
+        this.arco= new Item("Arco",1);
+        this.flecha=new Item("Flecha", quantidadeFlecha);
+        this.xp =0;
+    }
+
     public void setNome(String nome){
         this.nome=nome;
     }
