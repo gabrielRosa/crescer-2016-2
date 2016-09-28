@@ -30,15 +30,11 @@ public class Elfo{
         return this.arco;
     }
 
-    public void atirarFlecha(){
-        flecha.setQuantidade(flecha.getQuantidade()-1);
-        this.xp++;
-    }
-
-    public void caçarDwarve(Dwarve dwarve){
-        if(dwarve.getVida()>0){
-            atirarFlecha();
-            dwarve.setVida(dwarve.getVida()-10);
+    public void atirarFlecha(Dwarf dwarf){
+        if(flecha.getQuantidade()>0){
+            flecha.setQuantidade(flecha.getQuantidade()-1);
+            this.xp++;
+            dwarf.perderVida();
         }
     }
 }

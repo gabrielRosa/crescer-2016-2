@@ -34,7 +34,7 @@ public class ElfoTest
         //arrange
         Elfo legolas = new Elfo("Elfo");
         //act
-        legolas.atirarFlecha();
+        legolas.atirarFlecha(new Dwarf());
         //assert
         assertEquals(41, legolas.getFlecha().getQuantidade());
         assertEquals(1, legolas.getXp());
@@ -45,8 +45,8 @@ public class ElfoTest
         //arrange
         Elfo legolas = new Elfo("Elfo");
         //act
-        legolas.atirarFlecha();
-        legolas.atirarFlecha();
+        legolas.atirarFlecha(new Dwarf());
+        legolas.atirarFlecha(new Dwarf());
         //assert
         assertEquals(40, legolas.getFlecha().getQuantidade());
         assertEquals(2, legolas.getXp());
@@ -58,7 +58,7 @@ public class ElfoTest
         Elfo legolas = new Elfo("Elfo");
         //act
         for(int i=0;i<42;i++){
-            legolas.atirarFlecha();
+            legolas.atirarFlecha(new Dwarf());
         }
         //assert
         assertEquals(0, legolas.getFlecha().getQuantidade());
@@ -66,29 +66,13 @@ public class ElfoTest
     }
 
     @Test
-    public void elfoCaçaDwarves(){
-        //Arrange
-        Elfo elfo1 = new Elfo("Elfo1");
-        Dwarve dwarve1 = new Dwarve();
-        int numeroDeFlechas =elfo1.getFlecha().getQuantidade();
-        //Act
-        elfo1.caçarDwarve(dwarve1);
-        //Assert
-        assertEquals(100, dwarve1.getVida());
-        assertEquals(41, elfo1.getFlecha().getQuantidade()); 
-    }
-
-    @Test
-    public void elfoCaçaMuitoDwarve(){
-        //Arrange
-        Elfo elfo1 = new Elfo("Elfo1");
-        Dwarve dwarve1 = new Dwarve();	
-        //Act
-        for(int i=0;i<12;i++){
-            elfo1.caçarDwarve(dwarve1);
-        }
-        //Assert
-        assertEquals(dwarve1.getVida(),0);
-        assertEquals(elfo1.getFlecha().getQuantidade(), 31);
+    public void elfoAtiraFlechaUmDwarf(){
+        //arrange
+        Elfo legolas = new Elfo("Elfo");
+        Dwarf dwarf = new Dwarf();
+        //act
+        legolas.atirarFlecha(dwarf);
+        //assert
+        assertEquals(100, dwarf.getVida());
     }
 }
