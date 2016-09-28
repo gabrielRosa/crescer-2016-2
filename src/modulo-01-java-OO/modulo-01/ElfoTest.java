@@ -20,27 +20,26 @@ public class ElfoTest
     public void elfoCaçaDwarves(){
         //Arrange
         Elfo elfo1 = new Elfo("Elfo1");
-        Dwarves dwarve1 = new Dwarves("Dwarve1");
-        int vida=dwarve1.getVida();
-        int numeroDeFlechas =elfo1.numeroFlechas();
+        Dwarve dwarve1 = new Dwarve();
+        int numeroDeFlechas =elfo1.getFlecha().getQuantidade();
         //Act
-        elfo1.caçarDwarves(dwarve1);
+        elfo1.caçarDwarve(dwarve1);
         //Assert
-        assertEquals(dwarve1.getVida(),vida-10);
-        assertEquals(elfo1.numeroFlechas(), numeroDeFlechas -1);
+        assertEquals(100, dwarve1.getVida());
+        assertEquals(41, elfo1.getFlecha().getQuantidade()); 
     }
 
     @Test
-    public void elfoCaçaMuitoDwarves(){
+    public void elfoCaçaMuitoDwarve(){
         //Arrange
         Elfo elfo1 = new Elfo("Elfo1");
-        Dwarves dwarve1 = new Dwarves("Dwarve1");	
+        Dwarve dwarve1 = new Dwarve();	
         //Act
-        for(int i=0;i<43;i++){
-            elfo1.caçarDwarves(dwarve1);
+        for(int i=0;i<12;i++){
+            elfo1.caçarDwarve(dwarve1);
         }
         //Assert
         assertEquals(dwarve1.getVida(),0);
-        assertEquals(elfo1.numeroFlechas(), 31);
+        assertEquals(elfo1.getFlecha().getQuantidade(), 31);
     }
 }

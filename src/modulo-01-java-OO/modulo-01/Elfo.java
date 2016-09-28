@@ -18,24 +18,19 @@ public class Elfo{
         return this.nome;
     }
 
-    public int numeroFlechas(){
-        return flecha.getQuantidade();
+    public Item getFlecha(){
+        return this.flecha;
     }
 
-    public boolean atirarFlecha(){
-        if(flecha.getQuantidade()<=0){
-            return false;
-        }
+    public void atirarFlecha(){
         flecha.setQuantidade(flecha.getQuantidade()-1);
         xp++;
-        return true;
     }
 
-    public void caçarDwarves(Dwarves dwarves){
-        if(dwarves.getVida()>0){
-            if(this.atirarFlecha()){
-                dwarves.setVida(dwarves.getVida()-10);
-            }
+    public void caçarDwarve(Dwarve dwarve){
+        if(dwarve.getVida()>0){
+                atirarFlecha();
+                dwarve.setVida(dwarve.getVida()-10);
         }
     }
 }

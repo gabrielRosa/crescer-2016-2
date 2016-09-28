@@ -4,24 +4,24 @@ import org.junit.Before;
 import org.junit.Test;
 public class CestoDeLembasTest{
     @Test
-    public void testeLembas(){
+    public void numeroParLembas(){
         //Arrange
         CestoDeLembas lembas = new CestoDeLembas(12);
         boolean ret = false;
         //Act
         ret =lembas.podeDividirEmPares();
         //Assert
-        assertEquals(true, ret);
+        assertTrue(ret);
     }
-    
-        @Test
-    public void testeLembas2(){
+
+    @Test
+    public void numeroImparLembas2(){
         //Arrange
-        CestoDeLembas lembas = new CestoDeLembas(10);
+        CestoDeLembas lembas = new CestoDeLembas(11);
         boolean ret = false;
         //Act
         ret =lembas.podeDividirEmPares();
         //Assert
-        assertEquals(false, ret);
+        assertFalse(ret);
     }
 }

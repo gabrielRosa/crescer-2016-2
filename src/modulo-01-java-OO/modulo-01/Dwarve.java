@@ -1,9 +1,7 @@
-public class Dwarves{
+public class Dwarve{
     private int vida;
-    private String nome;
-    public Dwarves(String nome){
+    public Dwarve(){
         vida=110;
-        this.nome=nome;
     }
 
     public void setVida(int vida){
@@ -12,9 +10,5 @@ public class Dwarves{
 
     public int getVida(){
         return this.vida;
-    }
-    
-    public String getNome(){
-    return this.nome;
     }
 }
