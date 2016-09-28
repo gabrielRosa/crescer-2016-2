@@ -13,9 +13,20 @@ public class CestoDeLembasTest{
         //Assert
         assertTrue(ret);
     }
+    
+    @Test
+    public void numeroNegativoLembas(){
+        //Arrange
+        CestoDeLembas lembas = new CestoDeLembas(-100);
+        boolean ret = false;
+        //Act
+        ret =lembas.podeDividirEmPares();
+        //Assert
+        assertFalse(ret);
+    }
 
     @Test
-    public void numeroImparLembas2(){
+    public void numeroImparLembas(){
         //Arrange
         CestoDeLembas lembas = new CestoDeLembas(11);
         boolean ret = false;
