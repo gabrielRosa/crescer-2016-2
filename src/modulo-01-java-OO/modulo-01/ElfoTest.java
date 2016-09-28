@@ -17,6 +17,55 @@ public class ElfoTest
     }
 
     @Test
+    public void elfoNasceComArco(){
+    }
+
+    @Test
+    public void elfoNasceCom42Flechas(){
+        //act
+        Elfo elfoDoTeste = new Elfo("Elrond");
+        //assert
+        assertEquals("Flecha", elfoDoTeste.getFlecha().getDescricao());
+
+    }
+
+    @Test
+    public void elfoAtiraUmaFlecha(){
+        //arrange
+        Elfo legolas = new Elfo("Elfo");
+        //act
+        legolas.atirarFlecha();
+        //assert
+        assertEquals(41, legolas.getFlecha().getQuantidade());
+        assertEquals(1, legolas.getXp());
+    }
+
+    @Test
+    public void elfoAtiraDuasFlecha(){
+        //arrange
+        Elfo legolas = new Elfo("Elfo");
+        //act
+        legolas.atirarFlecha();
+        legolas.atirarFlecha();
+        //assert
+        assertEquals(40, legolas.getFlecha().getQuantidade());
+        assertEquals(2, legolas.getXp());
+    }
+
+    @Test
+    public void elfoAtira42Flecha(){
+        //arrange
+        Elfo legolas = new Elfo("Elfo");
+        //act
+        for(int i=0;i<42;i++){
+            legolas.atirarFlecha();
+        }
+        //assert
+        assertEquals(0, legolas.getFlecha().getQuantidade());
+        assertEquals(42, legolas.getXp());
+    }
+
+    @Test
     public void elfoCaçaDwarves(){
         //Arrange
         Elfo elfo1 = new Elfo("Elfo1");

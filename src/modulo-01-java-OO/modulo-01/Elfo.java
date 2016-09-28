@@ -2,7 +2,7 @@ public class Elfo{
     private String nome;
     private Item arco;
     private Item flecha;
-    private double xp;
+    private int xp;
 
     public Elfo(String nome){
         this.nome=nome;
@@ -22,15 +22,23 @@ public class Elfo{
         return this.flecha;
     }
 
+    public int getXp(){
+        return this.xp;
+    }
+
+    public Item getArco(){
+        return this.arco;
+    }
+
     public void atirarFlecha(){
         flecha.setQuantidade(flecha.getQuantidade()-1);
-        xp++;
+        this.xp++;
     }
 
     public void caçarDwarve(Dwarve dwarve){
         if(dwarve.getVida()>0){
-                atirarFlecha();
-                dwarve.setVida(dwarve.getVida()-10);
+            atirarFlecha();
+            dwarve.setVida(dwarve.getVida()-10);
         }
     }
 }
