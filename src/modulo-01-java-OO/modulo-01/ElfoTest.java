@@ -85,4 +85,15 @@ public class ElfoTest
         //assert
         assertEquals("Elfo possui 42 flechas e 0 níveis de experiência.", ret);
     }
+        @Test 
+    public void testDoToStringComAtirarFlecha(){
+        //arrange
+        Elfo legolas = new Elfo("Elfo");
+        //act
+        legolas.atirarFlecha(new Dwarf());
+        String ret = legolas.toString();
+        //assert
+        assertEquals("Elfo possui 41 flechas e 1 níveis de experiência.", ret);
+    }
+    
 }
