@@ -17,10 +17,6 @@ public class ElfoTest
     }
 
     @Test
-    public void elfoNasceComArco(){
-    }
-
-    @Test
     public void elfoNasceCom42Flechas(){
         //act
         Elfo elfoDoTeste = new Elfo("Elrond");

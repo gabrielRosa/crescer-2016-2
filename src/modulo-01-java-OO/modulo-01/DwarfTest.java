@@ -94,4 +94,14 @@ public class DwarfTest{
         assertTrue(test);
     }
 
+    @Test
+    public void testPerderVida(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        //act
+        dwarf.perderVida();
+        //assert
+        assertEquals(0,dwarf.getXp());
+    }
+
 }
