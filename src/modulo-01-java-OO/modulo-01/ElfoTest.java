@@ -126,4 +126,23 @@ public class ElfoTest
         assertEquals("Elfo", legolas.getNome());
     }
 
+    @Test
+    public void criarElfoComFlechaNegativa(){
+        //arrange
+        Elfo legolas = new Elfo("Elfo",-10);
+        //act
+        int flechas = legolas.getFlecha().getQuantidade();
+        //assert
+        assertEquals(42, flechas);
+    }
+
+    @Test
+    public void criarElfoComFlecha0(){
+        //arrange
+        Elfo legolas = new Elfo("Elfo",0);
+        //act
+        int flechas = legolas.getFlecha().getQuantidade();
+        //assert
+        assertEquals(0, flechas);
+    }
 }

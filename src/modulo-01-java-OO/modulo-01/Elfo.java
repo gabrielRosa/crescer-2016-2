@@ -5,16 +5,13 @@ public class Elfo{
     private int xp;
 
     public Elfo(String nome){
-        this.nome=nome;
-        this.arco= new Item("Arco",1);
-        this.flecha=new Item("Flecha", 42);
-        this.xp =0;
+        this(nome, 42);
     }
 
     public Elfo(String nome, int quantidadeFlecha){
         this.nome=nome;
         this.arco= new Item("Arco",1);
-        this.flecha=new Item("Flecha", quantidadeFlecha);
+        this.flecha=new Item("Flecha", quantidadeFlecha >=0 ? quantidadeFlecha : 42);
         this.xp =0;
     }
 
