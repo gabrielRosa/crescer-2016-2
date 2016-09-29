@@ -23,7 +23,7 @@ public class DwarfTest{
         //assert
         assertEquals(dwarf.getVida(),100);
     }
-    
+
     @Test
     public void dwarfPerde20Vida(){
         //arrange
@@ -33,6 +33,65 @@ public class DwarfTest{
         dwarf.perderVida();
         //assert
         assertEquals(dwarf.getVida(),90);
+    }
+
+    @Test 
+    public void testNovoConstrutorDwarfDataTerceiraEraNome(){
+        //arrange //act // assert
+        Dwarf dwarf = new Dwarf("Dwarf", new DataTerceiraEra(12,02,1990));
+    }
+
+    @Test
+    public void testGetNumeroSorteRetornoValorInicial(){
+        //arrange
+        Dwarf dwarf = new Dwarf("Dwarf", new DataTerceiraEra(12,02,1990));
+        //act
+        double ret = dwarf.getNumeroSorte();
+        boolean test = 101.0==ret;
+        //assert
+        assertTrue(test);
+    }
+
+    @Test
+    public void testGetNumeroSorteRetornoValorMultiplicaMenos33EBissexto(){
+        //arrange
+        Dwarf dwarf = new Dwarf("Dwarf", new DataTerceiraEra(12,02,1996));
+        //act
+        dwarf.perderVida();
+        dwarf.perderVida();
+        dwarf.perderVida();
+        double ret = dwarf.getNumeroSorte();
+        boolean test = (101.0*-33)==ret;
+        //assert
+        assertTrue(test);
+    }
+
+    @Test
+    public void testGetNumeroSorteRetornoValorMultiplicaMais33ENaoBissextoSeixas(){
+        //arrange
+        Dwarf dwarf = new Dwarf("Seixas", new DataTerceiraEra(12,02,1995));
+        //act
+        dwarf.perderVida();
+        dwarf.perderVida();
+        dwarf.perderVida();
+        double ret = dwarf.getNumeroSorte();
+        boolean test = ((101.0*33)%100)==ret;
+        //assert
+        assertTrue(test);
+    }
+
+    @Test
+    public void testGetNumeroSorteRetornoValorMultiplicaMais33ENaoBissextoMeireles(){
+        //arrange
+        Dwarf dwarf = new Dwarf("Meireles", new DataTerceiraEra(12,02,1995));
+        //act
+        dwarf.perderVida();
+        dwarf.perderVida();
+        dwarf.perderVida();
+        double ret = dwarf.getNumeroSorte();
+        boolean test = ((101.0*33)%100)==ret;
+        //assert
+        assertTrue(test);
     }
 
 }
