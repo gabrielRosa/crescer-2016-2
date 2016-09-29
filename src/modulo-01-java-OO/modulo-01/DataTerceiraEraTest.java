@@ -33,4 +33,24 @@ public class DataTerceiraEraTest{
         //assert
         assertTrue(retorno);
     }
+    
+    @Test
+    public void testaEhBissextoAno3000(){
+        //arrange
+        DataTerceiraEra data = new DataTerceiraEra(23,02,3000);
+        //act
+        boolean retorno = data.ehBissexto();
+        //assert
+        assertFalse(retorno);
+    }
+    
+    @Test
+    public void testaEhBissextoAno1999(){
+        //arrange
+        DataTerceiraEra data = new DataTerceiraEra(23,02,1999);
+        //act
+        boolean retorno = data.ehBissexto();
+        //assert
+        assertFalse(retorno);
+    }
 }
