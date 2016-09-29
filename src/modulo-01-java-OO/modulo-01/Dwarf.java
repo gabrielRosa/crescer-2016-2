@@ -18,15 +18,16 @@ public class Dwarf{
 
     public void perderVida(){
         double numero = this.getNumeroSorte();
-        if(numero <0){
+        if(numero <0)
             this.xp +=2;
-        }
-        if(this.vida==0){
-            this.status = Status.MORTO;
-        }
         if(numero>100){
-            this.vida-=10;
+            if(this.vida>0)
+                this.vida-=10;
+            else
+                this.vida=0;
         }
+        if(this.vida==0)
+            this.status = Status.MORTO;
     }
 
     public Status getStatus(){

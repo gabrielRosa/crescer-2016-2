@@ -119,11 +119,59 @@ public class DwarfTest{
         //arrange
         Dwarf dwarf = new Dwarf();
         //act
-        for(int i=0;i<=11;i++){
+        for(int i=0;i<11;i++){
             dwarf.perderVida();
         }
         //assert
         assertEquals(Status.MORTO,dwarf.getStatus());
+    }
+
+    @Test
+    public void testVidaPerde150DeVidaResultado0(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        //act
+        for(int i=0;i<15;i++){
+            dwarf.perderVida();
+        }
+        //assert
+        assertEquals(0, dwarf.getVida());
+    }
+
+    @Test
+    public void testVidaPerde100DeVidaResultado10(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        //act
+        for(int i=0;i<10;i++){
+            dwarf.perderVida();
+        }
+        //assert
+        assertEquals(10, dwarf.getVida());
+    }
+
+    @Test
+    public void testVidaPerde110DeVidaResultado0(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        //act
+        for(int i=0;i<11;i++){
+            dwarf.perderVida();
+        }
+        //assert
+        assertEquals(0, dwarf.getVida());
+    }
+
+    @Test
+    public void testVidaPerde10DeVidaResultado100(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        //act
+        for(int i=0;i<1;i++){
+            dwarf.perderVida();
+        }
+        //assert
+        assertEquals(100, dwarf.getVida());
     }
 
 }
