@@ -15,6 +15,14 @@ public class DwarfTest{
     }
 
     @Test
+    public void dwarfVivo(){
+        //Arrange //Act
+        Dwarf  bruceWayne = new Dwarf();
+        //Assert
+        assertEquals(Status.VIVO, bruceWayne.getStatus());
+    }
+
+    @Test
     public void dwarfPerde10Vida(){
         //arrange
         Dwarf dwarf = new Dwarf();
