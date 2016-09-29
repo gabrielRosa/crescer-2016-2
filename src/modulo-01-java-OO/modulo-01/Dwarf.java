@@ -3,11 +3,13 @@ public class Dwarf{
     private DataTerceiraEra dataNascimento;
     private String nome;
     private int xp;
+    private Status status;
 
     public Dwarf(String nome, DataTerceiraEra dataNascimento){
         this.nome=nome;
         this.dataNascimento=dataNascimento;
         this.vida=110;
+        this.status = Status.VIVO;
     }
 
     public Dwarf(){
@@ -19,9 +21,16 @@ public class Dwarf{
         if(numero <0){
             this.xp +=2;
         }
-        if(numero>100){
-            vida-=10;
+        if(this.vida==0){
+            this.status = Status.MORTO;
         }
+        if(numero>100){
+            this.vida-=10;
+        }
+    }
+
+    public Status getStatus(){
+        return this.status;
     }
 
     public int getVida(){

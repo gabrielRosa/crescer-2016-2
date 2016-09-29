@@ -104,4 +104,26 @@ public class DwarfTest{
         assertEquals(0,dwarf.getXp());
     }
 
+    @Test
+    public void testMorteNegada(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        //act
+        dwarf.perderVida();
+        //assert
+        assertEquals(Status.VIVO,dwarf.getStatus());
+    }
+
+    @Test
+    public void testMorteConfirmada(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        //act
+        for(int i=0;i<=11;i++){
+            dwarf.perderVida();
+        }
+        //assert
+        assertEquals(Status.MORTO,dwarf.getStatus());
+    }
+
 }
