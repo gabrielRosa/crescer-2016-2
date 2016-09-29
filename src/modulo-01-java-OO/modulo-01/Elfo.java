@@ -3,16 +3,21 @@ public class Elfo{
     private Item arco;
     private Item flecha;
     private int xp;
+    private Status status;
 
     public Elfo(String nome){
         this(nome, 42);
     }
-
+    // == para comparar enum ou equals
     public Elfo(String nome, int quantidadeFlecha){
         this.nome=nome;
         this.arco= new Item("Arco",1);
         this.flecha=new Item("Flecha", quantidadeFlecha >=0 ? quantidadeFlecha : 42);
-        this.xp =0;
+        this.status = status.VIVO;
+    }
+
+    public Status getStatus(){
+        return this.status;
     }
 
     public void setNome(String nome){

@@ -141,4 +141,12 @@ public class ElfoTest
         //assert
         assertEquals(0, flechas);
     }
+
+    @Test
+    public void testElfoNasceVivo(){
+        //arrange //act
+        Elfo legolas = new Elfo("Elfo",0);
+        //assert
+        assertEquals(Status.VIVO, legolas.getStatus());
+    }
 }
