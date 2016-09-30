@@ -17,6 +17,22 @@ public class ElfoTest
     }
 
     @Test
+    public void verificaItemNoInventario(){
+        //arrange
+        Elfo elfoDoTeste = new Elfo("Elrond");
+        //act //assert 
+        //TODO sem o getInventario para fazer o teste
+    }
+
+    @Test
+    public void verificaAdicionarItemNoInventario(){
+        //arrange
+        Elfo elfoDoTeste = new Elfo("Elrond");
+        //act //assert 
+        //TODO sem o getInventario para fazer o teste
+    }
+
+    @Test
     public void elfoNasceCom42Flechas(){
         //act
         Elfo elfoDoTeste = new Elfo("Elrond");
@@ -149,4 +165,5 @@ public class ElfoTest
         //assert
         assertEquals(Status.VIVO, legolas.getStatus());
     }
+    //TODO novos teste serao implementados
 }
