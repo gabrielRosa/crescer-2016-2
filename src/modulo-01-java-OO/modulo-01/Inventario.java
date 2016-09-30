@@ -33,14 +33,16 @@ public class Inventario{
         return item;
     }
 
-    public void getDescricoesItens(){
+    public String getDescricoesItens(){
         int tamanho = lista.size();
+        String retorno ="";
         for(int i=0;i<tamanho;i++){
             if(i==tamanho-1){
-                System.out.print(lista.get(i).getDescricao());
+                retorno += lista.get(i).getDescricao();
             }else{
-                System.out.print(lista.get(i).getDescricao() + ",");
+                retorno += lista.get(i).getDescricao() + ",";
             }
         }
+        return retorno;
     }
 }

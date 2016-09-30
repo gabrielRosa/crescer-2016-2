@@ -33,15 +33,23 @@ public class InventarioTest{
     public void imprimirDescricaoTodas(){
         //arrange
         Inventario itens = new Inventario();
-        Item item = new Item("Espada", 1);
-        Item item2 = new Item("Espada2", 1);
-        Item item3 = new Item("Espada3", 1);
+        Item item = new Item("Adaga", 1);
+        Item item2 = new Item("Escudo", 1);
+        Item item3 = new Item("Bracelete", 1);
         //act
         itens.adicionarItem(item);
         itens.adicionarItem(item2);
         itens.adicionarItem(item3);
         //assert
-        itens.getDescricoesItens();//duvida quanto a execucao do teste
+        assertEquals("Adaga,Escudo,Bracelete", itens.getDescricoesItens());
+    }
+
+    @Test
+    public void imprimirDescricaoNada(){
+        //arrange //act
+        Inventario itens = new Inventario();
+        //assert
+        assertEquals("", itens.getDescricoesItens());
     }
 
     @Test
