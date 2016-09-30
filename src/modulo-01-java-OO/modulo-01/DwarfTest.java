@@ -15,6 +15,26 @@ public class DwarfTest{
     }
 
     @Test
+    public void dwarfAdcionaItem(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        //act
+        dwarf.adicionarItem(new Item("Escudo", 2));
+        //assert 
+        //sem o get para fazer a verificação
+    }
+
+    @Test
+    public void dwarfRemoverItem(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        //act
+        dwarf.perderItem(new Item("Armadura", 2));
+        //assert 
+        //sem o get para fazer a verificação
+    }
+
+    @Test
     public void dwarfVivo(){
         //Arrange //Act
         Dwarf  bruceWayne = new Dwarf();
@@ -181,5 +201,5 @@ public class DwarfTest{
         //assert
         assertEquals(100, dwarf.getVida());
     }
-
+    //TODO novos teste serao implementados
 }

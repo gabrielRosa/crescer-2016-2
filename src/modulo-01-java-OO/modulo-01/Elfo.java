@@ -4,6 +4,7 @@ public class Elfo{
     private Item flecha;
     private int xp;
     private Status status;
+    private Inventario inventario;
 
     public Elfo(String nome){
         this(nome, 42);
@@ -11,6 +12,9 @@ public class Elfo{
     // == para comparar enum ou equals
     public Elfo(String nome, int quantidadeFlecha){
         this.nome=nome;
+        this.inventario = new Inventario();
+        this.inventario.adicionarItem(arco);
+        this.inventario.adicionarItem(flecha);
         this.arco= new Item("Arco",1);
         this.flecha=new Item("Flecha", quantidadeFlecha >=0 ? quantidadeFlecha : 42);
         this.status = status.VIVO;
