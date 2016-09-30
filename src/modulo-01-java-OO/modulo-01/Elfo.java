@@ -1,7 +1,5 @@
 public class Elfo{
     private String nome;
-    private Item arco;
-    private Item flecha;
     private int xp;
     private Status status;
     private Inventario inventario;
@@ -13,10 +11,8 @@ public class Elfo{
     public Elfo(String nome, int quantidadeFlecha){
         this.nome=nome;
         this.inventario = new Inventario();
-        this.inventario.adicionarItem(arco);
-        this.inventario.adicionarItem(flecha);
-        this.arco= new Item("Arco",1);
-        this.flecha=new Item("Flecha", quantidadeFlecha >=0 ? quantidadeFlecha : 42);
+        this.inventario.adicionarItem(new Item("Arco",1));
+        this.inventario.adicionarItem(new Item("Flecha", quantidadeFlecha >=0 ? quantidadeFlecha : 42));
         this.status = status.VIVO;
     }
 
@@ -33,7 +29,7 @@ public class Elfo{
     }
 
     public Item getFlecha(){
-        return this.flecha;
+        return this.inventario.getItens().get(1);
     }
 
     public int getXp(){
@@ -41,16 +37,16 @@ public class Elfo{
     }
 
     public Item getArco(){
-        return this.arco;
+        return this.inventario.getItens().get(0);
     }
 
     public String toString(){
-        return this.nome + " possui " + this.flecha.getQuantidade()+" flechas e " + this.xp+ " níveis de experiência.";
+        return this.nome + " possui " + this.getFlecha().getQuantidade()+" flechas e " + this.xp+ " níveis de experiência.";
     }
 
     public void atirarFlecha(Dwarf dwarf){
-        if(flecha.getQuantidade()>0){
-            flecha.setQuantidade(flecha.getQuantidade()-1);
+        if(getFlecha().getQuantidade()>0){
+            getFlecha().setQuantidade(getFlecha().getQuantidade()-1);
             this.xp++;
             dwarf.perderVida();
         }
