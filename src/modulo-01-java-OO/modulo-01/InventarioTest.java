@@ -16,6 +16,20 @@ public class InventarioTest{
     }
 
     @Test
+    public void adicionar2ItensNoInventario(){
+        //Arrange
+        Inventario itens = new Inventario();
+        Item item = new Item("Espada", 1);
+        Item item2 = new Item("Espada quebrada", 10);
+        //act
+        itens.adicionarItem(item);
+        itens.adicionarItem(item2);
+        //assert
+        assertTrue(itens.getItens().contains(item));
+        assertTrue(itens.getItens().contains(item2));
+    }
+
+    @Test
     public void imprimirDescricaoTodas(){
         //arrange
         Inventario itens = new Inventario();
@@ -78,5 +92,32 @@ public class InventarioTest{
         assertEquals(1, itens.getItens().size());
         assertEquals(item2.getDescricao(), itens.getItens().get(0).getDescricao());
     }
-    //TODO novos teste serao implementados 
+
+    @Test
+    public void itemMaisPopularCom2Itens(){
+        //Arrange
+        Inventario itens = new Inventario();
+        Item item = new Item("Espada", 2);
+        Item item2 = new Item("Espada mitica", 1);
+        //Act
+        itens.adicionarItem(item);
+        itens.adicionarItem(item2);
+        //assert
+        assertEquals(item, itens.itemMaisPopular());
+    }
+
+    @Test
+    public void itemMaisPopularCom3Itens(){
+        //Arrange
+        Inventario itens = new Inventario();
+        Item item = new Item("Espada", 2);
+        Item item2 = new Item("Espada mitica", 1);
+        Item item3 = new Item("Escudo mitica", 10);
+        //Act
+        itens.adicionarItem(item);
+        itens.adicionarItem(item2);
+        itens.adicionarItem(item3);
+        //assert
+        assertEquals(item3, itens.itemMaisPopular());
+    }
 }
