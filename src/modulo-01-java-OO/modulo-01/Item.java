@@ -18,4 +18,8 @@ public class Item{
     public String getDescricao(){
         return this.descricao;
     }
+
+    public void aumentarUnidades(int unidades){
+        this.quantidade+=unidades;
+    }
 }

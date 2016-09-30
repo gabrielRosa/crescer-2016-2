@@ -45,4 +45,34 @@ public class Inventario{
         }
         return retorno;
     }
+
+    public void aumentarUnidadesDosItens(int unidades){
+        for(int i=0;i<lista.size();i++){
+            lista.get(i).aumentarUnidades(unidades);    
+        }
+    }
+
+    public void ordenarItens(){
+        Item [] itens = new Item[lista.size()];
+        for(int i=0;i<itens.length;i++){
+            itens[i]=lista.get(0);
+            lista.remove(0);
+        }
+
+        for(int j=0;j<itens.length;j++){
+            for(int i =0;i<itens.length;i++){
+                if(itens[j].getQuantidade()< itens[i].getQuantidade()){
+                    Item item = itens[j];
+                    itens[j]=itens[i];
+                    itens[i] = item;
+                }
+            }
+        }
+        
+        for(int i=0;i<itens.length;i++){
+            lista.add(itens[i]);
+        }
+
+    }
 }
+

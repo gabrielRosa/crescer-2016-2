@@ -128,4 +128,44 @@ public class InventarioTest{
         //assert
         assertEquals(item3, itens.itemMaisPopular());
     }
+
+    @Test
+    public void ordenarItens6Itens(){
+        //Arrange
+        Inventario itens = new Inventario();
+        Item item = new Item("Espada", 10);
+        Item item2 = new Item("Espada mitica", 1100);
+        Item item3 = new Item("Escudo mitica", 0);
+        Item item4 = new Item("Espada", 2);
+        Item item5 = new Item("Espada mitica", 1);
+        Item item6 = new Item("Escudo mitica", 109);
+        itens.adicionarItem(item);
+        itens.adicionarItem(item2);
+        itens.adicionarItem(item3);
+        itens.adicionarItem(item4);
+        itens.adicionarItem(item5);
+        itens.adicionarItem(item6);
+        String valorFinal ="";
+        //act
+        itens.ordenarItens();
+        for(int i =0; i<itens.getItens().size();i++){
+            valorFinal+= itens.getItens().get(i).getQuantidade()+" ";
+        }
+        //assert
+        assertEquals("0 1 2 10 109 1100 ", valorFinal);
+    }
+
+    @Test
+    public void ordenarItens0Itens(){
+        //Arrange
+        Inventario itens = new Inventario();
+        String valorFinal ="";
+        //act
+        itens.ordenarItens();
+        for(int i =0; i<itens.getItens().size();i++){
+            valorFinal+= itens.getItens().get(i).getQuantidade()+" ";
+        }
+        //assert
+        assertEquals("", valorFinal);
+    }
 }

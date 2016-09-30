@@ -40,6 +40,20 @@ public class DwarfTest{
     }
 
     @Test
+    public void estarComSorte(){
+        //arrange
+        Dwarf dwarf = new Dwarf("Sortudo", new DataTerceiraEra(1,1,2016));
+        Item item1 = new Item("Escudo", 2);
+        //act
+        dwarf.perderVida();
+        dwarf.perderVida();
+        dwarf.perderVida();
+        dwarf.adicionarItem(item1);
+        dwarf.tentarSorte();
+        //assert
+        assertEquals(1002, dwarf.getInventario().getItens().get(0).getQuantidade());
+    }
+    @Test
     public void dwarfRemover1Item(){
         //arrange
         Dwarf dwarf = new Dwarf();
