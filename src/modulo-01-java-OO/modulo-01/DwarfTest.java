@@ -15,6 +15,14 @@ public class DwarfTest{
     }
 
     @Test
+    public void dwarfVivo(){
+        //Arrange //Act
+        Dwarf  bruceWayne = new Dwarf();
+        //Assert
+        assertEquals(Status.VIVO, bruceWayne.getStatus());
+    }
+
+    @Test
     public void dwarfPerde10Vida(){
         //arrange
         Dwarf dwarf = new Dwarf();
@@ -92,6 +100,86 @@ public class DwarfTest{
         boolean test = ((101.0*33)%100)==ret;
         //assert
         assertTrue(test);
+    }
+
+    @Test
+    public void testPerderVida(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        //act
+        dwarf.perderVida();
+        //assert
+        assertEquals(0,dwarf.getXp());
+    }
+
+    @Test
+    public void testMorteNegada(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        //act
+        dwarf.perderVida();
+        //assert
+        assertEquals(Status.VIVO,dwarf.getStatus());
+    }
+
+    @Test
+    public void testMorteConfirmada(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        //act
+        for(int i=0;i<11;i++){
+            dwarf.perderVida();
+        }
+        //assert
+        assertEquals(Status.MORTO,dwarf.getStatus());
+    }
+
+    @Test
+    public void testVidaPerde150DeVidaResultado0(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        //act
+        for(int i=0;i<15;i++){
+            dwarf.perderVida();
+        }
+        //assert
+        assertEquals(0, dwarf.getVida());
+    }
+
+    @Test
+    public void testVidaPerde100DeVidaResultado10(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        //act
+        for(int i=0;i<10;i++){
+            dwarf.perderVida();
+        }
+        //assert
+        assertEquals(10, dwarf.getVida());
+    }
+
+    @Test
+    public void testVidaPerde110DeVidaResultado0(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        //act
+        for(int i=0;i<11;i++){
+            dwarf.perderVida();
+        }
+        //assert
+        assertEquals(0, dwarf.getVida());
+    }
+
+    @Test
+    public void testVidaPerde10DeVidaResultado100(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        //act
+        for(int i=0;i<1;i++){
+            dwarf.perderVida();
+        }
+        //assert
+        assertEquals(100, dwarf.getVida());
     }
 
 }

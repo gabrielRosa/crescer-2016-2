@@ -23,7 +23,7 @@ public class DataTerceiraEraTest{
         //assert
         assertFalse(retorno);
     }
-    
+
     @Test
     public void testaEhBissextoTrue(){
         //arrange
@@ -32,5 +32,40 @@ public class DataTerceiraEraTest{
         boolean retorno = data.ehBissexto();
         //assert
         assertTrue(retorno);
+    }
+
+    @Test
+    public void testaEhBissextoAno3000(){
+        //arrange
+        DataTerceiraEra data = new DataTerceiraEra(23,02,3000);
+        //act
+        boolean retorno = data.ehBissexto();
+        //assert
+        assertFalse(retorno);
+    }
+
+    @Test
+    public void testaEhBissextoAno1999(){
+        //arrange
+        DataTerceiraEra data = new DataTerceiraEra(23,02,1999);
+        //act
+        boolean retorno = data.ehBissexto();
+        //assert
+        assertFalse(retorno);
+    }
+
+    @Test
+    public void testaEhBissextoAno1998(){
+        //arrange
+        DataTerceiraEra data = new DataTerceiraEra(23,02,1998);
+        //act
+        boolean retorno = data.ehBissexto();
+        //assert
+        assertFalse(retorno);
+    }
+
+    @Test
+    public void testaEhBissexto2090(){
+        assertFalse(new DataTerceiraEra(1,9,2090).ehBissexto());
     }
 }
