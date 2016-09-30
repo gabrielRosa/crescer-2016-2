@@ -22,6 +22,10 @@ public class Dwarf{
         this.inventario.adicionarItem(item);
     }
 
+    public Inventario getInventario(){
+        return this.inventario;
+    }
+
     public void perderItem(Item item){
         this.inventario.removerItem(item);
     }
