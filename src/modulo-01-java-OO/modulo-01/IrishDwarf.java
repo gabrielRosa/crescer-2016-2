@@ -49,13 +49,11 @@ public class IrishDwarf{
     }
 
     public void tentarSorte(){
-        if(this.getNumeroSorte() ==-3333){
-            for(int j=0;j<this.inventario.getItens().get(j).getQuantidade();j++){
-                int numeroAnterior =0;
+        if(this.getNumeroSorte() == -3333){
+            for(int j=0;j<this.inventario.getItens().size();j++){
                 int numero=0;
-                for(int i=0;i<this.inventario.getItens().get(j).getQuantidade();i++){
-                    numero+= numeroAnterior + i;
-                    numeroAnterior =i;
+                for(int i=Math.abs(this.inventario.getItens().get(j).getQuantidade()); i!=0 ;i--){
+                    numero+=i;
                 }
                 this.inventario.getItens().get(j).aumentarUnidades(1000*numero);
             }
