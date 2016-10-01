@@ -68,11 +68,10 @@ public class Inventario{
                 }
             }
         }
-        
+
         for(int i=0;i<itens.length;i++){
             lista.add(itens[i]);
         }
-
     }
 }
 
