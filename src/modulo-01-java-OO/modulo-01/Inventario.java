@@ -33,14 +33,46 @@ public class Inventario{
         return item;
     }
 
-    public void getDescricoesItens(){
+    public String getDescricoesItens(){
         int tamanho = lista.size();
+        String retorno ="";
         for(int i=0;i<tamanho;i++){
             if(i==tamanho-1){
-                System.out.print(lista.get(i).getDescricao());
+                retorno += lista.get(i).getDescricao();
             }else{
-                System.out.print(lista.get(i).getDescricao() + ",");
+                retorno += lista.get(i).getDescricao() + ",";
             }
         }
+        return retorno;
+    }
+
+    public void aumentarUnidadesDosItens(int unidades){
+        for(int i=0;i<lista.size();i++){
+            lista.get(i).aumentarUnidades(unidades);    
+        }
+    }
+
+    public void ordenarItens(){
+        Item [] itens = new Item[lista.size()];
+        for(int i=0;i<itens.length;i++){
+            itens[i]=lista.get(0);
+            lista.remove(0);
+        }
+
+        for(int j=0;j<itens.length;j++){
+            for(int i =0;i<itens.length;i++){
+                if(itens[j].getQuantidade()< itens[i].getQuantidade()){
+                    Item item = itens[j];
+                    itens[j]=itens[i];
+                    itens[i] = item;
+                }
+            }
+        }
+        
+        for(int i=0;i<itens.length;i++){
+            lista.add(itens[i]);
+        }
+
     }
 }
+

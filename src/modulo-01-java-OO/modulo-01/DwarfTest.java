@@ -15,23 +15,56 @@ public class DwarfTest{
     }
 
     @Test
-    public void dwarfAdcionaItem(){
+    public void dwarfAdciona1Item(){
         //arrange
         Dwarf dwarf = new Dwarf();
+        Item item1 = new Item("Escudo", 2);
         //act
-        dwarf.adicionarItem(new Item("Escudo", 2));
+        dwarf.adicionarItem(item1);
         //assert 
-        //sem o get para fazer a verificação
+        assertEquals(item1, dwarf.getInventario().getItens().get(0));
     }
 
     @Test
-    public void dwarfRemoverItem(){
+    public void dwarfAdciona2Itens(){
         //arrange
         Dwarf dwarf = new Dwarf();
+        Item item1 = new Item("Escudo", 2);
+        Item item2 = new Item("Escudo quebrado", 20);
         //act
-        dwarf.perderItem(new Item("Armadura", 2));
+        dwarf.adicionarItem(item1);
+        dwarf.adicionarItem(item2);
         //assert 
-        //sem o get para fazer a verificação
+        assertEquals(item1, dwarf.getInventario().getItens().get(0));
+        assertEquals(item2, dwarf.getInventario().getItens().get(1));
+    }
+
+    @Test
+    public void estarComSorte(){
+        //arrange
+        Dwarf dwarf = new Dwarf("Sortudo", new DataTerceiraEra(1,1,2016));
+        Item item1 = new Item("Escudo", 2);
+        //act
+        dwarf.perderVida();
+        dwarf.perderVida();
+        dwarf.perderVida();
+        dwarf.adicionarItem(item1);
+        dwarf.tentarSorte();
+        //assert
+        assertEquals(1002, dwarf.getInventario().getItens().get(0).getQuantidade());
+    }
+    @Test
+    public void dwarfRemover1Item(){
+        //arrange
+        Dwarf dwarf = new Dwarf();
+        Item item1 = new Item("Escudo", 2);
+        Item item2 = new Item("Escudo", 2);
+        //act
+        dwarf.adicionarItem(item1);
+        dwarf.adicionarItem(item2);
+        dwarf.perderItem(item1);
+        //assert 
+        assertFalse(dwarf.getInventario().getItens().contains(item1));
     }
 
     @Test
