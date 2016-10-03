@@ -59,7 +59,10 @@ public class Inventario{
     public void ordenarItens(){
         ordenarItens(TipoOrdenacao.ASCENDENTE);
     }
-
+    /*
+     * TODO: utilizar o set, refatorar o metodo
+     */
+    
     public void ordenarItens(TipoOrdenacao tipoOrdenacao){
         Item [] itens = new Item[lista.size()];
         for(int i=0;i<itens.length;i++){
