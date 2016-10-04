@@ -90,19 +90,28 @@ public class ElfoNoturnoTest{
     @Test
     public void elfoAtiraTresFlechaComVida85(){
         //Arrange
-        ElfoNoturno legolas = new ElfoNoturno("Elfo",100000);
+        ElfoNoturno legolas = new ElfoNoturno("Elfo");
         //Act
         legolas.atirarFlecha(new Dwarf());
         legolas.atirarFlecha(new Dwarf());
         legolas.atirarFlecha(new Dwarf());
         //Assert
-        //assertEquals(39, legolas.getFlecha().getQuantidade());
+        assertEquals(39, legolas.getFlecha().getQuantidade());
         assertEquals(9, legolas.getXp());
         assertEquals(85.7375, legolas.getVida(), 0);
 
-        for(int i=0;i<10000;i++){
+    }
+
+    @Test
+    public void elfoAtiraTresFlechaComVida(){
+        //Arrange
+        ElfoNoturno legolas = new ElfoNoturno("Elfo",100000);
+        //Act
+        for(int i=0; i<1000000;i++){
             legolas.atirarFlecha(new Dwarf());
         }
-        System.out.print(legolas.getVida());
+        //Assert
+        assertEquals(Status.MORTO, legolas.getStatus());
+
     }
 }
