@@ -52,7 +52,18 @@ public class Inventario{
         }
     }
 
+    /*DUVIDA Pergunatar na aula 
+     * Posso chamar o metodo ordenarItens o sem parametro, passando o parametro ascendente para o metodo ordenarItens com parametro
+     * Como otimizar este metodo
+     */
     public void ordenarItens(){
+        ordenarItens(TipoOrdenacao.ASCENDENTE);
+    }
+    /*
+     * TODO: utilizar o set, refatorar o metodo
+     */
+    
+    public void ordenarItens(TipoOrdenacao tipoOrdenacao){
         Item [] itens = new Item[lista.size()];
         for(int i=0;i<itens.length;i++){
             itens[i]=lista.get(0);
@@ -61,16 +72,24 @@ public class Inventario{
 
         for(int j=0;j<itens.length;j++){
             for(int i =0;i<itens.length;i++){
-                if(itens[j].getQuantidade()< itens[i].getQuantidade()){
-                    Item item = itens[j];
-                    itens[j]=itens[i];
-                    itens[i] = item;
+                if(tipoOrdenacao == TipoOrdenacao.ASCENDENTE){
+                    if(itens[j].getQuantidade()> itens[i].getQuantidade()){
+                        Item item = itens[j];
+                        itens[j]=itens[i];
+                        itens[i] = item;
+                    }
+                }else{
+                    if(itens[j].getQuantidade()< itens[i].getQuantidade()){
+                        Item item = itens[j];
+                        itens[j]=itens[i];
+                        itens[i] = item;
+                    }
                 }
             }
         }
 
         for(int i=0;i<itens.length;i++){
-            lista.add(itens[i]);
+            lista.add(0,itens[i]);
         }
     }
 }

@@ -268,4 +268,208 @@ public class InventarioTest{
         //assert
         assertEquals("", valorFinal);
     }
+
+    @Test
+    public void ordenarItens0ItensComParametroAscendente(){
+        //Arrange
+        Inventario itens = new Inventario();
+        String valorFinal ="";
+        //act
+        itens.ordenarItens(TipoOrdenacao.ASCENDENTE);
+        for(int i =0; i<itens.getItens().size();i++){
+            valorFinal+= itens.getItens().get(i).getQuantidade()+" ";
+        }
+        //assert
+        assertEquals("", valorFinal);
+    }
+
+    @Test
+    public void ordenarItens0ItensComParametroDescendente(){
+        //Arrange
+        Inventario itens = new Inventario();
+        String valorFinal ="";
+        //act
+        itens.ordenarItens(TipoOrdenacao.DESCENDENTE);
+        for(int i =0; i<itens.getItens().size();i++){
+            valorFinal+= itens.getItens().get(i).getQuantidade()+" ";
+        }
+        //assert
+        assertEquals("", valorFinal);
+    }
+
+    @Test
+    public void ordenarItens24ItensComParametroDescendente(){
+        //Arrange
+        Inventario itens = new Inventario();
+        Item item = new Item("Espada", 10);
+        Item item2 = new Item("Espada mitica", 1100);
+        Item item3 = new Item("Escudo mitica", 0);
+        Item item4 = new Item("Espada", 2);
+        Item item5 = new Item("Espada mitica", 1);
+        Item item6 = new Item("Escudo mitica", 109);
+        Item item7 = new Item("Espada", 10);
+        Item item8 = new Item("Espada mitica", 1100);
+        Item item9 = new Item("Escudo mitica", 0);
+        Item item10 = new Item("Espada", 2);
+        Item item11 = new Item("Espada mitica", 1);
+        Item item12 = new Item("Escudo mitica", 109);
+        Item item13 = new Item("Espada", 10);
+        Item item14 = new Item("Espada mitica", 1100);
+        Item item15 = new Item("Escudo mitica", 0);
+        Item item16 = new Item("Espada", 2);
+        Item item17 = new Item("Espada mitica", 1);
+        Item item18 = new Item("Escudo mitica", 109);
+        Item item19 = new Item("Espada", 10);
+        Item item20 = new Item("Espada mitica", 10000);
+        Item item21 = new Item("Escudo mitica", -1);
+        Item item22 = new Item("Espada", 2);
+        Item item23 = new Item("Espada mitica", 1);
+        Item item24 = new Item("Escudo mitica", 109);
+        itens.adicionarItem(item);
+        itens.adicionarItem(item2);
+        itens.adicionarItem(item3);
+        itens.adicionarItem(item4);
+        itens.adicionarItem(item5);
+        itens.adicionarItem(item6);
+        itens.adicionarItem(item7);
+        itens.adicionarItem(item8);
+        itens.adicionarItem(item9);
+        itens.adicionarItem(item10);
+        itens.adicionarItem(item11);
+        itens.adicionarItem(item12);
+        itens.adicionarItem(item13);
+        itens.adicionarItem(item14);
+        itens.adicionarItem(item15);
+        itens.adicionarItem(item16);
+        itens.adicionarItem(item17);
+        itens.adicionarItem(item18);
+        itens.adicionarItem(item19);
+        itens.adicionarItem(item20);
+        itens.adicionarItem(item21);
+        itens.adicionarItem(item22);
+        itens.adicionarItem(item23);
+        itens.adicionarItem(item24);
+        String valorFinal ="";
+        //act
+        itens.ordenarItens(TipoOrdenacao.DESCENDENTE);
+        for(int i =0; i<itens.getItens().size();i++){
+            valorFinal+= itens.getItens().get(i).getQuantidade()+" ";
+        }
+        //assert
+        assertEquals("10000 1100 1100 1100 109 109 109 109 10 10 10 10 2 2 2 2 1 1 1 1 0 0 0 -1 ", valorFinal);
+    }
+
+    @Test
+    public void ordenarItens6ItensComParametroDescendente(){
+        //Arrange
+        Inventario itens = new Inventario();
+        Item item = new Item("Espada", 10);
+        Item item2 = new Item("Espada mitica", 1100);
+        Item item3 = new Item("Escudo mitica", 0);
+        Item item4 = new Item("Espada", 2);
+        Item item5 = new Item("Espada mitica", 1);
+        Item item6 = new Item("Escudo mitica", 109);
+        itens.adicionarItem(item);
+        itens.adicionarItem(item2);
+        itens.adicionarItem(item3);
+        itens.adicionarItem(item4);
+        itens.adicionarItem(item5);
+        itens.adicionarItem(item6);
+        String valorFinal ="";
+        //act
+        itens.ordenarItens(TipoOrdenacao.DESCENDENTE);
+        for(int i =0; i<itens.getItens().size();i++){
+            valorFinal+= itens.getItens().get(i).getQuantidade()+" ";
+        }
+        //assert
+        assertEquals("1100 109 10 2 1 0 ", valorFinal);
+    }
+
+    @Test
+    public void ordenarItens6ItensComParametroAscendente(){
+        //Arrange
+        Inventario itens = new Inventario();
+        Item item = new Item("Espada", 10);
+        Item item2 = new Item("Espada mitica", 1100);
+        Item item3 = new Item("Escudo mitica", 0);
+        Item item4 = new Item("Espada", 2);
+        Item item5 = new Item("Espada mitica", 1);
+        Item item6 = new Item("Escudo mitica", 109);
+        itens.adicionarItem(item);
+        itens.adicionarItem(item2);
+        itens.adicionarItem(item3);
+        itens.adicionarItem(item4);
+        itens.adicionarItem(item5);
+        itens.adicionarItem(item6);
+        String valorFinal ="";
+        //act
+        itens.ordenarItens(TipoOrdenacao.ASCENDENTE);
+        for(int i =0; i<itens.getItens().size();i++){
+            valorFinal+= itens.getItens().get(i).getQuantidade()+" ";
+        }
+        //assert
+        assertEquals("0 1 2 10 109 1100 ", valorFinal);
+    }
+
+    @Test
+    public void ordenarItens24ItensComParametroAscendente(){
+        //Arrange
+        Inventario itens = new Inventario();
+        Item item = new Item("Espada", 10);
+        Item item2 = new Item("Espada mitica", 1100);
+        Item item3 = new Item("Escudo mitica", 0);
+        Item item4 = new Item("Espada", 2);
+        Item item5 = new Item("Espada mitica", 1);
+        Item item6 = new Item("Escudo mitica", 109);
+        Item item7 = new Item("Espada", 10);
+        Item item8 = new Item("Espada mitica", 1100);
+        Item item9 = new Item("Escudo mitica", 0);
+        Item item10 = new Item("Espada", 2);
+        Item item11 = new Item("Espada mitica", 1);
+        Item item12 = new Item("Escudo mitica", 109);
+        Item item13 = new Item("Espada", 10);
+        Item item14 = new Item("Espada mitica", 1100);
+        Item item15 = new Item("Escudo mitica", 0);
+        Item item16 = new Item("Espada", 2);
+        Item item17 = new Item("Espada mitica", 1);
+        Item item18 = new Item("Escudo mitica", 109);
+        Item item19 = new Item("Espada", 10);
+        Item item20 = new Item("Espada mitica", 10000);
+        Item item21 = new Item("Escudo mitica", -1);
+        Item item22 = new Item("Espada", 2);
+        Item item23 = new Item("Espada mitica", 1);
+        Item item24 = new Item("Escudo mitica", 109);
+        itens.adicionarItem(item);
+        itens.adicionarItem(item2);
+        itens.adicionarItem(item3);
+        itens.adicionarItem(item4);
+        itens.adicionarItem(item5);
+        itens.adicionarItem(item6);
+        itens.adicionarItem(item7);
+        itens.adicionarItem(item8);
+        itens.adicionarItem(item9);
+        itens.adicionarItem(item10);
+        itens.adicionarItem(item11);
+        itens.adicionarItem(item12);
+        itens.adicionarItem(item13);
+        itens.adicionarItem(item14);
+        itens.adicionarItem(item15);
+        itens.adicionarItem(item16);
+        itens.adicionarItem(item17);
+        itens.adicionarItem(item18);
+        itens.adicionarItem(item19);
+        itens.adicionarItem(item20);
+        itens.adicionarItem(item21);
+        itens.adicionarItem(item22);
+        itens.adicionarItem(item23);
+        itens.adicionarItem(item24);
+        String valorFinal ="";
+        //act
+        itens.ordenarItens(TipoOrdenacao.ASCENDENTE);
+        for(int i =0; i<itens.getItens().size();i++){
+            valorFinal+= itens.getItens().get(i).getQuantidade()+" ";
+        }
+        //assert
+        assertEquals("-1 0 0 0 1 1 1 1 2 2 2 2 10 10 10 10 109 109 109 109 1100 1100 1100 10000 ", valorFinal);
+    }
 }
