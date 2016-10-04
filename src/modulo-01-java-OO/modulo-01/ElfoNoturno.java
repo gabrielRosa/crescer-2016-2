@@ -9,7 +9,7 @@ public class ElfoNoturno extends Elfo{
 
     @Override
     public void atirarFlecha(Dwarf dwarf){
-        if(super.getStatus() == Status.VIVO){
+        if(super.getStatus() == Status.VIVO && super.getFlecha().getQuantidade()>0){
             super.atirarFlecha(dwarf,3);
             super.vida= this.vida - (super.vida/100)*5;
             if((int)super.vida == 0){

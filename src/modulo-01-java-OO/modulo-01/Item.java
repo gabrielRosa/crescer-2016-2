@@ -22,4 +22,9 @@ public class Item{
     public void aumentarUnidades(int unidades){
         this.quantidade+=unidades;
     }
+
+    @Override
+    public boolean equals(Object obj){
+        return this.descricao.equals(((Item)obj).getDescricao()) && this.quantidade == ((Item)obj).getQuantidade();
+    }
 }

@@ -7,9 +7,8 @@ public class Elfo extends Personagem{
     //mehor chamar o super em vez do this.nome=nome
     public Elfo(String nome, int quantidadeFlecha){
         super(nome);
-        this.inventario.adicionarItem(new Item("Arco",1));
-        this.inventario.adicionarItem(new Item("Flecha", quantidadeFlecha >=0 ? quantidadeFlecha : 42));
         this.vida=100;
+        inicializarInventario(quantidadeFlecha);
     }
     //TODO arrumar o index
     public Item getFlecha(){
@@ -26,6 +25,11 @@ public class Elfo extends Personagem{
 
     public void atirarFlecha(Dwarf dwarf){
         atirarFlecha(dwarf, 1);
+    }
+
+    public void inicializarInventario(int quantidadeFlecha){
+        this.inventario.adicionarItem(new Item("Arco",1));
+        this.inventario.adicionarItem(new Item("Flecha", quantidadeFlecha >=0 ? quantidadeFlecha : 42));
     }
 
     protected void atirarFlecha(Dwarf dwarf, int fatorExperiencia){

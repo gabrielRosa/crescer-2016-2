@@ -2,7 +2,6 @@ public class ElfoVerde extends Elfo{
 
     public ElfoVerde(String nome){
         super(nome);
-        super.inventario.getItens().clear();
     }
 
     @Override
@@ -15,5 +14,9 @@ public class ElfoVerde extends Elfo{
     public void atirarFlecha(Dwarf dwarf){
         dwarf.perderVida();
         super.xp+=2;
+    }
+
+    @Override
+    public void inicializarInventario(int quantidadeFlecha){
     }
 }
