@@ -2,8 +2,7 @@ public class ElfoVerde extends Elfo{
 
     public ElfoVerde(String nome){
         super(nome);
-        super.perderItem(super.getFlecha());
-        super.perderItem(super.getArco());
+        super.inventario.getItens().clear();
     }
 
     @Override
