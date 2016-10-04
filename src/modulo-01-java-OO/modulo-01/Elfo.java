@@ -1,5 +1,4 @@
 public class Elfo extends Personagem{
-    protected double vida;
 
     public Elfo(String nome){
         this(nome, 42);
@@ -21,19 +20,20 @@ public class Elfo extends Personagem{
         return this.inventario.getItens().get(0);
     }
 
-    public double getVida(){
-        return this.vida;
-    }
-
     public String toString(){
         return this.nome + " possui " + this.getFlecha().getQuantidade()+" flechas e " + this.xp+ " níveis de experiência.";
     }
 
     public void atirarFlecha(Dwarf dwarf){
+        atirarFlecha(dwarf, 1);
+    }
+
+    protected void atirarFlecha(Dwarf dwarf, int fatorExperiencia){
         if(getFlecha().getQuantidade()>0){
             getFlecha().setQuantidade(getFlecha().getQuantidade()-1);
-            this.xp++;
+            this.xp += 1 * fatorExperiencia;
             dwarf.perderVida();
         }
     }
+
 }
