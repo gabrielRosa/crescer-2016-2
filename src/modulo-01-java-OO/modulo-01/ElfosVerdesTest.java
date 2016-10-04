@@ -47,6 +47,16 @@ public class ElfosVerdesTest{
     }
 
     @Test
+    public void ganharItemNull(){
+        //Arrange
+        ElfoVerde elfo = new ElfoVerde("Elfo");
+        //Act
+        elfo.ganharItem(new Item(null, 0));
+        //Assert
+        assertEquals(0, elfo.getInventario().getItens().size());
+    }
+
+    @Test
     public void elfoAtiraUmaFlecha(){
         //arrange
         ElfoVerde legolas = new ElfoVerde("Elfo");
@@ -65,6 +75,18 @@ public class ElfosVerdesTest{
         legolas.atirarFlecha(new Dwarf());
         //assert
         assertEquals(4, legolas.getXp());
+    }
+
+    @Test
+    public void elfoAtiraTresFlecha(){
+        //arrange
+        ElfoVerde legolas = new ElfoVerde("Elfo");
+        //act
+        legolas.atirarFlecha(new Dwarf());
+        legolas.atirarFlecha(new Dwarf());
+        legolas.atirarFlecha(new Dwarf());
+        //assert
+        assertEquals(6, legolas.getXp());
     }
 
     @Test
