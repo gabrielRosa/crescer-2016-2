@@ -29,4 +29,12 @@ public class Personagem{
     public Inventario getInventario(){
         return this.inventario;
     }
+    //duvida quanto ao metodo
+    public void perderItem(Item item){
+        this.inventario.getItens().remove(item);
+    }
+
+    public void ganharItem(Item item){
+        this.inventario.getItens().add(item);
+    }
 }
