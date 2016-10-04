@@ -11,7 +11,7 @@ public class DwarfTest{
         //Act
         Dwarf  bruceWayne = new Dwarf();
         //Assert
-        assertEquals(bruceWayne.getVida(),110);
+        assertEquals(bruceWayne.getVida(),110,0);
     }
 
     @Test
@@ -53,6 +53,7 @@ public class DwarfTest{
         //assert
         assertEquals(1002, dwarf.getInventario().getItens().get(0).getQuantidade());
     }
+
     @Test
     public void dwarfRemover1Item(){
         //arrange
@@ -82,7 +83,7 @@ public class DwarfTest{
         //act 
         dwarf.perderVida();
         //assert
-        assertEquals(dwarf.getVida(),100);
+        assertEquals(dwarf.getVida(),100,0);
     }
 
     @Test
@@ -93,7 +94,7 @@ public class DwarfTest{
         dwarf.perderVida();
         dwarf.perderVida();
         //assert
-        assertEquals(dwarf.getVida(),90);
+        assertEquals(dwarf.getVida(),90, 0);
     }
 
     @Test 
@@ -196,7 +197,7 @@ public class DwarfTest{
             dwarf.perderVida();
         }
         //assert
-        assertEquals(0, dwarf.getVida());
+        assertEquals(0, dwarf.getVida(),0);
     }
 
     @Test
@@ -208,7 +209,7 @@ public class DwarfTest{
             dwarf.perderVida();
         }
         //assert
-        assertEquals(10, dwarf.getVida());
+        assertEquals(10, dwarf.getVida(),0);
     }
 
     @Test
@@ -220,7 +221,7 @@ public class DwarfTest{
             dwarf.perderVida();
         }
         //assert
-        assertEquals(0, dwarf.getVida());
+        assertEquals(0, dwarf.getVida(),0);
     }
 
     @Test
@@ -232,7 +233,7 @@ public class DwarfTest{
             dwarf.perderVida();
         }
         //assert
-        assertEquals(100, dwarf.getVida());
+        assertEquals(100, dwarf.getVida(),0);
     }
     //TODO novos teste serao implementados
 }
