@@ -8,7 +8,7 @@ public class ElfoVerde extends Elfo{
 
     @Override
     public void ganharItem(Item item){
-        if("Espada de aço valiriano".equals(item.getDescricao()) || "Arco e Flecha de Vidro".equals(item.getDescricao())){
+        if(item != null && "Espada de aço valiriano".equals(item.getDescricao()) || "Arco e Flecha de Vidro".equals(item.getDescricao())){
             super.ganharItem(item);
         }
     }
