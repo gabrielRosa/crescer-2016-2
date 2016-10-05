@@ -56,7 +56,7 @@ public class ExercitoDeElfosTest{
         assertEquals(elfoVerde, exercito.getExercito()[1]);
         assertEquals(2, exercito.getExercito().length);
     }
-    
+
     @Test
     public void buscarUmElfoVerdePeloNome(){
         //arrange
@@ -67,7 +67,7 @@ public class ExercitoDeElfosTest{
         //assert
         assertEquals(elfoVerde, exercito.buscar("Elfo verde"));
     }
-    
+
     @Test
     public void buscarUmElfoVerdePeloNomeQueNaoExiste(){
         //arrange
@@ -78,7 +78,7 @@ public class ExercitoDeElfosTest{
         //assert
         assertEquals(null, exercito.buscar("Elfo Azul"));
     }
-    
+
     @Test
     public void buscarComVariosEMesmoNome(){
         //arrange
@@ -93,7 +93,7 @@ public class ExercitoDeElfosTest{
         //assert
         assertEquals(elfoNoturno, exercito.buscar("Elfo verde"));
     }
-    
+
     @Test
     public void buscarComVariosEMesmoNomeENomeNaoExiste(){
         //arrange
@@ -108,4 +108,41 @@ public class ExercitoDeElfosTest{
         //assert
         assertEquals(null, exercito.buscar("Elfo laranja"));
     }
+
+    @Test
+    public void buscarUmElfoVerdeComVida(){
+        //arrange
+        ExercitoDeElfos exercito = new ExercitoDeElfos();
+        ElfoVerde elfoVerde = new ElfoVerde("Elfo verde");
+        //act
+        exercito.alistar(elfoVerde);
+        //assert
+        assertEquals(elfoVerde, exercito.buscar(Status.VIVO).get(0));
+    }
+
+    @Test
+    public void buscarUmElfoNorturnoMorto(){
+        //arrange
+        ExercitoDeElfos exercito = new ExercitoDeElfos();
+        ElfoNoturno elfoNoturno = new ElfoNoturno("Elfo verde", 200);
+        //act
+        exercito.alistar(elfoNoturno);
+        for(int i=0;i<200;i++){
+            elfoNoturno.atirarFlecha(new Dwarf());
+        }
+        //assert
+        assertEquals(elfoNoturno, exercito.buscar(Status.MORTO).get(0));
+    }
+
+    @Test
+    public void buscarUmElfoNorturnoMortoPoremEleEstaVivo(){
+        //arrange
+        ExercitoDeElfos exercito = new ExercitoDeElfos();
+        ElfoNoturno elfoNoturno = new ElfoNoturno("Elfo verde", 200);
+        //act
+        exercito.alistar(elfoNoturno);
+        //assert
+        assertTrue(exercito.buscar(Status.MORTO).isEmpty());
+    }
+
 }

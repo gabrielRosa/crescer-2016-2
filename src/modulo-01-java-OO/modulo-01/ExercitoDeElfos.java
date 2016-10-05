@@ -23,4 +23,13 @@ public class ExercitoDeElfos{
         return null;
     }
 
+    public ArrayList<Elfo> buscar(Status status){
+        ArrayList<Elfo> array = new ArrayList<>();
+        for(Elfo elfo : exercito){
+            if(elfo.getStatus() == status)
+                array.add(elfo);
+        }
+        return array;
+    }
+
 }
