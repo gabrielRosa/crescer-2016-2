@@ -1,8 +1,9 @@
-public class Personagem{
+public abstract class Personagem{
     protected String nome;
     protected Inventario inventario;
     protected Status status;
     protected int xp;
+    protected double vida;
 
     public Personagem(String nome){
         this.nome= nome;
@@ -16,6 +17,10 @@ public class Personagem{
 
     public String getNome(){
         return this.nome;
+    }
+
+    public double getVida(){
+        return this.vida;
     }
 
     public Status getStatus(){

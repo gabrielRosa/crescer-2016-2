@@ -1,5 +1,4 @@
 public class Elfo extends Personagem{
-    protected double vida;
 
     public Elfo(String nome){
         this(nome, 42);
@@ -8,9 +7,8 @@ public class Elfo extends Personagem{
     //mehor chamar o super em vez do this.nome=nome
     public Elfo(String nome, int quantidadeFlecha){
         super(nome);
-        this.inventario.adicionarItem(new Item("Arco",1));
-        this.inventario.adicionarItem(new Item("Flecha", quantidadeFlecha >=0 ? quantidadeFlecha : 42));
         this.vida=100;
+        inicializarInventario(quantidadeFlecha);
     }
     //TODO arrumar o index
     public Item getFlecha(){
@@ -21,19 +19,25 @@ public class Elfo extends Personagem{
         return this.inventario.getItens().get(0);
     }
 
-    public double getVida(){
-        return this.vida;
-    }
-
     public String toString(){
         return this.nome + " possui " + this.getFlecha().getQuantidade()+" flechas e " + this.xp+ " níveis de experiência.";
     }
 
     public void atirarFlecha(Dwarf dwarf){
+        atirarFlecha(dwarf, 1);
+    }
+
+    public void inicializarInventario(int quantidadeFlecha){
+        this.inventario.adicionarItem(new Item("Arco",1));
+        this.inventario.adicionarItem(new Item("Flecha", quantidadeFlecha >=0 ? quantidadeFlecha : 42));
+    }
+
+    protected void atirarFlecha(Dwarf dwarf, int fatorExperiencia){
         if(getFlecha().getQuantidade()>0){
             getFlecha().setQuantidade(getFlecha().getQuantidade()-1);
-            this.xp++;
+            this.xp += 1 * fatorExperiencia;
             dwarf.perderVida();
         }
     }
+
 }

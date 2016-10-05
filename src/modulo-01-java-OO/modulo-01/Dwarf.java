@@ -1,10 +1,9 @@
 public class Dwarf extends Personagem{
-    protected int vida;
     protected DataTerceiraEra dataNascimento;
     public Dwarf(String nome, DataTerceiraEra dataNascimento){
         super(nome);
         this.dataNascimento=dataNascimento;
-        this.vida=110;
+        super.vida=110;
     }
 
     public Dwarf(){
@@ -37,10 +36,6 @@ public class Dwarf extends Personagem{
         if(this.getNumeroSorte() ==-3333){
             inventario.aumentarUnidadesDosItens(1000);
         }
-    }
-
-    public int getVida(){
-        return this.vida;
     }
 
     public double getNumeroSorte(){

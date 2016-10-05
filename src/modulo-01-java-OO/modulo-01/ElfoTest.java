@@ -85,7 +85,7 @@ public class ElfoTest
         //act
         legolas.atirarFlecha(dwarf);
         //assert
-        assertEquals(100, dwarf.getVida());
+        assertEquals(100, dwarf.getVida(),0);
     }
 
     @Test 
