@@ -99,20 +99,6 @@ public class ElfoNoturnoTest{
         assertEquals(39, legolas.getFlecha().getQuantidade());
         assertEquals(9, legolas.getXp());
         assertEquals(85.7375, legolas.getVida(), 0);
-
-    }
-
-    @Test
-    public void elfoAtiraTresFlechaComVida(){
-        //Arrange
-        ElfoNoturno legolas = new ElfoNoturno("Elfo",100000);
-        //Act
-        for(int i=0; i<1000000;i++){
-            legolas.atirarFlecha(new Dwarf());
-        }
-        //Assert
-        assertEquals(Status.MORTO, legolas.getStatus());
-
     }
     
     @Test

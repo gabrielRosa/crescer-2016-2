@@ -4,9 +4,10 @@ public class ElfoNoturno extends Elfo{
     }
 
     public ElfoNoturno (String nome, int quantidade){
-        super(nome, quantidade);
+    super(nome, quantidade);
     }
-
+ 
+    //nao é posssivel zerar, apenas chegar perto do 0
     @Override
     public void atirarFlecha(Dwarf dwarf){
         if(super.getStatus() == Status.VIVO && super.getFlecha().getQuantidade()>0){
