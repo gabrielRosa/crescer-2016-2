@@ -59,7 +59,7 @@ public class DwarfTest{
         //arrange
         Dwarf dwarf = new Dwarf();
         Item item1 = new Item("Escudo", 2);
-        Item item2 = new Item("Escudo", 2);
+        Item item2 = new Item("Escudo2", 2);
         //act
         dwarf.adicionarItem(item1);
         dwarf.adicionarItem(item2);
