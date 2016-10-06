@@ -4,8 +4,13 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ElfoTest
-{
+public class ElfoTest{
+
+    @After
+    public void tearDown(){
+        System.gc();
+    }
+
     @Test
     public void elfoNasceComNome(){
         //Arrange
@@ -165,5 +170,23 @@ public class ElfoTest
         //assert
         assertEquals(Status.VIVO, legolas.getStatus());
     }
-    //TODO novos teste serao implementados
+
+    @Test
+    public void testContaElfoCom1(){
+        //tearDown();
+        //arrange //act
+        Elfo legolas2 = new Elfo("Elfo",0);
+        //assertEquals
+        assertEquals(1, Elfo.getQuantidadeElfos());
+    }
+
+    @Test
+    public void testContaElfoCom2(){
+        //tearDown();
+        //arrange //act
+        Elfo legolas = new Elfo("Elfo",0);
+        Elfo legolas2 = new Elfo("Elfo",0);
+        //assertEquals
+        assertEquals(2, Elfo.getQuantidadeElfos());
+    }
 }

@@ -1,5 +1,6 @@
 public class Elfo extends Personagem{
-
+    //final para finalizar a classe ou seja não pode herda-la
+    private static int quantidadeElfos;
     public Elfo(String nome){
         this(nome, 42);
     }
@@ -9,10 +10,21 @@ public class Elfo extends Personagem{
         super(nome);
         this.vida=100;
         inicializarInventario(quantidadeFlecha);
+        quantidadeElfos++;
     }
     //TODO arrumar o index
     public Item getFlecha(){
         return this.inventario.getItens().get(1);
+    }
+
+    @Override
+    protected void finalize() throws Throwable{
+        super.finalize();
+        Elfo.quantidadeElfos--;
+    }
+
+    public static int getQuantidadeElfos(){
+        return quantidadeElfos;
     }
 
     public Item getArco(){
