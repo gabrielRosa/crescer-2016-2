@@ -10,9 +10,13 @@ public class ExercitoDeElfosTest{
         ExercitoDeElfos exercito = new ExercitoDeElfos();
         ElfoVerde elfoVerde = new ElfoVerde("Elfo verde");
         //act
-        exercito.alistar(elfoVerde);
+        try{
+            exercito.alistar(elfoVerde);
+        }catch(Exception e){
+            e.toString();
+        }
         //assert
-        assertEquals(elfoVerde, exercito.getExercito()[0]);
+        assertEquals(elfoVerde, exercito.getContingente()[0]);
     }
 
     @Test
@@ -21,9 +25,13 @@ public class ExercitoDeElfosTest{
         ExercitoDeElfos exercito = new ExercitoDeElfos();
         ElfoNoturno elfoNoturno = new ElfoNoturno("Elfo verde");
         //act
-        exercito.alistar(elfoNoturno);
+        try{
+            exercito.alistar(elfoNoturno);
+        }catch(Exception e){
+            e.toString();
+        }
         //assert
-        assertEquals(elfoNoturno, exercito.getExercito()[0]);
+        assertEquals(elfoNoturno, exercito.getContingente()[0]);
     }
 
     @Test
@@ -33,11 +41,15 @@ public class ExercitoDeElfosTest{
         ElfoNoturno elfoNoturno = new ElfoNoturno("Elfo verde");
         ElfoVerde elfoVerde = new ElfoVerde("Elfo verde");
         //act
-        exercito.alistar(elfoNoturno);
-        exercito.alistar(elfoVerde);
+        try{
+            exercito.alistar(elfoNoturno);
+            exercito.alistar(elfoVerde);
+        }catch(Exception e){
+            e.toString();
+        }
         //assert
-        assertEquals(elfoNoturno, exercito.getExercito()[0]);
-        assertEquals(elfoVerde, exercito.getExercito()[1]);
+        assertEquals(elfoNoturno, exercito.getContingente()[0]);
+        assertEquals(elfoVerde, exercito.getContingente()[1]);
     }
 
     @Test
@@ -48,13 +60,17 @@ public class ExercitoDeElfosTest{
         ElfoVerde elfoVerde = new ElfoVerde("Elfo verde");
         Elfo elfo = new Elfo("Elfo verde");
         //act
-        exercito.alistar(elfoNoturno);
-        exercito.alistar(elfoVerde);
-        exercito.alistar(elfo);
+        try{
+            exercito.alistar(elfoNoturno);
+            exercito.alistar(elfoVerde);
+            exercito.alistar(elfo);
+        }catch(Exception e){
+            e.toString();
+        }
         //assert
-        assertEquals(elfoNoturno, exercito.getExercito()[0]);
-        assertEquals(elfoVerde, exercito.getExercito()[1]);
-        assertEquals(2, exercito.getExercito().length);
+        assertEquals(elfoNoturno, exercito.getContingente()[0]);
+        assertEquals(elfoVerde, exercito.getContingente()[1]);
+        assertEquals(2, exercito.getContingente().length);
     }
 
     @Test
@@ -63,7 +79,11 @@ public class ExercitoDeElfosTest{
         ExercitoDeElfos exercito = new ExercitoDeElfos();
         ElfoVerde elfoVerde = new ElfoVerde("Elfo verde");
         //act
-        exercito.alistar(elfoVerde);
+        try{
+            exercito.alistar(elfoVerde);
+        }catch(Exception e){
+            e.toString();
+        }
         //assert
         assertEquals(elfoVerde, exercito.buscar("Elfo verde"));
     }
@@ -74,7 +94,11 @@ public class ExercitoDeElfosTest{
         ExercitoDeElfos exercito = new ExercitoDeElfos();
         ElfoVerde elfoVerde = new ElfoVerde("Elfo verde");
         //act
-        exercito.alistar(elfoVerde);
+        try{
+            exercito.alistar(elfoVerde);
+        }catch(Exception e){
+            e.toString();
+        }
         //assert
         assertEquals(null, exercito.buscar("Elfo Azul"));
     }
@@ -87,9 +111,13 @@ public class ExercitoDeElfosTest{
         ElfoVerde elfoVerde = new ElfoVerde("Elfo verde");
         Elfo elfo = new Elfo("Elfo verde");
         //act
-        exercito.alistar(elfoNoturno);
-        exercito.alistar(elfoVerde);
-        exercito.alistar(elfo);
+        try{
+            exercito.alistar(elfoNoturno);
+            exercito.alistar(elfoVerde);
+            exercito.alistar(elfo);
+        }catch(Exception e){
+            e.toString();
+        }
         //assert
         assertEquals(elfoNoturno, exercito.buscar("Elfo verde"));
     }
@@ -102,9 +130,13 @@ public class ExercitoDeElfosTest{
         ElfoVerde elfoVerde = new ElfoVerde("Elfo verde");
         Elfo elfo = new Elfo("Elfo verde");
         //act
-        exercito.alistar(elfoNoturno);
-        exercito.alistar(elfoVerde);
-        exercito.alistar(elfo);
+        try{
+            exercito.alistar(elfoNoturno);
+            exercito.alistar(elfoVerde);
+            exercito.alistar(elfo);
+        }catch(Exception e){
+            e.toString();
+        }
         //assert
         assertEquals(null, exercito.buscar("Elfo laranja"));
     }
@@ -115,7 +147,11 @@ public class ExercitoDeElfosTest{
         ExercitoDeElfos exercito = new ExercitoDeElfos();
         ElfoVerde elfoVerde = new ElfoVerde("Elfo verde");
         //act
-        exercito.alistar(elfoVerde);
+        try{
+            exercito.alistar(elfoVerde);
+        }catch(Exception e){
+            e.toString();
+        }
         //assert
         assertEquals(elfoVerde, exercito.buscar(Status.VIVO).get(0));
     }
@@ -126,9 +162,13 @@ public class ExercitoDeElfosTest{
         ExercitoDeElfos exercito = new ExercitoDeElfos();
         ElfoNoturno elfoNoturno = new ElfoNoturno("Elfo verde", 200);
         //act
-        exercito.alistar(elfoNoturno);
-        for(int i=0;i<200;i++){
-            elfoNoturno.atirarFlecha(new Dwarf());
+        try{
+            exercito.alistar(elfoNoturno);
+            for(int i=0;i<200;i++){
+                elfoNoturno.atirarFlecha(new Dwarf());
+            }
+        }catch(Exception e){
+            e.toString();
         }
         //assert
         assertEquals(elfoNoturno, exercito.buscar(Status.MORTO).get(0));
@@ -140,7 +180,11 @@ public class ExercitoDeElfosTest{
         ExercitoDeElfos exercito = new ExercitoDeElfos();
         ElfoNoturno elfoNoturno = new ElfoNoturno("Elfo verde", 200);
         //act
-        exercito.alistar(elfoNoturno);
+        try{
+            exercito.alistar(elfoNoturno);
+        }catch(Exception e){
+            e.toString();
+        }
         //assert
         assertTrue(exercito.buscar(Status.MORTO).isEmpty());
     }

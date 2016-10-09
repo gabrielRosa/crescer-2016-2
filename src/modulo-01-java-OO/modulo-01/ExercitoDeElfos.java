@@ -1,17 +1,19 @@
 import java.util.ArrayList;
-public class ExercitoDeElfos{
+public class ExercitoDeElfos implements Exercito{
     private ArrayList<Elfo> exercito;
     public ExercitoDeElfos(){
         exercito = new ArrayList<>();
     }
 
-    public void alistar(Elfo elfo){
+    public void alistar(Elfo elfo) throws NaoPodeAlistarException{
         if(elfo instanceof ElfoVerde || elfo instanceof ElfoNoturno){
             exercito.add(elfo);
+        }else{
+            throw  new NaoPodeAlistarException();
         }
     }
 
-    public Elfo[] getExercito(){
+    public Elfo[] getContingente(){
         return exercito.toArray(new Elfo [exercito.size()]);
     }
 
