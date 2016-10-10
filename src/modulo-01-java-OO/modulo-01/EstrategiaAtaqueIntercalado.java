@@ -17,26 +17,38 @@ public class EstrategiaAtaqueIntercalado implements Estrategia{
                 }
             }
         }
-        //verifica se tem 50% de verde e 50% de noturno
-        if(!(contVerde == contNoturno)){
-            throw new ContingenteDesproporcionalException();
-        }
 
         if(novaList.size()==0){
             return novaList;
         }
 
-        for(int i =0;i<novaList.size();i++){
-            for(int j =0;j<novaList.size()-1;j++){
-                if(novaList.get(j) instanceof ElfoNoturno){
-                    Elfo aux = novaList.get(j);
-                    novaList.set(j, novaList.get(j+1));
-                    novaList.set(j+1, aux);
-                }
-            }
+        //verifica se tem 50% de verde e 50% de noturno
+        if(!(contVerde == contNoturno)){
+            throw new ContingenteDesproporcionalException();
         }
 
-        return null;
+        intercalar(novaList);
+
+        return novaList;
+    }
+
+    private void intercalar(List<Elfo> novaList){
+        for(int i=1;i<novaList.size();i++){
+            if((novaList.get(i-1).getClass().equals(novaList.get(i).getClass()))){
+                int j = i;
+                Elfo auxiliar;
+                while(j<novaList.size()){
+                    if(!(novaList.get(i-1).getClass().equals(novaList.get(j).getClass()))){
+                        auxiliar = novaList.get(i);
+                        novaList.set(i, novaList.get(j));
+                        novaList.remove(j);
+                        novaList.add(auxiliar);
+                        break;
+                    }
+                    j++;
+                }
+            }  
+        }
     }
 }
 
