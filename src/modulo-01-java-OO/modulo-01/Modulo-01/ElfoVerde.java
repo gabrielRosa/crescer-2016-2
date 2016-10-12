@@ -18,5 +18,7 @@ public class ElfoVerde extends Elfo{
 
     @Override
     public void inicializarInventario(int quantidadeFlecha){
+        inventario.adicionarItem(new Item("Arco de vidro", 1));
+        inventario.adicionarItem(new Item("Flecha de vidro", 100));
     }
 }
