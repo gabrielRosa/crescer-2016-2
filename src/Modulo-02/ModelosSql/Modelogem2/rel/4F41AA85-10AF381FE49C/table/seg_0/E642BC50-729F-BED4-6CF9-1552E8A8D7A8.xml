@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E642BC50-729F-BED4-6CF9-1552E8A8D7A8" name="Projeto">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 16:57:22 UTC</createdTime>
+<generatorID>5223C57A-F607-A961-A8E9-BE6700327609</generatorID>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDProjeto" id="5A3B9CC0-675C-C8BD-337B-88E6FC8C0CE5">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 16:57:53 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="Nome" id="9FD7E115-9C02-7CA5-FFFC-728DF8E26F22">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 17:07:05 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDEmpregadoResponsavel" id="75D62234-5DFA-E299-5BD5-C46365DA770F">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 17:21:49 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7624D80C-DABE-8CE2-5CA3-9678A857D5CD" referredColumn="7395C35D-36E1-83AD-8104-5A7599FADE6A"/>
+</associations>
+</Column>
+<Column name="DataInicio" id="7351392B-67E3-E30F-E795-C5EF93B2DA86">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 17:25:01 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataFimPrevisto" id="0B2A935C-94AE-BA3F-5FD0-40867C22BE74">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 17:25:01 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataFimReal" id="4E134011-DE43-4F70-6C56-0F4EF3B7FE88">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 17:25:01 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Situacao" id="961C1709-CE94-1211-D61C-CE8D79AD73A6">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 17:25:01 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ValorPrevisto" id="91E6060D-B238-840C-74C6-7815E1321B15">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 17:38:40 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,18,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ValorRealizado" id="950F117D-15F2-117F-1402-3AF40B600857">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 17:38:40 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,18,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ValorFaturado" id="1CE28E45-56D8-FA90-92E2-3C2AB282201D">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 17:38:40 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,18,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AA292B77-4019-C359-5F50-FAA93161AF64" name="Projeto_PK">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 16:57:53 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="5A3B9CC0-675C-C8BD-337B-88E6FC8C0CE5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A736621A-BE0E-C97D-3430-D1AB38DB4BD2" name="FKProjeto_Empregado">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 17:21:49 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="75D62234-5DFA-E299-5BD5-C46365DA770F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
