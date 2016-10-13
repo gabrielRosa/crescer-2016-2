@@ -11,7 +11,7 @@ public class ElfosVerdesTest{
         //Act
         elfo.ganharItem(new Item("Espada de aço valiriano", 0));
         //Assert
-        assertEquals("Espada de aço valiriano", elfo.getInventario().getItens().get(0).getDescricao());
+        assertEquals("Espada de aço valiriano", elfo.getInventario().getItens().get(2).getDescricao());
     }
 
     @Test
@@ -21,7 +21,7 @@ public class ElfosVerdesTest{
         //Act
         elfo.ganharItem(new Item("Arco e Flecha de Vidro", 0));
         //Assert
-        assertEquals("Arco e Flecha de Vidro", elfo.getInventario().getItens().get(0).getDescricao());
+        assertEquals("Arco e Flecha de Vidro", elfo.getInventario().getItens().get(2).getDescricao());
     }
 
     @Test
@@ -32,8 +32,8 @@ public class ElfosVerdesTest{
         elfo.ganharItem(new Item("Arco e Flecha de Vidro", 0));
         elfo.ganharItem(new Item("Espada de aço valiriano", 0));
         //Assert
-        assertEquals("Arco e Flecha de Vidro", elfo.getInventario().getItens().get(0).getDescricao());
-        assertEquals("Espada de aço valiriano", elfo.getInventario().getItens().get(1).getDescricao());
+        assertEquals("Arco e Flecha de Vidro", elfo.getInventario().getItens().get(2).getDescricao());
+        assertEquals("Espada de aço valiriano", elfo.getInventario().getItens().get(3).getDescricao());
     }
 
     @Test
@@ -43,17 +43,7 @@ public class ElfosVerdesTest{
         //Act
         elfo.ganharItem(new Item("Arco e Flecha Vidro", 0));
         //Assert
-        assertEquals(0, elfo.getInventario().getItens().size());
-    }
-
-    @Test
-    public void ganharItemNull(){
-        //Arrange
-        ElfoVerde elfo = new ElfoVerde("Elfo");
-        //Act
-        elfo.ganharItem(new Item(null, 0));
-        //Assert
-        assertEquals(0, elfo.getInventario().getItens().size());
+        assertEquals(2, elfo.getInventario().getItens().size());
     }
 
     @Test

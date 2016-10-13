@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7F781332-14D2-4E7E-BC49-961B6F1CC366" name="Empregado">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-13 00:08:03 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nome" id="2D8B7ADF-3533-DF8F-9380-FCBC408FC3C7">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-13 00:08:41 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8426C81B-491A-0445-1EA7-D0A0CE025D81" name="Empregado PK">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-13 00:08:25 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2D8B7ADF-3533-DF8F-9380-FCBC408FC3C7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,193 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2E1030A4-C5E6-C043-41E5-A17B8FD8278E" name="Projeto">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-12 22:58:54 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="IDProjeto" id="95D446C3-8791-7D17-C141-88555CD92AEB">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-12 23:06:19 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NomeProjeto" id="BB794B4F-96FB-CCC8-3E78-44CBE856DBC0">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-12 23:05:09 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DataInicio" id="A7638131-9FCC-375C-D017-3AAB3D034E49">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-12 23:22:17 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DataFimPrevisto " id="36D41597-71F7-109B-671C-5FEC22F241EA">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-12 23:23:18 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DataFimReal  " id="C61AAD41-37D3-E730-A477-9C9B38F5C2AF">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-12 23:23:31 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ValorPrevisto  " id="22F13C24-1F1F-091C-5026-BF04AE78C6EE">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-12 23:23:52 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,18,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ValorRealizado " id="63CD27AE-C6FD-D97D-E218-BDF5F45B8B95">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-12 23:24:24 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,18,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ValorFaturado" id="ADFCEA9B-6D22-B905-D63B-1EBBA39A7481">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-12 23:28:42 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,18,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ParticipacaoPerc " id="AC9B3B5C-D7C8-060B-AB99-F0797AB8FD83">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-12 23:29:21 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,3,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IDEmpregado2" id="3D4047D0-8F14-FCBA-0D20-504DEA19B845">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-13 00:18:07 UTC</createdTime>
+<generatorID>2BBF1E68-A759-CE11-67C0-178DF3878F8E</generatorID>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<referedAttribute>FE96C0B0-2D17-7161-7C77-9E5677264689</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nome" id="D67D224C-9917-9934-8021-81F5FF389EF3">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-13 01:24:11 UTC</createdTime>
+<generatorID>1A00B0D1-6E02-3C68-EBCE-A875D33F080F</generatorID>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<referedAttribute>2D8B7ADF-3533-DF8F-9380-FCBC408FC3C7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nome1" id="C09B6F56-0D5E-348C-4FE3-C0C5BAED222F">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-13 01:24:24 UTC</createdTime>
+<generatorID>E7DEFD82-9596-6C71-4B77-C5FCC8C023FF</generatorID>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<referedAttribute>8225E09B-7A1A-565A-3D4F-7A316C570A75</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1AE09752-FAC7-EE38-1AD9-46DBFD5370E5" name="Projeto PK">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-12 23:06:49 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>95D446C3-8791-7D17-C141-88555CD92AEB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
