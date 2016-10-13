@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="2E1030A4-C5E6-C043-41E5-A17B8FD8278E" name="Projeto" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="1E9C9A58-0F39-86B1-6008-858D12027DCE" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="47A3E3E0-D74D-2990-8710-951440C63E79" name="Responsavel" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="1E9C9A58-0F39-86B1-6008-858D12027DCE" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="7F781332-14D2-4E7E-BC49-961B6F1CC366" name="Empregado" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="1E9C9A58-0F39-86B1-6008-858D12027DCE" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Relation" objectID="1A00B0D1-6E02-3C68-EBCE-A875D33F080F" name="Relation_2" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="1E9C9A58-0F39-86B1-6008-858D12027DCE" propertySourceId="7F781332-14D2-4E7E-BC49-961B6F1CC366" propertyTargetId="2E1030A4-C5E6-C043-41E5-A17B8FD8278E"/>
+   <object objectType="Relation" objectID="E7DEFD82-9596-6C71-4B77-C5FCC8C023FF" name="Relation_8" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="1E9C9A58-0F39-86B1-6008-858D12027DCE" propertySourceId="47A3E3E0-D74D-2990-8710-951440C63E79" propertyTargetId="2E1030A4-C5E6-C043-41E5-A17B8FD8278E"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

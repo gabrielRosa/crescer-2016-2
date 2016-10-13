@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="47A3E3E0-D74D-2990-8710-951440C63E79" name="Responsavel">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-13 00:20:09 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nome" id="8225E09B-7A1A-565A-3D4F-7A316C570A75">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-13 00:20:49 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B29CEA28-5098-8749-D0D4-439EBA564068" name="Responsavel PK">
+<createdBy>Gabriel</createdBy>
+<createdTime>2016-10-13 00:20:41 UTC</createdTime>
+<ownerDesignName>Execicio1</ownerDesignName>
+<engineerTo>
+<item key="A7126BC3-C1D1-C582-FD9A-6F6A8BB7D306" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8225E09B-7A1A-565A-3D4F-7A316C570A75</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

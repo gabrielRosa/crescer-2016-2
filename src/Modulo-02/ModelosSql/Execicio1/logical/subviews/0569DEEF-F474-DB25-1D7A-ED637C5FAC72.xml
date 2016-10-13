@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.logical.DPVLogical" id="0569DEEF-F474-DB25-1D7A-ED637C5FAC72">
+<createdBy>Gabriel</createdBy>
+<modifiedBy>Gabriel</modifiedBy>
+<createdTime>2016-10-12 22:57:23 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="2E1030A4-C5E6-C043-41E5-A17B8FD8278E" otype="Entity" vid="EE38EBCC-291C-D9CC-1301-6E3E15CFDF57">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="50" y="50" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="47A3E3E0-D74D-2990-8710-951440C63E79" otype="Entity" vid="8F1172E6-81E8-0E02-7435-CC60E0EA605C">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="170" y="290" width="170" height="110"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="7F781332-14D2-4E7E-BC49-961B6F1CC366" otype="Entity" vid="EFE141A6-7553-CADE-B8C8-AA533B3DD484">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="80" y="110" width="170" height="110"/>
+</OView>
+</objectViews>
+<connectors>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="1A00B0D1-6E02-3C68-EBCE-A875D33F080F" otype="Relation" vid_source="EFE141A6-7553-CADE-B8C8-AA533B3DD484" vid_target="EE38EBCC-291C-D9CC-1301-6E3E15CFDF57">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<lineWidth>1</lineWidth>
+<points>
+<point x="80" y="135"/>
+<point x="220" y="135"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="E7DEFD82-9596-6C71-4B77-C5FCC8C023FF" otype="Relation" vid_source="8F1172E6-81E8-0E02-7435-CC60E0EA605C" vid_target="EE38EBCC-291C-D9CC-1301-6E3E15CFDF57">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<lineWidth>1</lineWidth>
+<points>
+<point x="195" y="290"/>
+<point x="195" y="160"/>
+</points>
+</Connector>
+</connectors>
+</Diagram>
