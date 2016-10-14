@@ -17,6 +17,7 @@ begin tran
 update empregado2
 set salario = salario*1.145
 from empregado2 e inner join departamento d on e.IDDepartamento = d.IDDepartamento and d.Localizacao in ('Sao paulo')
+commit 
 
 select * from Empregado2
 
