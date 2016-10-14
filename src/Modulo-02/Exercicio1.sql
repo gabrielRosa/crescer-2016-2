@@ -79,16 +79,14 @@ select Empregado,
 Having  count(1)>1;
 
 --2)
-select NomeProjeto
+select distinct NomeProjeto
 		from Projeto
-where (ValorFaturado - ValorRealizado)<0;
+where (ValorFaturado - ValorRealizado)>0;
 
---3)Não consegui executar 
-select NomeProjeto ,
-			 case when (ValorFaturado - ValorRealizado)<0
-			 then ((ValorFaturado - ValorRealizado)/16)*100
-			 End as Total
-		from Projeto;
+--3) 
+select NomeProjeto 
+		from projeto
+		where valorFaturado < ValorRealizado
 
 --4)
 select Nome, 

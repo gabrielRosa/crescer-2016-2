@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F65A9538-C9C9-4138-1877-6061DEBE7A23" name="Relation_1">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 16:57:53 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDEmpregadoProjeto" id="072575E9-CF9D-F9D8-8566-928670B414F1">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 17:04:42 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDProjeto" id="0AAAED02-1D59-9DA3-67DB-1D6301CE722C">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 16:57:53 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B5731395-07DC-2699-BEE4-96EACC94EB17" referredColumn="5A3B9CC0-675C-C8BD-337B-88E6FC8C0CE5"/>
+</associations>
+</Column>
+<Column name="IDEmpregado" id="DEF73001-71E6-9548-1439-C55017F0611D">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 16:57:53 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EF103AEC-F952-4BA8-9BBE-1522A1AB4B3C" referredColumn="7395C35D-36E1-83AD-8104-5A7599FADE6A"/>
+</associations>
+</Column>
+<Column name="PercentualAtuacao" id="353A2D27-FEF6-EAAB-D031-CD45698942BF">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 17:41:56 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,3,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BBDEE5F5-6982-21D2-600A-665BF50B425F" name="Relation_1_PK">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 16:57:53 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="072575E9-CF9D-F9D8-8566-928670B414F1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C8A38807-27A0-F39F-7BF0-B7169433B9E2" name="UK_ProjetoEmpregado">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 17:05:57 UTC</createdTime>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AAAED02-1D59-9DA3-67DB-1D6301CE722C"/>
+<colUsage columnID="DEF73001-71E6-9548-1439-C55017F0611D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B4285A88-93F4-A7DC-FF93-52B7E9E51C91" name="FK_EmpregadoProjeto_Projeto">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 16:57:53 UTC</createdTime>
+<generatorID>63F4CC19-6571-52BE-6855-FFB77A1EDDB9</generatorID>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AAAED02-1D59-9DA3-67DB-1D6301CE722C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="197F54D9-5AD2-8DFB-10E4-6FA9835A9103" name="FK_EmpregadoProjeto_Empregado">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-13 16:57:53 UTC</createdTime>
+<generatorID>63F4CC19-6571-52BE-6855-FFB77A1EDDB9</generatorID>
+<ownerDesignName>Modelogem2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DEF73001-71E6-9548-1439-C55017F0611D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
