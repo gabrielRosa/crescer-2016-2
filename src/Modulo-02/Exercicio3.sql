@@ -1,4 +1,4 @@
---7) nao consegui fazer
+--7) 
 select * from empregado
 
 Select e.NomeEmpregado as NomeEmpregado,
