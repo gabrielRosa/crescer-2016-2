@@ -1,6 +1,4 @@
---7) nao consegui fazer
-select * from empregado
-
+--7) 
 Select e.NomeEmpregado as NomeEmpregado,
 		f.NomeDepartamento as Departamento,
 		g.NomeEmpregado as NomeGerente,
