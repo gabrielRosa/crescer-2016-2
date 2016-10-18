@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="81073D73-59C8-85E3-CC05-AD0EC38DA572" name="UF">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:50:48 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDUF" id="CD9BDFD0-DCAA-3F93-31E1-43AEFE85809B">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:51:15 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Sigla" id="FEDA30F0-2016-A54B-1D34-EC0291DAF9BE">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:51:56 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="03517D8E-2B14-2829-0030-8E8C3310978A">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:51:56 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="621E201C-B91A-A946-5860-D0AE3367003C" name="UF_PK">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:51:15 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD9BDFD0-DCAA-3F93-31E1-43AEFE85809B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="92374E5C-2C7A-19C3-BF38-95FAE8C69A28" name="UF__UN">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:08:00 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FEDA30F0-2016-A54B-1D34-EC0291DAF9BE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="392EB89A-42C9-4B54-4347-BFE180E00A21" mainViewID="6769598A-8302-052B-2DDB-53D20B851DBB">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:41:38 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>
