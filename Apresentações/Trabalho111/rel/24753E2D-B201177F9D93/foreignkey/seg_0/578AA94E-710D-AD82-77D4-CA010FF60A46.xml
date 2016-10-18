@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="578AA94E-710D-AD82-77D4-CA010FF60A46" containerWithKeyObject="A7572EE6-69A0-A2B9-AF1B-6F4F1ECA9158" localFKIndex="540244C0-26FD-FEF6-DFB5-C1FB3631D22A" name="FK_OrdemDeCompraMaterial_Materia">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:18:25 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D616FD18-68EE-24DF-4F7D-00E578F12EB5</referredTableID>
+<keyObject>2A7BC455-EE07-2473-2E89-8EA334A9AA7B</keyObject>
+<referredKeyID>2A7BC455-EE07-2473-2E89-8EA334A9AA7B</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

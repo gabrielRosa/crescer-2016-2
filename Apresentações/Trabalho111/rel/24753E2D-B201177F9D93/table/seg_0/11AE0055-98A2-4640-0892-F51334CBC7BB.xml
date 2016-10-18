@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="11AE0055-98A2-4640-0892-F51334CBC7BB" name="Receita">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-15 21:59:44 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDReceita" id="DB30D869-B1C1-1C1C-8B6D-8E38A151FC54">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 16:04:12 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="C025E566-F3B7-6385-876B-EE67691E4DD5">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 23:30:27 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDTipoCerveja" id="9BAA0F36-1753-8069-AA93-DCC77A375A51">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 23:30:59 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="51482E67-8A10-483A-E5E4-08D43B70A70D" referredColumn="BDBC9F72-B03A-A676-F676-9292DE841632"/>
+</associations>
+</Column>
+<Column name="TempoFermentacao" id="8DE31016-341B-8EC4-E8FB-7ACEB616DC4E">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 16:22:59 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fermentacao" id="AADA80D2-420A-A37F-A020-754AB72F7898">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 16:24:22 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Situacao" id="C15109DA-7CBB-18CB-FE14-3A4ABCF19666">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 23:47:23 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="061D7748-05BF-DCFB-1FEE-355CA64D340D" name="Receita_PK">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 16:04:12 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DB30D869-B1C1-1C1C-8B6D-8E38A151FC54"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="62D0CE9E-47B7-ECA6-6BA4-6A3377AD9C38" name="Receita_TipoCerveja_FK">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:51:50 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9BAA0F36-1753-8069-AA93-DCC77A375A51"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

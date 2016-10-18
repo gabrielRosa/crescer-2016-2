@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B26A2E72-E9B2-58CF-5FDC-F7F79C7E3F81" name="OrdemDeCompra">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:15:29 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDOrdemDeCompra" id="B0D03042-8684-47E9-CD0E-9791D134092E">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:16:19 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NomeResponsavel" id="7C37F608-3CB4-FC49-FE25-95C7DE076A1C">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:16:19 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataEmissao" id="3BD64F2D-20D6-06C6-4712-72E8C5DFA85C">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:23:46 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Valor" id="E567BC58-7F0A-A4EE-E795-30873FE437D5">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:24:02 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NomeFornecedor" id="A63B1636-0090-529E-8F84-DDAEECD5F41D">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:24:55 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CNPJ" id="B79ED2E6-E424-D6EF-C8DB-38C2C0074F59">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:26:17 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Situacao" id="387B25FC-A64F-1644-2CAF-91EFA891C86B">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 23:48:31 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E9753491-D8FC-FFB7-CEA0-CDBC24677486" name="OrdemDeCompra_PK">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:16:19 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B0D03042-8684-47E9-CD0E-9791D134092E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

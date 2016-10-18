@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9476ABE4-0F7A-EF00-3D4A-313AEA981A8F" name="Votocao">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:13:08 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDVoto" id="04038BC8-CB53-9F7A-EC28-A5151E981E6F">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:33:14 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FK_Candidato" id="3B7DE3B0-5C81-9A04-A1A3-5447AB58C8DA">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:13:48 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B01A195C-A818-BC9E-94C2-EE698EC84127" referredColumn="9045B3A6-8E68-E896-2168-4A9D7DBD8B7F"/>
+</associations>
+</Column>
+<Column name="Branco" id="5311A576-65E5-D50F-CB7A-F8B7F28895FC">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:40:39 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8DC6C660-79C7-1051-7C0F-B4C8E1DDCFD0" name="TABLE_6_PK">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:14:58 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="04038BC8-CB53-9F7A-EC28-A5151E981E6F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="991C0D12-BDDC-F2F0-CFDF-A7870B35C034" name="FK_Candidato">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:13:48 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3B7DE3B0-5C81-9A04-A1A3-5447AB58C8DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

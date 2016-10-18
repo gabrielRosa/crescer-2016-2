@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="24753E2D-A7F5-FD4E-F6E6-B201177F9D93" mainViewID="65B79716-0551-1AC9-999F-CDBEB6D72749">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-15 21:47:26 UTC</createdTime>
+<ownerDesignName>trabalho1</ownerDesignName>
+<shouldBeOpen>true</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>

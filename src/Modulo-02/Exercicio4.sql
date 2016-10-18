@@ -2,7 +2,7 @@
 
 select count(1) as Total
 		from Pedido
-		where DataPedido between convert(datetime,'01/09/2016', 103) and convert(datetime,'30/09/2016', 103)
+		where DataPedido between convert(datetime,'01/09/2016', 103) and convert(datetime,'30/09/2016', 103)+.99999
 
 --2)
 
@@ -13,11 +13,13 @@ select p.nome
 	Inner join ProdutoMaterial as m on p.IDProduto = m.IDProduto
 	where m.IDMaterial = 15836
 
+create index IX_ProdutoMaterial_Material on ProdutoMaterial (IDMaterial);
+
 --3)
 
 select Nome
 	from cliente
-	where RazaoSocial like '%ltda%'
+	where RazaoSocial like '%ltda%' or Nome  like '%ltda%'
 
 --4)
 
@@ -39,7 +41,7 @@ Select p.Nome
 	where p.IDProduto not in (Select IDProduto from PedidoItem)
 
 /*
-Pensei em fazer com o inner join (como demonstrado abaixo) porém não obtive sucesso.
+Pensei em fazer com o inner join (como demonstrado abaixo) porï¿½m nï¿½o obtive sucesso.
 Select p.Nome
 	from Produto as p
 	Inner Join PedidoItem as pdi on p.IDProduto = pdi.IDProduto

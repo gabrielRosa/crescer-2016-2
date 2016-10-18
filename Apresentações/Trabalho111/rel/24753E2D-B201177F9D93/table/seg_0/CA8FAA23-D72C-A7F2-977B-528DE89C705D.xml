@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CA8FAA23-D72C-A7F2-977B-528DE89C705D" name="VendaProduto">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:30:25 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<ordsAlias>table_16</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDVendaProduto" id="613E303E-A012-F0D0-D37A-6651B196FDE7">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:31:01 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDVenda" id="EC9D23E2-0FA6-5C00-1F0F-0051D61A32EC">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:31:18 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B5B84FDA-EBB0-425C-57B6-E7300AE01425" referredColumn="05C6BC67-2080-4948-8BBE-54251BFC213C"/>
+</associations>
+</Column>
+<Column name="IDProduto" id="875499FA-BDF4-39FF-0A43-DB0FE7AED9C4">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:31:36 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="981092CC-0F67-1F59-5353-B0BBB3F1AF7C" referredColumn="5E77DE7B-D185-645E-E3E2-60D6B775C8FC"/>
+</associations>
+</Column>
+<Column name="Quantidade" id="E03963D7-C3AD-45F1-B309-57EF90ADE921">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:32:13 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,8,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1DE4B3CA-FE22-E238-9ECB-77C0F06878E8" name="VendaProduto_PK">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:31:01 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="613E303E-A012-F0D0-D37A-6651B196FDE7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3D37A43C-0F70-C873-997B-8005CBD673BB" name="FK_VendaProduto_Produto">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:34:49 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="875499FA-BDF4-39FF-0A43-DB0FE7AED9C4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ECE6D86F-606B-342F-AF4D-834CF0AB46A6" name="FK_VendaProduto_Venda">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:35:42 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC9D23E2-0FA6-5C00-1F0F-0051D61A32EC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

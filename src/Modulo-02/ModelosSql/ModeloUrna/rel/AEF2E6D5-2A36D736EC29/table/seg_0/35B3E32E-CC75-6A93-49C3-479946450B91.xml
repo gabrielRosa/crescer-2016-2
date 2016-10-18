@@ -1,0 +1,156 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="35B3E32E-CC75-6A93-49C3-479946450B91" name="Candidato">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:44:26 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDCandidato" id="9045B3A6-8E68-E896-2168-4A9D7DBD8B7F">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:45:57 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NomeCompleto" id="01643DD5-25E0-D535-0B3F-9BF431AFC1E2">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:46:32 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NomePopular" id="24A3AF9A-5F14-EB86-B103-2BF101FD12E5">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:46:55 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataNascimento" id="52C9C148-8D11-182A-EC53-FDA283CCCADB">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:47:11 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RegistroTRE" id="2F330805-7BD7-8223-2268-2B9FF982850B">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:48:28 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Partido" id="C99A7C16-4992-0170-93E2-DBBC460991B4">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:48:47 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Foto" id="8000805D-39C1-8455-7B7F-17CA4CF51FDE">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:49:07 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NumeroEscolha" id="2274B921-AB0C-6D5C-6332-EC6645FA73AB">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:49:29 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TipoCargo" id="B9B53D22-66B3-08AE-40E3-C6157DF1F725">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:49:48 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cidade" id="2092DF2B-0E8D-5E59-1E77-36FF9F5A65FB">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:55:14 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="671BD606-A70D-6D3A-8AB5-A3D0D9650712" referredColumn="15B503A8-BBA6-6276-20A4-C948DCC54CDA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="30A23F3C-589D-8877-A8DF-99D18EA2CDBF" name="Candidatos_PK">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:45:57 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9045B3A6-8E68-E896-2168-4A9D7DBD8B7F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1F85C3B1-582A-7CB7-92B5-CFAD6A253787" name="Candidatos__UN">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:08:29 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F330805-7BD7-8223-2268-2B9FF982850B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="954625B4-7EF0-6009-5E8D-331A2B546691" name="FK_Cidade">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 18:55:14 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2092DF2B-0E8D-5E59-1E77-36FF9F5A65FB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

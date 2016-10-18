@@ -1,0 +1,122 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="37FADDE9-A2B2-6B42-DB2B-48B85C7F0165" name="Eleitor">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:02:03 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDEleitor" id="E0400A15-869C-ECDE-F324-7CCD198886DB">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:04:22 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NomeCompleto" id="5A518A83-E92B-EFB8-DD1A-0962F9C08018">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:04:22 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TituloEleitor" id="49A8C93C-179C-5343-B582-A5B4154C61C5">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:04:22 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RG" id="9EB36995-1AFA-8835-57CD-AFFD54DAA21E">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:04:22 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataNascimento" id="CF8854CF-978E-B29B-4D0F-A08DD3DD1892">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:04:22 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Zona" id="85519570-A69A-B42D-5E62-C97D6CA6C0BB">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:04:22 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Secao" id="FBAD2AAC-CB2C-D108-4506-D551B5479BA3">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:04:22 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Situacao" id="3242FEA9-3C23-FDBB-482D-2ECEF5649E07">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:05:21 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F235B8CF-C72B-4E8A-06F9-432BBBDF8AA2" name="Eleitor_PK">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:04:22 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E0400A15-869C-ECDE-F324-7CCD198886DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A0421BA7-8418-8937-E026-1DC355DA8E6D" name="Eleitor__UN">
+<createdBy>rosa.gabriel</createdBy>
+<createdTime>2016-10-18 19:08:49 UTC</createdTime>
+<ownerDesignName>ModeloUrna</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="49A8C93C-179C-5343-B582-A5B4154C61C5"/>
+<colUsage columnID="9EB36995-1AFA-8835-57CD-AFFD54DAA21E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

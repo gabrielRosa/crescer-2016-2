@@ -1,6 +1,4 @@
 --7) 
-select * from empregado
-
 Select e.NomeEmpregado as NomeEmpregado,
 		f.NomeDepartamento as Departamento,
 		g.NomeEmpregado as NomeGerente,
@@ -11,8 +9,8 @@ Select e.NomeEmpregado as NomeEmpregado,
 	Inner join Departamento as h on  e.IDDepartamento = h.IDDepartamento and e.IDGerente = g.IDEmpregado
 
 --8)
-select * into Empregado2 from empregado
-
+select * into Empregado from empregado
+--melhor usar o exists
 begin tran
 update empregado2
 set salario = salario*1.145
@@ -22,7 +20,7 @@ commit
 select * from Empregado2
 
 --9)
-select sum(e2.salario - e.salario ) 
+select sum(e2.salario - e.salario ) as Diferenca
 from empregado e inner join empregado2 e2
 on e.IDEmpregado = e2.IDEmpregado
 /*

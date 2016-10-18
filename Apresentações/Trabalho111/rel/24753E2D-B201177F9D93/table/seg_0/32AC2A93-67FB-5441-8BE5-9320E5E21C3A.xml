@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="32AC2A93-67FB-5441-8BE5-9320E5E21C3A" name="Usuario">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:11:19 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<ordsAlias>table_24</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDUsuario" id="4E7D8C77-D34F-5A42-4012-7E89B089D177">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:13:03 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="976C203A-3D22-D375-F371-E47724E13CE8">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:13:03 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Senha" id="1E95702F-A7F8-4CCB-D9B8-0D4046C94411">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:13:03 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDPessoa" id="A55B1A1A-3A0C-11BE-97DD-6F6910B8F376">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:13:19 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B8607988-0F52-9714-9E03-1FD621AB4E17" referredColumn="5E259D38-3296-3379-D925-DEC8E366B56E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="44ABAAB4-969B-E0B6-1143-4B0F474500C9" name="Usuario_PK">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:13:03 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4E7D8C77-D34F-5A42-4012-7E89B089D177"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BD7423AD-AFC8-CAC4-FEEC-4997EB912006" name="UK_Usuario">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:14:28 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="976C203A-3D22-D375-F371-E47724E13CE8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3BE9B11D-DB60-1AE4-E6EB-D3DB2FAC1339" name="FK_Usuario_Pessoa">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:14:50 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A55B1A1A-3A0C-11BE-97DD-6F6910B8F376"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

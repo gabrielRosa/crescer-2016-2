@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D22004AD-7613-FB90-2968-FEF9789481ED" name="PessoaJuridica">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:02:25 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<ordsAlias>table_22</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDPessoaJuridica" id="7D6EC405-BDAF-5093-5AE1-4B7C660FE2B3">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:03:05 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDPessoa" id="490A0A94-FC72-7603-96E2-6D4836FBE534">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:05:36 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3D71EE14-461C-6859-0FAF-BA3EE43920E5" referredColumn="5E259D38-3296-3379-D925-DEC8E366B56E"/>
+</associations>
+</Column>
+<Column name="RazaoSocial" id="CC7B3AE1-A262-8605-F36B-A75FE69DB488">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:03:49 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CNPJ" id="E9B86D1C-4266-1D6D-E530-C0742A3437F4">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:05:12 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="397C65A5-4F42-12E9-1560-4F267C312E79" name="PessoaJuridica_PK">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:03:05 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7D6EC405-BDAF-5093-5AE1-4B7C660FE2B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4827C013-D81A-7F87-422B-957AA2430E00" name="UK_PessoaJuridica_CNPJ">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:10:20 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E9B86D1C-4266-1D6D-E530-C0742A3437F4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="76A5D03C-46FB-53F4-80B2-998FB33FCBF1" name="UK_PessoaJuridica_RazaoSocial">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:11:08 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC7B3AE1-A262-8605-F36B-A75FE69DB488"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="45197AA1-43E3-A550-26ED-2CCECF045745" name="FK_PessoaJuridica_Pessoa">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:15:14 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="490A0A94-FC72-7603-96E2-6D4836FBE534"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

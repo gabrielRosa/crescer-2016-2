@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9FB9BE20-BC22-CAEC-695C-AA535A3DCCEC" name="ProducaoCusto">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:07:25 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<ordsAlias>table_13</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDProducaoCusto" id="223E8093-F65C-A4BD-CE1F-64AB1400E78D">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:14:24 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDProducao" id="85FEF1CE-952E-426D-9174-62F795A88D94">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:14:24 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DFEEC056-C424-2281-D509-FCC63F8B6EF9" referredColumn="9071780A-41CD-CEA7-FC35-0FDD92A3B443"/>
+</associations>
+</Column>
+<Column name="IDCusto" id="F66530F3-B41E-B9A4-7D99-3A60C369D915">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:14:34 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="648E0AE6-DE4F-8C7E-3007-A4AE7FAD8E5E" referredColumn="A5512792-1EAA-F6C0-688B-D60EDAF770E4"/>
+</associations>
+</Column>
+<Column name="Valor" id="E3B53E26-A8DB-FA0A-BC69-D0B413EAAD94">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:14:52 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F4D048A8-DAE8-A339-EFB5-9A801E5E24D2" name="ProducaoCusto_PK">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:14:24 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="223E8093-F65C-A4BD-CE1F-64AB1400E78D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C50A3CA9-1EFC-B158-EA8F-2960B40E2D6F" name="FK_ProducaoCusto_Producao">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:15:18 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="85FEF1CE-952E-426D-9174-62F795A88D94"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5A4B6AAE-1E35-0CB8-C29B-3787297D8AFF" name="FK_ProducaoCusto_Custo">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:18:58 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F66530F3-B41E-B9A4-7D99-3A60C369D915"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
