@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="51482E67-8A10-483A-E5E4-08D43B70A70D" containerWithKeyObject="11AE0055-98A2-4640-0892-F51334CBC7BB" localFKIndex="62D0CE9E-47B7-ECA6-6BA4-6A3377AD9C38" name="Receita_TipoCerveja_FK">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:51:50 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F39B44E5-B9C6-1080-294A-D46A872FB423</referredTableID>
+<keyObject>3BBB5765-CC9F-1ACE-1DB5-8B7F06A52720</keyObject>
+<referredKeyID>3BBB5765-CC9F-1ACE-1DB5-8B7F06A52720</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

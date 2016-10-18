@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="85B3C0AC-42A0-81D8-A224-47BF16AAD64D" name="Producao">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:06:04 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<ordsAlias>table_12</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDProducao" id="9071780A-41CD-CEA7-FC35-0FDD92A3B443">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:07:02 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TempoFermentacao" id="6A382B5F-7C11-D960-20A1-4145EFDAE9ED">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:07:02 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="748766BB-2136-2D01-7EBD-F8422CA942ED" name="Producao_PK">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:07:02 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9071780A-41CD-CEA7-FC35-0FDD92A3B443"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

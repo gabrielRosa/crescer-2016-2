@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B5183D09-A7C5-3B13-02F8-9D7E8450CACB" name="ReceitaMaterial">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:11:26 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<ordsAlias>table_8</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDReceitaMaterial" id="CA5A9ADC-6BC7-0839-7393-2DAA8FB9D800">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:12:38 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDReceita" id="89A1EC37-71EA-A6B1-4BED-4FD1E1178B78">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:12:38 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B719F4E9-F7F2-FAEC-DFD6-64A751D8A324" referredColumn="DB30D869-B1C1-1C1C-8B6D-8E38A151FC54"/>
+</associations>
+</Column>
+<Column name="IDMaterial" id="480821D0-1C1E-3927-79A5-7A2FA2D945B9">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:12:38 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D0D7EC29-1B77-7E3E-4A64-9E87255926C1" referredColumn="A20AC0CB-80AA-7D48-9DBB-0BEDEA5A1BEC"/>
+</associations>
+</Column>
+<Column name="Quantidade" id="2A8E331C-2DBB-E907-1E50-3370F6785304">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:12:38 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,8,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="73617867-CAE4-5551-214B-0C1DAEC991F0" name="ReceitaMaterial_PK">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:12:38 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA5A9ADC-6BC7-0839-7393-2DAA8FB9D800"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6EBED7D1-723E-2EA5-121A-34AECBAC7B39" name="FK_ReceitaMaterial_Material">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:13:47 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="480821D0-1C1E-3927-79A5-7A2FA2D945B9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="89F63DD1-FA2C-2E97-06D4-6EBA796E61B5" name="FK_ReceitaMaterial_Receita">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:13:47 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="89A1EC37-71EA-A6B1-4BED-4FD1E1178B78"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

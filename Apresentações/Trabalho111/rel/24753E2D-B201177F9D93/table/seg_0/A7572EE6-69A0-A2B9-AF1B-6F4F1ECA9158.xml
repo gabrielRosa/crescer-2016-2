@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A7572EE6-69A0-A2B9-AF1B-6F4F1ECA9158" name="OrdemDeCompraMaterial">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:16:27 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<ordsAlias>table_10</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDOrdemDeCompraMaterial" id="FF821BA3-B982-80B2-1491-1AE0F864CC1A">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:17:21 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDOrdemDeCompra" id="E1E2F777-8B4A-5E89-E9A8-0166984F72AC">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:17:46 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AF721091-4056-14A7-1B3F-13AE4E4717DE" referredColumn="B0D03042-8684-47E9-CD0E-9791D134092E"/>
+</associations>
+</Column>
+<Column name="IDMaterial" id="73186B1A-FCFB-86EC-6FF8-9C3CE3FAF6CA">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:17:46 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="578AA94E-710D-AD82-77D4-CA010FF60A46" referredColumn="A20AC0CB-80AA-7D48-9DBB-0BEDEA5A1BEC"/>
+</associations>
+</Column>
+<Column name="Quantidade" id="EC445652-2E16-A84F-AF5C-F6A1DA0041E9">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:27:28 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,8,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="22CC30DD-7107-63F4-E72C-A17DB61D4512" name="OrdemDeCompraMaterial_PK">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:17:21 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FF821BA3-B982-80B2-1491-1AE0F864CC1A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="058E2222-356A-78C6-1071-C439C0A2A9FA" name="FK_OrdemDeCompraMaterial_OrdemDeCompra">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:18:25 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E1E2F777-8B4A-5E89-E9A8-0166984F72AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="540244C0-26FD-FEF6-DFB5-C1FB3631D22A" name="FK_OrdemDeCompraMaterial_Materia">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-16 17:18:25 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="73186B1A-FCFB-86EC-6FF8-9C3CE3FAF6CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

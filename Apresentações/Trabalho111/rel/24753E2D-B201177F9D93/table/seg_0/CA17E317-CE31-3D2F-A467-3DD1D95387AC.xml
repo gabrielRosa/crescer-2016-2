@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CA17E317-CE31-3D2F-A467-3DD1D95387AC" name="LocacaoEquipamento">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 13:18:40 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<ordsAlias>table_19</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDLocacaoEquipamento" id="84A70771-225E-756B-6DC2-D41A16117A34">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 13:19:41 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDEquipamento" id="05110614-8BEE-183B-6251-C42E0B1E7100">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 13:19:41 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="75BE8F8B-A818-CC38-2EB4-10D70CEA256A" referredColumn="1BE3259A-3460-6395-5F72-48C4B90F7999"/>
+</associations>
+</Column>
+<Column name="IDLocacao" id="B8225A46-A3B7-D849-4B8F-601AD5E34C13">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 13:20:00 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ECEC9411-8A84-014C-EE61-14C8AC18784E" referredColumn="E8186869-E4BE-A0AE-70E7-E894AE7A2343"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="27C8A42E-13EA-91C4-DDC0-F54FA1F09931" name="LocacaoEquipamento_PK">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 13:19:41 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="84A70771-225E-756B-6DC2-D41A16117A34"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9175C64E-331A-B58E-1938-5A9BDD89D1EF" name="FK_LocacaoEquipamento_Locacao">
+<createdBy>victor.eduardo</createdBy>
+<createdTime>2016-10-17 15:30:34 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B8225A46-A3B7-D849-4B8F-601AD5E34C13"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E5147139-250F-4C93-86D3-0F29A96745C6" name="FK_LocacaoEquipamento_Equipamento">
+<createdBy>victor.eduardo</createdBy>
+<createdTime>2016-10-17 15:31:15 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05110614-8BEE-183B-6251-C42E0B1E7100"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="24084274-C1A9-42E9-55C0-170D51ACBDD5" name="Venda">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:20:21 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<ordsAlias>table_14</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDVenda" id="05C6BC67-2080-4948-8BBE-54251BFC213C">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:26:49 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDCliente" id="88007C97-ED02-BCE2-1F05-F6FADEC1C66A">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:28:04 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B776EEA6-6214-F10E-7161-AF23EBE393F1" referredColumn="5E259D38-3296-3379-D925-DEC8E366B56E"/>
+</associations>
+</Column>
+<Column name="Data" id="C66B7502-3237-7800-2A92-F20B54B89222">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:26:58 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CupomFiscal" id="0954AC1F-07AD-C5DF-83A7-B6DF94E4580E">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:30:15 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LocalDoConsumo" id="2CB38456-5902-20C1-A30B-15F26A695619">
+<createdBy>victor.eduardo</createdBy>
+<createdTime>2016-10-17 15:21:23 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="07E71AC6-1F79-1CD5-F01F-7EE0DCF2BF8B" name="Venda_PK">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:34:55 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05C6BC67-2080-4948-8BBE-54251BFC213C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5CA59530-A4DE-0FA0-2F13-C37C9103678B" name="UK_Venda">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:37:05 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0954AC1F-07AD-C5DF-83A7-B6DF94E4580E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2EB68BB2-10FF-C9C4-4EBE-6437921BB9AC" name="FK_Venda_Cliente">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:36:14 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88007C97-ED02-BCE2-1F05-F6FADEC1C66A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

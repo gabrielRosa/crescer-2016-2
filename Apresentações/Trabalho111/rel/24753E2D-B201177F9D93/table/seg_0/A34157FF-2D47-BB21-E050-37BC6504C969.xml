@@ -1,0 +1,182 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A34157FF-2D47-BB21-E050-37BC6504C969" name="Locacao">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:42:10 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<ordsAlias>table_18</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDLocacao" id="E8186869-E4BE-A0AE-70E7-E894AE7A2343">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:42:44 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataInicio" id="4427DBD8-34BA-2C3C-0774-94C96610F90F">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:42:44 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataFim" id="08089507-5051-E8D7-28F9-FEA638A66467">
+<createdBy>victor.eduardo</createdBy>
+<createdTime>2016-10-17 15:34:12 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDCliente" id="3A878162-6CAA-1879-398E-25C952F7CB57">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:43:01 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4DB2B94A-5E90-4FF7-14BD-6AE053BE9FCA" referredColumn="5E259D38-3296-3379-D925-DEC8E366B56E"/>
+</associations>
+</Column>
+<Column name="IDFuncionario" id="10ED6CEC-06A4-3C2F-838B-BE14E76C38D6">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:43:11 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BE5AB7AE-87FE-C092-BD89-BB48A8026AB1" referredColumn="5E259D38-3296-3379-D925-DEC8E366B56E"/>
+</associations>
+</Column>
+<Column name="IDTipoCerveja" id="804F2416-1D2E-CD9A-C271-68CC298FAB7E">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:47:47 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0EFE9B4F-DE75-DD63-8644-1DCA932665F0" referredColumn="BDBC9F72-B03A-A676-F676-9292DE841632"/>
+</associations>
+</Column>
+<Column name="LitragemProduzida" id="71583C9A-BB23-BEEB-424D-84CEB35DBADE">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:46:59 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,10,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TempoFermentacao" id="00EB95FF-6088-76C4-B2B6-C59F0EFB59FD">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:48:12 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Situacao" id="9188A653-0E81-7563-EDB2-6DE6ACA36CAA">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 13:24:15 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ValorFinal" id="54783588-4A12-D5D6-9AF6-A0EE38BB0125">
+<createdBy>victor.eduardo</createdBy>
+<createdTime>2016-10-17 15:58:26 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Status" id="F737F6B5-13FD-07E4-9172-3F2BF69C1CD5">
+<createdBy>victor.eduardo</createdBy>
+<createdTime>2016-10-17 15:59:19 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F4A2E294-88A7-1313-24BD-AFCCAA855D1B" name="Locacao_PK">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:42:44 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E8186869-E4BE-A0AE-70E7-E894AE7A2343"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BB2EF694-4FE2-1B24-E5A0-0EABBD7446AD" name="FK_Locacao_Pessoa_Cliente">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:53:19 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3A878162-6CAA-1879-398E-25C952F7CB57"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0D147CE9-AB40-AB34-F475-388FCA2C61AF" name="FK_Locacao_TipoCerveja">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:53:52 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="804F2416-1D2E-CD9A-C271-68CC298FAB7E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A2A7D84-7214-BCFA-DCA9-68BE3FBF2707" name="FK_Locacao_Pessoa_Funcionario">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:17:17 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="10ED6CEC-06A4-3C2F-838B-BE14E76C38D6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

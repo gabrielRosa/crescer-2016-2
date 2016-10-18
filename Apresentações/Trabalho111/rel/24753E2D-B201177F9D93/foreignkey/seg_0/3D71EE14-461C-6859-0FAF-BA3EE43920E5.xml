@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3D71EE14-461C-6859-0FAF-BA3EE43920E5" containerWithKeyObject="D22004AD-7613-FB90-2968-FEF9789481ED" localFKIndex="45197AA1-43E3-A550-26ED-2CCECF045745" name="FK_PessoaJuridica_Pessoa">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 01:15:14 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4DF3AE84-08C5-4F8C-62BD-6105EE31D789</referredTableID>
+<keyObject>255F0F1B-1644-10B9-9438-A8749D55737A</keyObject>
+<referredKeyID>255F0F1B-1644-10B9-9438-A8749D55737A</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

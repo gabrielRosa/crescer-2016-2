@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F39B44E5-B9C6-1080-294A-D46A872FB423" name="TipoCerveja">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:48:56 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<ordsAlias>table_19</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDTipoCerveja" id="BDBC9F72-B03A-A676-F676-9292DE841632">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:49:35 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="E75B8A0F-C0B0-C839-0451-277DADB40ECA">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:49:51 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Situacao" id="2312044F-CBD5-08D6-2EC5-E80CE12A00B0">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 13:24:49 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3BBB5765-CC9F-1ACE-1DB5-8B7F06A52720" name="TipoCerveja_PK">
+<createdBy>Máicon Loebens</createdBy>
+<createdTime>2016-10-17 00:51:34 UTC</createdTime>
+<ownerDesignName>Trabalho111</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BDBC9F72-B03A-A676-F676-9292DE841632"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
