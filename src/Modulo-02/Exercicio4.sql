@@ -6,6 +6,8 @@ select count(1) as Total
 
 --2)
 
+
+
 select p.nome
 	from Produto as p 
 	Inner join ProdutoMaterial as m on p.IDProduto = m.IDProduto
@@ -15,46 +17,116 @@ create index IX_ProdutoMaterial_Material on ProdutoMaterial (IDMaterial);
 
 --3)
 
-select Nome, RazaoSocial
+select Nome
 	from cliente
 	where RazaoSocial like '%ltda%' or Nome  like '%ltda%'
 
 --4)
 
-insert into Produto (Nome, PrecoCusto, PrecoVenda, Situacao)
-values('Galocha Maragato', 36.67, 77.95, 'A')
+insert into Produto (Nome, 
+					 DataCadastro,
+					 PrecoCusto,
+					 PrecoVenda,
+					 Situacao)
+	values('Galocha Maragato',
+		    GETDATE(),	
+			35.67,
+			77.95,
+			'A');
 
 --5)
 
-Select * 
-from Produto as produto left Join PedidoItem as pim
-on produto.IDProduto = pim.IDProduto
-where pim.IDProduto is null
+Select p.Nome
+	from Produto as p
+	where p.IDProduto not in (Select IDProduto from PedidoItem)
 
 /*
---Melhor esse modelo
-Select IDProduto, Nome
-from Produto pro
-where not exists (Select 1
-				  From pedidoItem item
-				  where pro.IDProduto = item.IDProduto)
+Pensei em fazer com o inner join (como demonstrado abaixo) por�m n�o obtive sucesso.
+Select p.Nome
+	from Produto as p
+	Inner Join PedidoItem as pdi on p.IDProduto = pdi.IDProduto
+	where p.IDProduto <> pdi.IDProduto
 */
-
 
 --6)
 
-Select top 1 UF
-from Cidade as c 
-Inner join cliente as cl on c.IDCidade = cl.IDCidade
-group by uf
-order by count(1) desc
+Select top 1 with ties 
+	c1.UF
+	from Cidade as c1
+	Inner Join Cliente as ct on ct.IDCidade = c1.IDCidade
+	group by c1.UF
+	order by count(1) desc ;
 
-Select top 1 UF
-from Cidade as c 
-Inner join cliente as cl on c.IDCidade = cl.IDCidade
-group by uf
-order by count(1) asc
+Select top 1 with ties 
+	c1.UF
+	from Cidade as c1
+	Inner Join Cliente as ct on ct.IDCidade = c1.IDCidade
+	group by c1.UF
+	order by count(1) asc ;
 
 --7)
 
-Select IDPedido, DataEntrega, ValorPedido, Quantidade
+Select pedido.IDPedido, pedido.DataEntrega, pedido.ValorPedido, pim.Quantidade
+	from Pedido as pedido
+	Inner Join PedidoItem as pim on pedido.IDPedido = pim.IDPedido
+	Inner Join ProdutoMaterial as produtoMaterial on produtoMaterial.IDProduto = pim.IDProduto
+
+	where pedido.DataEntrega between convert(datetime, '01/10/2016', 103) and convert(datetime, '31/10/2016', 103) and 
+	isnull(produtoMaterial.Quantidade,0)=0
+
+Select pedido.IDCliente
+	from Pedido as pedido
+	Inner Join PedidoItem as pim on pedido.IDPedido = pim.IDPedido
+	Inner Join ProdutoMaterial as produtoMaterial on produtoMaterial.IDProduto = pim.IDProduto
+
+	where pedido.DataEntrega between convert(datetime, '01/10/2016', 103) and convert(datetime, '31/10/2016', 103) and 
+	isnull(produtoMaterial.Quantidade,0)=0
+
+
+
+--8)
+select * from ProdutoMaterial where IDProduto = 8001
+select * from Produto where nome = 'Galocha Maragato'
+
+Select Nome
+	from Produto as produto
+	Inner Join ProdutoMaterial as pm on produto.IDProduto = pm.IDProduto
+	where produto.IDProduto not in (pm.IDProduto)
+
+
+
+
+
+--9)
+
+Select top 1 with ties
+	Substring(Nome, 1, Charindex(' ', Nome) -1)
+	from Cliente
+	group by Nome 
+	order by count(distinct(Substring(Nome, 1, Charindex(' ', Nome) -1))) desc
+ 
+
+--10)
+
+begin tran
+	
+	 update produto set Situacao='F' 
+		from pedido as pedido
+			Inner Join PedidoItem as pim on pedido.IDPedido = pim.IDPedido
+			Inner Join ProdutoMaterial as produtoMaterial on produtoMaterial.IDProduto = pim.IDProduto
+			where isnull(produtoMaterial.Quantidade,0)=0
+	 update Produto set Situacao='Q'
+		  	from pedido as pedido
+			Inner Join PedidoItem as pim on pedido.IDPedido = pim.IDPedido
+			Inner Join ProdutoMaterial as produtoMaterial on produtoMaterial.IDProduto = pim.IDProduto
+			where pedido.DataEntrega not between convert(datetime, DATEADD(M, -60, GETDATE()), 103) and convert(datetime, GETDATE(), 103) and 
+			isnull(produtoMaterial.Quantidade,0)=0
+	 update Produto set Situacao='A'
+		  	from pedido as pedido
+			Inner Join PedidoItem as pim on pedido.IDPedido = pim.IDPedido
+			Inner Join ProdutoMaterial as produtoMaterial on produtoMaterial.IDProduto = pim.IDProduto	 
+			where not pedido.DataEntrega not between convert(datetime, DATEADD(M, -60, GETDATE()), 103) and convert(datetime, GETDATE(), 103) and 
+			isnull(produtoMaterial.Quantidade,0)=0 or isnull(produtoMaterial.Quantidade,0)=0
+		  
+commit
+
