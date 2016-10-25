@@ -1,18 +1,29 @@
-//3
-function find(array, func){
-  if(typeof func !=="function"){
-    return null;
-  }
-  var ret =[];
-  var cont=0;
-  for(var i =0, len = array.length;i<len;i++){
-    if(func(array[i])){
-      ret[cont++]=array[i];
+/*function find(array, fnFiltro){
+  let ret =[];
+  if(typeof fnFiltro !=="function"){
+    for(let i =0, len = array.length;i<len;i++){
+      if(fnFiltro(array[i])){
+        ret.push(array[i]);
+      }
     }
   }
   return ret;
 }
+*/
+function find(array, fnFiltro) {
 
+  let resultado = [];
+  if (typeof fnFiltro === 'function') {
+    for (let i = 0; i < array.length; i++) {
+      let encontrou = fnFiltro(array[i]);
+      if (encontrou) {
+        resultado.push(array[i]);
+      }
+    }
+  }
+  return resultado;
+
+}
 //teste 1
 
 var maiorIgualADois = function(elemento) {
