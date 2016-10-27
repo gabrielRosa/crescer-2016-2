@@ -23,7 +23,7 @@ describe('foraDaGuerraCivil()', function() {
     let resultado = herois5.mediaPaginas();
     expect(resultado).toEqual(37.03125);
   });
-
+/*
   it(' retorna o objeto comic mais caro entre todos personagens', function() {
     let dadosHerois = [
       { name: 'Debug Destruidor', comics: { itens: { prices: {price : 100 }} } },
@@ -34,5 +34,5 @@ describe('foraDaGuerraCivil()', function() {
     let resultado = herois5.maisPublicado();
     expect(resultado).toEqual(  { name: 'Tipagem Maravilhosa', comics:  { itens:{ prices:{price : 100,2000}} } });
   });
-
+*/
 });

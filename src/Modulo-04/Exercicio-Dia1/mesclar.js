@@ -1,11 +1,14 @@
-function mesclar(objeto1, objeto2){
-    for (var k in objeto1){
-      for (var l in objeto2){
-        if(objeto1[l] === objeto2[l])
-        objeto1[l] = objeto1[l] + objeto2[l];
-      }
+var mesclar = function(obj1, obj2, recursiva = false) {
+
+  for (var prop in obj2) {
+    if (recursiva && typeof obj2[prop] === 'object') {
+      mesclar(obj1[prop], obj2[prop], recursiva);
+    } else {
+      obj1[prop] = obj2[prop];
     }
   }
+
+}
 //teste 1
 var objeto1 = {
   abacaxi: 0,

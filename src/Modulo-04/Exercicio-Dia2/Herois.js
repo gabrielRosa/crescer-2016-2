@@ -2,7 +2,7 @@ class Herois{
   constructor(array){
     this.array = array;
   }
-
+/*
  foraDaGuerraCivil(){
    let ret = new Array();
    for(let i =0;i<this.array.length;i++){
@@ -22,7 +22,17 @@ class Herois{
     }
     return ret;
   }
+  */
 
+  foraDaGuerraCivil(){
+    function contem(subTexto){
+       return this.indeof("Civil War") !== -1;
+    }
+     return this.array.filter(array => array.events.items.filter(e => e.name.contem()).length ===0);
+  }
+
+
+/*
   maisPublicado(){
     let ret;
     let objs = this.array[0];
@@ -41,7 +51,9 @@ class Herois{
     }
     return ret;
   }
+  */
 
+/*
   mediaPaginas(){
     let pageCount = 0;
     let count =0;
@@ -57,7 +69,9 @@ class Herois{
     }
     return pageCount/count;
   }
+  */
 
+/*
   seriesPorLongevidade(){
     //bug para ordenar
     let ret = new Array();
@@ -78,7 +92,9 @@ class Herois{
     return ret;
     //bug para ordenar
   }
+  */
 
+/*
   comicMaisCara(){
     let price = 0;
     let ret;
@@ -100,11 +116,5 @@ class Herois{
     }
     return ret;
   }
-
-
-
-
-
-
-
+*/
 }
