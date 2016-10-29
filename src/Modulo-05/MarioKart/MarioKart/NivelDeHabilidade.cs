@@ -1,0 +1,1 @@
+﻿public enum NivelDeHabilidade { Noob, Mediano, Profissional };
