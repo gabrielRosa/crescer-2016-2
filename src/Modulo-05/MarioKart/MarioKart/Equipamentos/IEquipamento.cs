@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MarioKart.Equipamentos
 {
-    interface IEquipamento
+    public interface IEquipamento
     {
         short BonusEquipameto { get; }
     }

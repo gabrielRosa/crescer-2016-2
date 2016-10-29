@@ -31,8 +31,13 @@ namespace Karts
             }
         }
 
+        public void AdicionarEquipamento(IEquipamento equipamento)
+        {
+            Equipamentos.Add(equipamento);
+        }
+
         //calcula a velocidade de acordo com as especificações
-        private int CalcularVelocidade()
+        protected virtual int CalcularVelocidade()
         {
             int BonusDeHabilidadeDoCorredor = 0;
             switch (Corredor.NivelDeHabilidade)
@@ -44,7 +49,7 @@ namespace Karts
                     BonusDeHabilidadeDoCorredor = 5;
                     break;
                 case NivelDeHabilidade.Profissional:
-                    BonusDeHabilidadeDoCorredor = 6;
+                    BonusDeHabilidadeDoCorredor = 6 + Equipamentos.Count;
                     break;
             }
             int BonusEquipameto = 0;
@@ -52,7 +57,7 @@ namespace Karts
             {
                 BonusEquipameto += obj.BonusEquipameto;
             }
-            return 3 + BonusEquipameto + (BonusDeHabilidadeDoCorredor + Equipamentos.Count);
+            return 3 + BonusEquipameto + BonusDeHabilidadeDoCorredor;
         }
     }
 }

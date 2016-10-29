@@ -43,8 +43,11 @@
     <Compile Include="Corredor.cs" />
     <Compile Include="Equipamentos\IEquipamento.cs" />
     <Compile Include="Kart.cs" />
+    <Compile Include="MotorABaseDeLava.cs" />
     <Compile Include="NivelDeHabilidade.cs" />
+    <Compile Include="PneusDeCouroDeDragao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sonnar.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
