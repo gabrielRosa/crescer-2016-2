@@ -8,9 +8,9 @@ using MarioKart.Equipamentos;
 
 namespace Karts
 {
-    public class SkyFusion : Kart, IEquipamento
+    public class SKYFUSION : Kart, IEquipamento
     {
-        public SkyFusion(Corredor corredor) : base(corredor)
+        public SKYFUSION(Corredor corredor) : base(corredor)
         {
         }
 
