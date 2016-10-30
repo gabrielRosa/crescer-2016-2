@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Corredor.cs" />
+    <Compile Include="Dinam.cs" />
     <Compile Include="Equipamentos\IEquipamento.cs" />
     <Compile Include="Kart.cs" />
+    <Compile Include="Light.cs" />
     <Compile Include="MotorABaseDeLava.cs" />
     <Compile Include="NivelDeHabilidade.cs" />
     <Compile Include="PneusDeCouroDeDragao.cs" />

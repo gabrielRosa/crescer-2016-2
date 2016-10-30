@@ -15,7 +15,7 @@ namespace Karts
 
         protected override int CalcularVelocidade()
         {
-            bool temItem = base.Equipamentos.Count() > 0;
+            bool temItem = Equipamentos.Count > 0;
             if (temItem)
             {
                 return base.CalcularVelocidade() + 2;
