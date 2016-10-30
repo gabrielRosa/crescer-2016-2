@@ -50,6 +50,7 @@
     <Compile Include="NivelDeHabilidade.cs" />
     <Compile Include="PneusDeCouroDeDragao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SKYFUSION.cs" />
     <Compile Include="Sonnar.cs" />
     <Compile Include="UltraPack.cs" />
   </ItemGroup>
