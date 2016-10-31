@@ -104,7 +104,7 @@ namespace Repositorio
 
         public IList<Funcionario> BuscarPorTurno(params TurnoTrabalho[] turnos)
         {
-            return null;
+            throw new NotImplementedException();
         }
 
         public IList<Funcionario> FiltrarPorIdadeAproximada(int idade)
@@ -114,7 +114,7 @@ namespace Repositorio
 
         public double SalarioMedio(TurnoTrabalho? turno = null)
         {
-            return 0.0;//this.Funcionarios.Select(funcionario =>funcionario.TurnoTrabalho.Equals(turno)).Where(s => s+=)
+            throw new NotImplementedException();
 
         }
 
