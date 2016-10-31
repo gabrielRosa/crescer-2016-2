@@ -104,7 +104,16 @@ namespace Repositorio
 
         public IList<Funcionario> BuscarPorTurno(params TurnoTrabalho[] turnos)
         {
-            throw new NotImplementedException();
+            if(turnos.Length == 0)
+            {
+                return this.Funcionarios.Select(funcionario => funcionario).ToList();
+            }
+            IList<Funcionario> novaLista = new List<Funcionario>();
+            foreach(var turno in turnos)
+            {
+                novaLista.Union(this.Funcionarios.Where(funcionario => funcionario.TurnoTrabalho.Equals(turno)).ToList());
+            }
+            return novaLista;
         }
 
         public IList<Funcionario> FiltrarPorIdadeAproximada(int idade)
