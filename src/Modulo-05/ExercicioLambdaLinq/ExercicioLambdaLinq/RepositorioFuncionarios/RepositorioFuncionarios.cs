@@ -85,7 +85,8 @@ namespace Repositorio
 
         public IList<Funcionario> BuscarPorCargo(Cargo cargo)
         {
-            return this.Funcionarios.Where(funcionario => funcionario.Cargo.Equals(cargo)).OrderBy(funcionario =>funcionario.Nome).ToList();
+            return this.Funcionarios.Where(funcionario => funcionario.Cargo.Equals(cargo))
+                .ToList();
         }
 
         public IList<Funcionario> OrdenadosPorCargo()
@@ -123,8 +124,16 @@ namespace Repositorio
 
         public double SalarioMedio(TurnoTrabalho? turno = null)
         {
-            throw new NotImplementedException();
-
+            double salario = 0;
+            int cont = Funcionarios.Count;
+            if (turno == null)
+            {
+                this.Funcionarios.Select(funcionario => salario += funcionario.Cargo.Salario);
+                return salario / cont;
+            }
+            List<Funcionario> lista = this.Funcionarios.Where(funcionario => funcionario.TurnoTrabalho.Equals(turno)).ToList();
+            lista.Select(l => salario += l.Cargo.Salario);
+            return salario / cont;
         }
 
         public IList<Funcionario> AniversariantesDoMes()
@@ -136,7 +145,12 @@ namespace Repositorio
 
         public IList<dynamic> BuscaRapida()
         {
-            throw new NotImplementedException();
+            return this.Funcionarios
+                .Select(f => (dynamic)new
+                {
+                    NomeFuncionario = f.Nome,
+                    TituloCargo = f.Cargo.Titulo
+                }).ToList();
         }
 
         public IList<dynamic> QuantidadeFuncionariosPorTurno()
