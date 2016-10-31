@@ -9,7 +9,7 @@ namespace MarioKart
 {
     public class PneusDeCouroDeDragao : IEquipamento
     {
-        public short BonusEquipameto
+        public int BonusEquipameto
         {
             get
             {

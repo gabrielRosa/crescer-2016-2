@@ -7,57 +7,57 @@ using MarioKart;
 namespace MarioKartTestes
 {
     [TestClass]
-    public class KartTeste
+    public class DinamTeste
     {
         [TestMethod]
         public void CalcularVelocidaParaProfissionalSemEquipamento()
         {
             Corredor corredor = new Corredor("Gabriel", NivelDeHabilidade.Profissional);
-            Kart meuKart = new Kart(corredor);
-            Assert.AreEqual(9, meuKart.Velocidade);
+            Dinam meuKart = new Dinam(corredor);
+            Assert.AreEqual(15, meuKart.Velocidade);
         }
 
         [TestMethod]
         public void CalcularVelocidaParaNoobSemEquipamento()
         {
             Corredor corredor = new Corredor("Gabriel", NivelDeHabilidade.Noob);
-            Kart meuKart = new Kart(corredor);
-            Assert.AreEqual(6, meuKart.Velocidade);
+            Dinam meuKart = new Dinam(corredor);
+            Assert.AreEqual(9, meuKart.Velocidade);
         }
 
         [TestMethod]
         public void CalcularVelocidaParaMedianoSemEquipamento()
         {
             Corredor corredor = new Corredor("Gabriel", NivelDeHabilidade.Mediano);
-            Kart meuKart = new Kart(corredor);
-            Assert.AreEqual(8, meuKart.Velocidade);
+            Dinam meuKart = new Dinam(corredor);
+            Assert.AreEqual(13, meuKart.Velocidade);
         }
 
         [TestMethod]
         public void CalcularVelocidaParaYoshiMedianoComPneusDeCouroDeDragao()
         {
             Corredor corredor = new Corredor("Yoshi", NivelDeHabilidade.Mediano);
-            Kart meuKart = new Kart(corredor);
+            Dinam meuKart = new Dinam(corredor);
             meuKart.AdicionarEquipamento(new PneusDeCouroDeDragao());
-            Assert.AreEqual(10, meuKart.Velocidade);
+            Assert.AreEqual(15, meuKart.Velocidade);
         }
 
         [TestMethod]
         public void CalcularVelocidaParaYoshiMedianoComMotorABaseDeLava()
         {
             Corredor corredor = new Corredor("Yoshi", NivelDeHabilidade.Mediano);
-            Kart meuKart = new Kart(corredor);
+            Dinam meuKart = new Dinam(corredor);
             meuKart.AdicionarEquipamento(new MotorABaseDeLava());
-            Assert.AreEqual(11, meuKart.Velocidade);
+            Assert.AreEqual(16, meuKart.Velocidade);
         }
 
         [TestMethod]
         public void CalcularVelocidaParaYoshiProfissionalComMotorABaseDeLava()
         {
             Corredor corredor = new Corredor("Yoshi", NivelDeHabilidade.Profissional);
-            Kart meuKart = new Kart(corredor);
+            Dinam meuKart = new Dinam(corredor);
             meuKart.AdicionarEquipamento(new MotorABaseDeLava());
-            Assert.AreEqual(13, meuKart.Velocidade);
+            Assert.AreEqual(20, meuKart.Velocidade);
         }
     }
 }

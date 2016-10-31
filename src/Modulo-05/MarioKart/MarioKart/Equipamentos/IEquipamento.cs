@@ -8,6 +8,6 @@ namespace MarioKart.Equipamentos
 {
     public interface IEquipamento
     {
-        short BonusEquipameto { get; }
+        int BonusEquipameto { get; }
     }
 }

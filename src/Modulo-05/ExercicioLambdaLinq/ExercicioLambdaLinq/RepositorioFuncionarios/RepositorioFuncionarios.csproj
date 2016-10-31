@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F5D0CA1A-956A-415B-B9F1-8A83386C429F}</ProjectGuid>
+    <ProjectGuid>{0E4E8941-44E9-4EB2-9E49-F07001C65309}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MarioKart</RootNamespace>
-    <AssemblyName>MarioKart</AssemblyName>
+    <RootNamespace>RepositorioFuncionarios</RootNamespace>
+    <AssemblyName>RepositorioFuncionarios</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -29,7 +32,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,19 +50,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Corredor.cs" />
-    <Compile Include="Dinam.cs" />
-    <Compile Include="Equipamentos\IEquipamento.cs" />
-    <Compile Include="FogueteDePlutonio.cs" />
-    <Compile Include="Kart.cs" />
-    <Compile Include="Light.cs" />
-    <Compile Include="MotorABaseDeLava.cs" />
-    <Compile Include="NivelDeHabilidade.cs" />
-    <Compile Include="PneusDeCouroDeDragao.cs" />
+    <Compile Include="Cargo.cs" />
+    <Compile Include="Funcionario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SKYFUSION.cs" />
-    <Compile Include="Sonnar.cs" />
-    <Compile Include="UltraPack.cs" />
+    <Compile Include="TurnoTrabalho.cs" />
+    <Compile Include="RepositorioFuncionarios.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

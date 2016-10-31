@@ -39,6 +39,17 @@ namespace Karts
         //calcula a velocidade de acordo com as especificações
         protected virtual int CalcularVelocidade()
         {
+            int BonusDeHabilidadeDoCorredor = this.CalculaBonusCorredor();
+            int BonusEquipameto = 0;
+            foreach (IEquipamento obj in Equipamentos)
+            {
+                BonusEquipameto += obj.BonusEquipameto;
+            }
+            return 3 + BonusEquipameto + BonusDeHabilidadeDoCorredor;
+        }
+
+        protected virtual int CalculaBonusCorredor()
+        {
             int BonusDeHabilidadeDoCorredor = 0;
             switch (Corredor.NivelDeHabilidade)
             {
@@ -52,12 +63,7 @@ namespace Karts
                     BonusDeHabilidadeDoCorredor = 6 + Equipamentos.Count;
                     break;
             }
-            int BonusEquipameto = 0;
-            foreach (IEquipamento obj in Equipamentos)
-            {
-                BonusEquipameto += obj.BonusEquipameto;
-            }
-            return 3 + BonusEquipameto + BonusDeHabilidadeDoCorredor;
+            return BonusDeHabilidadeDoCorredor;
         }
     }
 }

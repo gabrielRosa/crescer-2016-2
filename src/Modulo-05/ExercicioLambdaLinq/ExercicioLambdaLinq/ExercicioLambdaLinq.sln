@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositorioFuncionarios", "RepositorioFuncionarios\RepositorioFuncionarios.csproj", "{0E4E8941-44E9-4EB2-9E49-F07001C65309}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{FDE54045-583B-4A83-8CEC-FD18E71CFD62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E4E8941-44E9-4EB2-9E49-F07001C65309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E4E8941-44E9-4EB2-9E49-F07001C65309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E4E8941-44E9-4EB2-9E49-F07001C65309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E4E8941-44E9-4EB2-9E49-F07001C65309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDE54045-583B-4A83-8CEC-FD18E71CFD62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDE54045-583B-4A83-8CEC-FD18E71CFD62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDE54045-583B-4A83-8CEC-FD18E71CFD62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDE54045-583B-4A83-8CEC-FD18E71CFD62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
