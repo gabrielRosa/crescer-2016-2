@@ -38,5 +38,23 @@ namespace StreetFighter.Web.Controllers
             fichaTecnica.GolpesEspeciaisFamosos = "Electric Thunder, Rolling Attack.";
             return View(fichaTecnica);
         }
-    }
+
+        public ActionResult Sobre()
+        {
+            SobreModel sobre = new SobreModel();
+            sobre.PrimeiraAparicao = "Meados de 1996.";
+            sobre.Nascimento = DateTime.Parse();
+            sobre.Altura = 165;
+            sobre.Peso = 61;
+            sobre.Medidas = "B198, C120, Q172.";
+            sobre.TipoSanguineo = 'A';
+            sobre.HabilidadesEspeciais = "Programar, jogar e pedalar.";
+            sobre.Gosta = "Nutella.";
+            sobre.Desgosta = "Frio.";
+            sobre.EstiloDeLuta = "Null.";
+            sobre.Origem = "Brasil.";
+            sobre.UmaFalaDeVitoria = "Ver um código sem bug é o paraíso!";
+            sobre.GolpesEspeciaisFamosos = "Null.";
+            return View(sobre)
+        }
 }
