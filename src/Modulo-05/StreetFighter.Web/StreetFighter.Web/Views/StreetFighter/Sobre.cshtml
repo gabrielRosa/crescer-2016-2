@@ -1,0 +1,34 @@
+﻿@model StreetFighter.Web.Models.SobreModel
+
+@{
+    ViewBag.Title = "Sobre";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="conteudo">
+    <h2>Mim</h2>
+    <table>
+        <tr>
+            <td>
+                <img src="http://static1.1.sqspcdn.com/static/f/280482/2136982/1226558953450/dhalsim_teleport.gif?token=QaesZaWSJMuahSmVV4VwY%2F%2F3w1g%3D alt="Blanka">
+            </td>
+            <td>
+                <strong>Primeira aparição:</strong> @model.PrimeriaAparicao <br>
+                <strong>Nascimento:</strong> @model.Nascimento <br>
+                <strong>Altura:</strong> @model.Altura <br>
+                <strong>Peso:</strong> @model.Peso <br>
+                <strong>Medidas:</strong> @model.Medidas <br>
+                <strong>Tipo sanguíneo:</strong> @model.TipoSanguineo < br >
+                <strong>Habilidades especiais:</strong> @model.HabilidadesEspeciais <br>
+                <strong>Gosta:</strong> @model.Gosta <br>
+                <strong>Desgosta:</strong> @model.Desgosta <br>
+                <strong>Estilo de luta:</strong> @model.EstiloDeLuta <br>
+                <strong>Origem:</strong> @model.Origem <br>
+                <strong>Uma fala de vitória:</strong> @model.UmaFalaDeVitoria <br>
+                <strong>Golpes especiais famosos:</strong> @model.GolpesEspeciaisFamosos <br>
+            </td>
+        </tr>
+    </table>
+</div>
+
+

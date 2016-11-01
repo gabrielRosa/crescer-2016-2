@@ -18,11 +18,43 @@ namespace StreetFighter.Web.Controllers
         public ActionResult FichaTecnica()
         {
             FichaTecnicaModel fichaTecnica = new FichaTecnicaModel();
-            fichaTecnica.PrimeiraAparicao = "Street Fighter II The World Warrior (1991)";
-            fichaTecnica.Nascimento = DateTime.Parse("ads");
+            fichaTecnica.PrimeiraAparicao = "Street Fighter II The World Warrior (1991).";
+            fichaTecnica.Nascimento = DateTime.Parse();
             fichaTecnica.Altura = 192;
             fichaTecnica.Peso = 96;
+            fichaTecnica.Medidas = "B198, C120, Q172.";
+            fichaTecnica.TipoSanguineo = 'B';
+            fichaTecnica.HabilidadesEspeciais = "Caçar, Eletricidade.";
+            fichaTecnica.Gosta = "Frutas tropicais, Pirarucu, Sua mãe.";
+            fichaTecnica.Desgosta = "Army ants (espécie de formiga).";
+            fichaTecnica.EstiloDeLuta = "Luta Selvagem autodidata (Army Ants) / Capoeira.";
+            fichaTecnica.Origem = "Brasil (lugar de nascença é provável como sendo Tailândia).";
+            fichaTecnica.UmaFalaDeVitoria = "Ver você em ação é uma piada!";
+            fichaTecnica.SSF2Nickname = "A selvagem criança da natureza.";
+            fichaTecnica.SFA3Nickname = "A animal pessoa amazônica.";
+            fichaTecnica.SF4Nickname = "Guerreiro da selva";
+            fichaTecnica.SFA3Stage = "Ramificação do Rio Madeira - pantano, Brasil (ramificação do rio Madeira: talvez possa ser Mato Grosso, ou Tocantins?).";
+            fichaTecnica.SF2Stage = "Bacia do rio Amazonas (Brasil)";
+            fichaTecnica.GolpesEspeciaisFamosos = "Electric Thunder, Rolling Attack.";
             return View(fichaTecnica);
         }
-    }
+
+        public ActionResult Sobre()
+        {
+            SobreModel sobre = new SobreModel();
+            sobre.PrimeiraAparicao = "Meados de 1996.";
+            sobre.Nascimento = DateTime.Parse();
+            sobre.Altura = 165;
+            sobre.Peso = 61;
+            sobre.Medidas = "B198, C120, Q172.";
+            sobre.TipoSanguineo = 'A';
+            sobre.HabilidadesEspeciais = "Programar, jogar e pedalar.";
+            sobre.Gosta = "Nutella.";
+            sobre.Desgosta = "Frio.";
+            sobre.EstiloDeLuta = "Null.";
+            sobre.Origem = "Brasil.";
+            sobre.UmaFalaDeVitoria = "Ver um código sem bug é o paraíso!";
+            sobre.GolpesEspeciaisFamosos = "Null.";
+            return View(sobre)
+        }
 }

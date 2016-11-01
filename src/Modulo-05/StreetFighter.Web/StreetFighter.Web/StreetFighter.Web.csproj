@@ -129,6 +129,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\FichaTecnicaModel.cs" />
+    <Compile Include="Models\SobreModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +137,7 @@
     <Content Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\StreetFighter\Index.cshtml" />
+    <Content Include="Views\StreetFighter\Sobre.cshtml" />
     <Content Include="Views\StreetFighter\FichaTecnica.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

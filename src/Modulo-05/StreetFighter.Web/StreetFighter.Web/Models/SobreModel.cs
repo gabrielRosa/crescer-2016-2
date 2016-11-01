@@ -5,7 +5,7 @@ using System.Web;
 
 namespace StreetFighter.Web.Models
 {
-    public class FichaTecnicaModel
+    public class SobreModel
     {
         public string PrimeiraAparicao { get; set; }
         public DateTime Nascimento { get; set; }
@@ -19,11 +19,6 @@ namespace StreetFighter.Web.Models
         public string EstiloDeLuta { get; set; }
         public string Origem { get; set; }
         public string UmaFalaDeVitoria { get; set; }
-        public string SSF2Nickname { get; set; }
-        public string SFA3Nickname { get; set; }
-        public string SF4Nickname { get; set;}
-        public string SFA3Stage { get; set; }
-        public string SF2Stage { get; set; }
         public string GolpesEspeciaisFamosos { get; set; }
     }
 }
