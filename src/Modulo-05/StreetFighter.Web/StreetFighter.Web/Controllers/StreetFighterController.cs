@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using StreetFighter.Web.Models;
+using System.Globalization;
 
 namespace StreetFighter.Web.Controllers
 {
@@ -19,7 +20,7 @@ namespace StreetFighter.Web.Controllers
         {
             FichaTecnicaModel fichaTecnica = new FichaTecnicaModel();
             fichaTecnica.PrimeiraAparicao = "Street Fighter II The World Warrior (1991).";
-            fichaTecnica.Nascimento = DateTime.Parse();
+            fichaTecnica.Nascimento = DateTime.Parse("12/02/1966", new CultureInfo("pt-BR"));
             fichaTecnica.Altura = 192;
             fichaTecnica.Peso = 96;
             fichaTecnica.Medidas = "B198, C120, Q172.";
@@ -43,7 +44,7 @@ namespace StreetFighter.Web.Controllers
         {
             SobreModel sobre = new SobreModel();
             sobre.PrimeiraAparicao = "Meados de 1996.";
-            sobre.Nascimento = DateTime.Parse();
+            sobre.Nascimento = DateTime.Parse("23/02/1997", new CultureInfo("pt-BR"));
             sobre.Altura = 165;
             sobre.Peso = 61;
             sobre.Medidas = "B198, C120, Q172.";
@@ -55,6 +56,25 @@ namespace StreetFighter.Web.Controllers
             sobre.Origem = "Brasil.";
             sobre.UmaFalaDeVitoria = "Ver um código sem bug é o paraíso!";
             sobre.GolpesEspeciaisFamosos = "Null.";
-            return View(sobre)
+            return View(sobre);
         }
+
+        public ActionResult Cadastro()
+        {
+            PopularPais();
+            return View();
+        }
+
+        private void PopularPais()
+        {
+            ViewData["ListaPaises"] = new List<SelectListItem>()
+            {
+                new SelectListItem() { Value = "BR", Text = "Brasil" },
+                new SelectListItem() { Value = "USA", Text = "Estados Unidos" },
+                new SelectListItem() { Value = "CHI", Text = "Chile" },
+                new SelectListItem() { Value = "GER", Text = "Alemanha" },
+                new SelectListItem() { Value = "GRE", Text = "Grecia" }
+            };
+        }
+    }
 }
