@@ -11,8 +11,8 @@ namespace StreetFighter.Web.Models
         public DateTime Nascimento { get; set; }
         public double Altura { get; set; }
         public double Peso { get; set; }
-        public double Medidas { get; set; }
-        public string TipoSanguineo { get; set; }
+        public string Medidas { get; set; }
+        public char TipoSanguineo { get; set; }
         public string HabilidadesEspeciais { get; set; }
         public string Gosta { get; set; }
         public string Desgosta { get; set; }
