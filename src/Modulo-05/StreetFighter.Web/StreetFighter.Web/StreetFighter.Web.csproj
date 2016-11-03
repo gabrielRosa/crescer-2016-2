@@ -168,6 +168,7 @@
     <Content Include="Views\StreetFighter\Sobre.cshtml" />
     <Content Include="Views\StreetFighter\FichaTecnica.cshtml" />
     <Content Include="Views\StreetFighter\Cadastro.cshtml" />
+    <Content Include="Views\StreetFighter\ListaDePersonagens.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -177,6 +178,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StreetFighter.Aplicativo\StreetFighter.Aplicativo.csproj">
+      <Project>{fa040359-9141-4458-978b-500243a2cb80}</Project>
+      <Name>StreetFighter.Aplicativo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StreetFighter.Dominio\StreetFighter.Dominio.csproj">
+      <Project>{cdc7b11d-5c35-4c2c-b782-2d2445d932ef}</Project>
+      <Name>StreetFighter.Dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
