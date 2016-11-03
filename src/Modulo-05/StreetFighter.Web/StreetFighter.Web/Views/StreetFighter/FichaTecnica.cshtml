@@ -1,4 +1,4 @@
-﻿@model StreetFighter.Web.Models.FichaTecnicaModel
+﻿@model StreetFighter.Web.Models.CadastroModel
 @{
     ViewBag.Title = "FichaTecnica";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,11 +9,11 @@
     <table>
         <tr>
             <td>
-                <img src= @Model.Imagem  alt="Blanka">
+                <img src= @Model.Imagem  alt=@Model.Nome>
             </td>
             <td>
                 <!--<strong>Primeira aparição:</strong> //Model.PrimeiraAparicao <br>-->
-                <strong>Nascimento:</strong> @Model.Nascimento.ToLongDateString()<br>
+                <strong>Nascimento:</strong> @Model.Nascimento.ToString("dd' de 'MMMM' de 'yyyy")<br>
                 <strong>Altura:</strong> @Model.Altura cm<br>
                 <strong>Peso:</strong> @Model.Peso Kg<br>
                 <!--<strong>Medidas:</strong> //Model.Medidas<br>-->
@@ -22,14 +22,14 @@
                 <!--<strong>Gosta:</strong> //Model.Gosta<br>-->
                 <!--<strong>Desgosta:</strong> //Model.Desgosta <br>-->
                 <!--<strong>Estilo de luta:</strong> //Model.EstiloDeLuta <br>-->
-                <strong>Origem:</strong> @Model.Origem<br>
+                <strong>Origem:</strong> @Model.AbreviacaoPais<br>
                 <!--<strong>Uma fala de vitória:</strong> //Model.UmaFalaDeVitoria<br>-->
                 <!--<strong>SSF2 nickname:</strong> //Model.SSF2Nickname<br>-->
                 <!--<strong>SFA3 nickname:</strong>  //Model.SFA3Nickname<br>-->
                 <!--<strong>SF4 nickname:</strong> //Model.SF4Nickname<br>-->
                 <!--<strong>SFA3 stage:</strong> //Model.SFA3Stage<br>-->
                 <!--<strong>SF2 stage:</strong> //Model.SF2Stage<br>-->
-                <strong>Golpes especiais famosos:</strong> @Model.GolpesEspeciaisFamosos<br>
+                <strong>Golpes especiais famosos:</strong> @Model.GolpesEspeciais<br>
                 <strong>Personagem Oculto:</strong> @(Model.PersonagemOculto? "Sim": "Não")<br>
             </td>
         </tr>

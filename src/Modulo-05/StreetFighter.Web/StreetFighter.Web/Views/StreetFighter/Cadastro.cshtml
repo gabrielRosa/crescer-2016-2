@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="conteudo">
-    @using (Html.BeginForm("Salvar", "Cadastro", FormMethod.Post, new { @class = "form-horizontal" }))
+    @using (Html.BeginForm("Salvar", "StreetFighter", FormMethod.Post, new { @class = "form-horizontal" }))
     {
         <div class="form-group">
             @Html.LabelFor(model => model.Imagem, new { @class = "col-sm-2 control-label" })
@@ -87,3 +87,4 @@
 <script src="~/Scripts/jquery-1.9.1.js"></script>
 <script src="~/Scripts/jquery.validate.js"></script>
 <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script src="~/Scripts/formato-brasileiro.js"></script>

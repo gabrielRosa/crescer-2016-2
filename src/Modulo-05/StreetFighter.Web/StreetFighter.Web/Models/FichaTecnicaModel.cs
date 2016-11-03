@@ -2,6 +2,7 @@
 
 namespace StreetFighter.Web.Models
 {
+    [Obsolete]
     public class FichaTecnicaModel
     {
         //public string PrimeiraAparicao { get;  set; }

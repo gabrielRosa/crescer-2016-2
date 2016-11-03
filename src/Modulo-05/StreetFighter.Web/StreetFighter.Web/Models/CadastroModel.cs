@@ -15,7 +15,7 @@ namespace StreetFighter.Web.Models
         public string Nome { get; set; }
 
         [DisplayName("Nascimento")]
-        public string Nascimento { get; set; }
+        public DateTime Nascimento { get; set; }
 
         [DisplayName("Altura")]
         public int Altura { get; set; }
