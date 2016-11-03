@@ -19,24 +19,27 @@ namespace StreetFighter.Web.Controllers
         public ActionResult FichaTecnica()
         {
             FichaTecnicaModel fichaTecnica = new FichaTecnicaModel();
-            fichaTecnica.PrimeiraAparicao = "Street Fighter II The World Warrior (1991).";
+            //fichaTecnica.PrimeiraAparicao = "Street Fighter II The World Warrior (1991).";
             fichaTecnica.Nascimento = DateTime.Parse("12/02/1966", new CultureInfo("pt-BR"));
+            fichaTecnica.Nome = "Blanka";
+            fichaTecnica.Imagem = @"~/Content/Imagens/blanka.png";
             fichaTecnica.Altura = 192;
             fichaTecnica.Peso = 96;
-            fichaTecnica.Medidas = "B198, C120, Q172.";
-            fichaTecnica.TipoSanguineo = 'B';
-            fichaTecnica.HabilidadesEspeciais = "Caçar, Eletricidade.";
-            fichaTecnica.Gosta = "Frutas tropicais, Pirarucu, Sua mãe.";
-            fichaTecnica.Desgosta = "Army ants (espécie de formiga).";
-            fichaTecnica.EstiloDeLuta = "Luta Selvagem autodidata (Army Ants) / Capoeira.";
+            //fichaTecnica.Medidas = "B198, C120, Q172.";
+            //fichaTecnica.TipoSanguineo = 'B';
+            //fichaTecnica.HabilidadesEspeciais = "Caçar, Eletricidade.";
+            //fichaTecnica.Gosta = "Frutas tropicais, Pirarucu, Sua mãe.";
+            //fichaTecnica.Desgosta = "Army ants (espécie de formiga).";
+            //fichaTecnica.EstiloDeLuta = "Luta Selvagem autodidata (Army Ants) / Capoeira.";
             fichaTecnica.Origem = "Brasil (lugar de nascença é provável como sendo Tailândia).";
-            fichaTecnica.UmaFalaDeVitoria = "Ver você em ação é uma piada!";
-            fichaTecnica.SSF2Nickname = "A selvagem criança da natureza.";
-            fichaTecnica.SFA3Nickname = "A animal pessoa amazônica.";
-            fichaTecnica.SF4Nickname = "Guerreiro da selva";
-            fichaTecnica.SFA3Stage = "Ramificação do Rio Madeira - pantano, Brasil (ramificação do rio Madeira: talvez possa ser Mato Grosso, ou Tocantins?).";
-            fichaTecnica.SF2Stage = "Bacia do rio Amazonas (Brasil)";
+            //fichaTecnica.UmaFalaDeVitoria = "Ver você em ação é uma piada!";
+            //fichaTecnica.SSF2Nickname = "A selvagem criança da natureza.";
+            //fichaTecnica.SFA3Nickname = "A animal pessoa amazônica.";
+            //fichaTecnica.SF4Nickname = "Guerreiro da selva";
+            //fichaTecnica.SFA3Stage = "Ramificação do Rio Madeira - pantano, Brasil (ramificação do rio Madeira: talvez possa ser Mato Grosso, ou Tocantins?).";
+            //fichaTecnica.SF2Stage = "Bacia do rio Amazonas (Brasil)";
             fichaTecnica.GolpesEspeciaisFamosos = "Electric Thunder, Rolling Attack.";
+            fichaTecnica.PersonagemOculto = false;
             return View(fichaTecnica);
         }
 
@@ -59,10 +62,36 @@ namespace StreetFighter.Web.Controllers
             return View(sobre);
         }
 
-        public ActionResult Cadastro()
+        public ActionResult Cadastro(CadastroModel model)
         {
             PopularPais();
-            return View();
+
+            CadastroModel retorno = new CadastroModel();
+            retorno.Imagem = model.Imagem;
+            retorno.Nome = model.Nome;
+            retorno.Nascimento = model.Nascimento;
+            retorno.Altura = model.Altura;
+            retorno.Peso = model.Peso;
+            retorno.AbreviacaoPais = model.AbreviacaoPais;
+            retorno.GolpesEspeciais = model.GolpesEspeciais;
+            retorno.PersonagemOculto = model.PersonagemOculto;
+
+            return View(retorno);
+        }
+
+        public ActionResult Salvar(CadastroModel model)
+        {
+            CadastroModel retorno = new CadastroModel();
+            retorno.Imagem = model.Imagem;
+            retorno.Nome = model.Nome;
+            retorno.Nascimento = model.Nascimento;
+            retorno.Altura = model.Altura;
+            retorno.Peso = model.Peso;
+            retorno.AbreviacaoPais = model.AbreviacaoPais;
+            retorno.GolpesEspeciais = model.GolpesEspeciais;
+            retorno.PersonagemOculto = model.PersonagemOculto;
+
+            return View("CadastroModel",retorno);
         }
 
         private void PopularPais()
