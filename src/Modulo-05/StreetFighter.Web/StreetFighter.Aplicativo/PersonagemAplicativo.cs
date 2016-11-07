@@ -14,7 +14,7 @@ namespace StreetFighter.Aplicativo
 
         public PersonagemAplicativo()
         {
-            this.repositorio = new PersonagemRepositorio();
+            this.repositorio = new PersonagemRepositorioBancoADO();
         }
 
         internal PersonagemAplicativo(IPersonagemRepositorio repositorio)
