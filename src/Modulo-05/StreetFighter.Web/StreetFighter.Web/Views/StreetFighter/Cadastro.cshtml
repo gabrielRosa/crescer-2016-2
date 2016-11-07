@@ -3,9 +3,16 @@
     ViewBag.Title = "Cadastro";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <div class="conteudo">
+    <h3>@ViewBag.Mensagem</h3>
+    <a href="@Url.Action("Login", "StreetFighter")">
+        Logar
+    </a>
     @using (Html.BeginForm("Salvar", "StreetFighter", FormMethod.Post, new { @class = "form-horizontal" }))
     {
+        @Html.HiddenFor(model => model.Id)
+
         <div class="form-group">
             @Html.LabelFor(model => model.Imagem, new { @class = "col-sm-2 control-label" })
             <div class="col-sm-10">
@@ -66,9 +73,9 @@
             @Html.LabelFor(model => model.PersonagemOculto, new { @class = "col-sm-2 control-label" })
             <div class="col-sm-10">
 
-                @Html.RadioButtonFor(model => model.PersonagemOculto, "Sim")
+                @Html.RadioButtonFor(model => model.PersonagemOculto, true)
                 <span>Sim</span>
-                @Html.RadioButtonFor(model => model.PersonagemOculto, "Não")
+                @Html.RadioButtonFor(model => model.PersonagemOculto, false)
                 <span>Não</span>
 
                 @Html.ValidationMessageFor(model => model.PersonagemOculto)

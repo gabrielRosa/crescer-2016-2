@@ -3,19 +3,29 @@
     ViewBag.Title = "ListaDePersonagens";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@section Css{
+<link href="~/Content/botoes.css" rel="stylesheet">
+}
 <div class="conteudo">
     <h2>ListaDePersonagens</h2>
-    
-
+    <a href="@Url.Action("Cadastro", "StreetFighter")">
+        Cadastrar</a>
+    <h3>@ViewBag.Mensagem</h3>
     <div class="row">
-        <div class="col-xs-6 col-md-3">
-            <a href= "" class="thumbnail">
-                <img src=@Model.Imagem  alt=@Model.Nome>
-            </a>
-        </div>
+        @{ foreach(var p in Model)
+            {
+                    <div class="col-xs-6 col-md-3">
+                        <a href="@Url.Action("ExcluirPersonagem", "StreetFighter", p.Id)" class="botao-excluir">
+                            X
+                        </a>
+                        <a href="@Url.Action("EditarPersonagem", "StreetFighter", p.Id)" class="botao-editar">
+                            Editar
+                        </a>
+                        <a href="/StreetFighter/FichaTecnica/?Nome=@p.Nome" class="thumbnail">
+                          <img src=@p.Imagem alt="Imagem">
+                        </a>
+                    </div>
+            }
+        }
     </div>
-
-
-
-
 </div>

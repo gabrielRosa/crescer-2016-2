@@ -40,12 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Autenticacao.cs" />
     <Compile Include="PersonagemAplicativo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Infra\Infra.csproj">
+      <Project>{edd70a0b-2802-4186-83ac-078e14656cd6}</Project>
+      <Name>Infra</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StreetFighter.Dominio\StreetFighter.Dominio.csproj">
-      <Project>{cdc7b11d-5c35-4c2c-b782-2d2445d932ef}</Project>
+      <Project>{CDC7B11D-5C35-4C2C-B782-2D2445D932EF}</Project>
       <Name>StreetFighter.Dominio</Name>
     </ProjectReference>
     <ProjectReference Include="..\StreetFighter.Repositorio\StreetFighter.Repositorio.csproj">

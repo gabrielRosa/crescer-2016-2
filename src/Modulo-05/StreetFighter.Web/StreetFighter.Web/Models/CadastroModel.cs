@@ -8,6 +8,8 @@ namespace StreetFighter.Web.Models
 {
     public class CadastroModel
     {
+        public int Id { get; set; }
+
         [DisplayName("Imagem")]
         public string Imagem { get; set; }
 

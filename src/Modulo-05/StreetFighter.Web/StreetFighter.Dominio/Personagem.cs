@@ -31,6 +31,8 @@ namespace StreetFighter.Dominio
             string abreviacaoPais, string golpesEspeciais, bool personagemOculto, 
             int id, string nome) : this(id, nome)
         {
+            if (abreviacaoPais.Equals("MP"))
+                throw new RegraNegocioException("Somente um personagem pode ser dessa região e esse personagem não é o Nunes.");
             this.Imagem = imagem;
             this.Nascimento = nascimento;
             this.Altura = altura;
@@ -43,7 +45,7 @@ namespace StreetFighter.Dominio
         public Personagem(int id, string nome)
             : this(nome)
         {
-            this.Id = id;
+                this.Id = id;
         }
 
         public Personagem(string nome)
@@ -52,6 +54,17 @@ namespace StreetFighter.Dominio
                 throw new RegraNegocioException("Não é permitido cadastrar um personagem overpowered.");
 
             this.Nome = nome;
+        }
+
+        public override bool Equals(object obj)
+        {
+            var objeto = obj as Personagem;
+
+            if(objeto == null)
+            {
+                return false;
+            }
+            return this.Id == objeto.Id;
         }
     }
 }
