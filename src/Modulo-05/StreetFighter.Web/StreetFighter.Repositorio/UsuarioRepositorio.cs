@@ -23,7 +23,7 @@ namespace StreetFighter.Repositorio
         {
             List<string> usuarios = this.LeArquivo(caminhoArquivo);
             Usuario usuario = new Usuario();
-            usuario = usuarios.Where(u => u.Contains(nome));
+            //usuario = usuarios.Where(u => u.Contains(nome));
             return usuario;
         }
 
