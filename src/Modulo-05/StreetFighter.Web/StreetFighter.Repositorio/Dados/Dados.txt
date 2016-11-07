@@ -1,0 +1,4 @@
+10;http://www.streetfighter.com.br/upload/editor/20120623181731_940.gif;01/01/0001;176;47;USA;Yoga Fire, Yoga Flame.;False;DHALSIM;
+
+685908875;http://www.streetfighter.com.br/upload/editor/20131104191101_507.png;12/12/1222;182;96;USA;Psycho Crusher, Knee Press Nightmare;False;M. BISON;
+

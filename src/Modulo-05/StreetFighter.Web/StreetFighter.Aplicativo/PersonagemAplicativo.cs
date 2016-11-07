@@ -22,17 +22,36 @@ namespace StreetFighter.Aplicativo
             this.repositorio = repositorio;
         }
 
-        public List<Personagem> ListarPersonagens(string filtroNome)
+        public List<Personagem> ListarPersonagens(string filtroNome = null)
         {
             return repositorio.ListarPersonagens(filtroNome);
+        }
+
+        public Personagem PersonagensPorId(int id)
+        {
+            return repositorio.BuscarPorId(id);
+        }
+
+        public void ExcluirPersonagem(int id)
+        {
+            Personagem personagem = repositorio.BuscarPorId(id);
+            repositorio.ExcluirPersonagem(personagem);
         }
 
         public void Salvar(Personagem personagem)
         {
             if (personagem.Id == 0)
+            {
                 repositorio.IncluirPersonagem(personagem);
+            }
             else
                 repositorio.EditarPersonagem(personagem);
+        }
+
+        public void EditarPersonagem(int id)
+        {
+            Personagem personagem = repositorio.BuscarPorId(id);
+            repositorio.EditarPersonagem(personagem);
         }
     }
 }
