@@ -7,6 +7,8 @@ using StreetFighter.Web.Models;
 using System.Globalization;
 using StreetFighter.Aplicativo;
 using StreetFighter.Dominio;
+using StreetFighter.Web.Filters;
+using StreetFighter.Web.Services;
 
 namespace StreetFighter.Web.Controllers
 {
@@ -96,6 +98,28 @@ namespace StreetFighter.Web.Controllers
                 personagemAplicativo.Salvar(personagem);
             }
             return View("Cadastro", model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Logar(string usuario, string senha)
+        {
+            Usuario usuarioAutenticado = Autenticacao.BuscarUsuarioAutenticado(
+                   usuario , senha);
+
+            if (usuarioAutenticado != null)
+            {
+                ServicoDeAutenticacao.Autenticar(new UsuarioLogadoModel(
+                    usuarioAutenticado.Nome, usuarioAutenticado.Permissoes));
+                return RedirectToAction("Secreta");
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Login()
+        {
+            return View();
         }
 
         public ActionResult ListaDePersonagens(string filtro)

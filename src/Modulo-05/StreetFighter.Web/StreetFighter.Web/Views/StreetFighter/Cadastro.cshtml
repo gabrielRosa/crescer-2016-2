@@ -6,6 +6,9 @@
 
 <div class="conteudo">
     <h3>@ViewBag.Mensagem</h3>
+    <a href="@Url.Action("Login", "StreetFighter")">
+        Logar
+    </a>
     @using (Html.BeginForm("Salvar", "StreetFighter", FormMethod.Post, new { @class = "form-horizontal" }))
     {
         @Html.HiddenFor(model => model.Id)

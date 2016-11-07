@@ -18,10 +18,28 @@ namespace StreetFighter.Repositorio
             usuarios.Add(this.TransformarObjetoEmString(usuario));
             File.WriteAllLines(caminhoArquivo, usuarios);
         }
+        //TODO: retirar o contains
+        public Usuario Ler(string nome)
+        {
+            List<string> usuarios = this.LeArquivo(caminhoArquivo);
+            Usuario usuario = new Usuario();
+            usuario = usuarios.Where(u => u.Contains(nome));
+            return usuario;
+        }
 
         private List<String> LeArquivo(String caminhoArquivo)
         {
             return File.ReadAllLines(caminhoArquivo).ToList();
+        }
+
+        private Usuario TransformaStringEmObjeto(string usuario)
+        {
+            string[] usuarioQuebrado = usuario.Split(';');
+            Usuario retorno = new Usuario();
+            retorno.Nome = usuarioQuebrado[0];
+            retorno.Senha = usuarioQuebrado[1];
+            //retorno.Permissoes = usuarioQuebrado[2]
+            return retorno;
         }
 
         private string TransformarObjetoEmString(Usuario usuario)
