@@ -15,10 +15,10 @@
         @{ foreach(var p in Model)
             {
                     <div class="col-xs-6 col-md-3">
-                        <a href="@Url.Action("ExcluirPersonagem", "StreetFighter", p.Id)" class="botao-excluir">
+                        <a href="~/StreetFighter/ExcluirPersonagem?Id=@p.Id" class="botao-excluir">
                             X
                         </a>
-                        <a href="@Url.Action("EditarPersonagem", "StreetFighter", p.Id)" class="botao-editar">
+                        <a href="~/StreetFighter/EditarPersonagem?Id=@p.Id" class="botao-editar">
                             Editar
                         </a>
                         <a href="/StreetFighter/FichaTecnica/?Nome=@p.Nome" class="thumbnail">

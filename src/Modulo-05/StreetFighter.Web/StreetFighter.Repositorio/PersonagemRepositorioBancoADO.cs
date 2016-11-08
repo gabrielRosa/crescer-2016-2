@@ -19,7 +19,7 @@ namespace StreetFighter.Repositorio
             using (SqlConnection conexao = new SqlConnection(connectionString))
             {
                 conexao.Open();
-                string sqlQuery = $"Select IDPersonaem,Nome,Imagem,Nascimento,Altura,Peso,AbreviacaoPais,GolpesEspeciais,PersonagemOculto From Personagens Where IDPersonagem == @param_Id";//nao usar na ordem errada
+                string sqlQuery = $"Select IDPersonagem,Nome,Imagem,Nascimento,Altura,Peso,AbreviacaoPais,GolpesEspeciais,PersonagemOculto From Personagens Where IDPersonagem = @param_Id";//nao usar na ordem errada
                 var command = new SqlCommand(sqlQuery, conexao);
                 command.Parameters.Add(new SqlParameter("param_Id", id));
 
@@ -45,7 +45,7 @@ namespace StreetFighter.Repositorio
             using (SqlConnection conexao = new SqlConnection(connectionString))
             {
                 conexao.Open();
-                string sqlQuery = $"UPDATE Personagens SET ID Nome = @param_Nome ,Imagem = @param_Imagem ,Nascimento = @param_Nascimento,Altura = @param_Altura,Peso = @param_Peso,AbreviacaoPais = @param_AbreviacaoPais ,GolpesEspeciais = @param_GolpesEspeciais,PersonagemOculto = @param_PersonagemOculto WHERE IDPersonagem == @param_IDPersonagem";//nao usar na ordem errada
+                string sqlQuery = $"UPDATE Personagens SET  Nome = @param_Nome ,Imagem = @param_Imagem ,Nascimento = @param_Nascimento,Altura = @param_Altura,Peso = @param_Peso,AbreviacaoPais = @param_AbreviacaoPais ,GolpesEspeciais = @param_GolpesEspeciais,PersonagemOculto = @param_PersonagemOculto WHERE IDPersonagem = @param_IDPersonagem";//nao usar na ordem errada
                 var command = new SqlCommand(sqlQuery, conexao);
                 command.Parameters.Add(new SqlParameter("param_IDPersonagem", personagem.Id));
                 command.Parameters.Add(new SqlParameter("param_Nome", personagem.Nome));
@@ -71,7 +71,7 @@ namespace StreetFighter.Repositorio
             using (SqlConnection conexao = new SqlConnection(connectionString))
             {
                 conexao.Open();
-                string sqlQuery = $"DELETE FROM Personagens WHERE IDPersonagem == @param_IDPersonagem";//nao usar na ordem errada
+                string sqlQuery = $"DELETE FROM Personagens WHERE IDPersonagem = @param_IDPersonagem";//nao usar na ordem errada
                 var command = new SqlCommand(sqlQuery, conexao);
                 command.Parameters.Add(new SqlParameter("param_IDPersonagem", personagem.Id));
                 SqlDataReader reader = command.ExecuteReader();
@@ -88,11 +88,11 @@ namespace StreetFighter.Repositorio
             using (SqlConnection conexao = new SqlConnection(connectionString))
             {
                 conexao.Open();
-                string sqlQuery = $"INSERT INTO Personagens Nome,Imagem,Nascimento,Altura,Peso,AbreviacaoPais,GolpesEspeciais,PersonagemOculto values @param_Nome, @param_Imagem , @param_Nascimento, @param_Altura, @param_Peso, @param_AbreviacaoPais , @param_GolpesEspeciais, @param_PersonagemOculto";//nao usar na ordem errada
+                string sqlQuery = $"INSERT INTO Personagens (Nome , Imagem, Nascimento ,Altura,Peso,AbreviacaoPais,GolpesEspeciais,PersonagemOculto) VALUES (@param_Nome, @param_Imagem ,convert(datetime, @param_Nascimento,103) , @param_Altura, @param_Peso, @param_AbreviacaoPais , @param_GolpesEspeciais, @param_PersonagemOculto)";//nao usar na ordem errada
                 var command = new SqlCommand(sqlQuery, conexao);
                 command.Parameters.Add(new SqlParameter("param_Nome", personagem.Nome));
                 command.Parameters.Add(new SqlParameter("param_Imagem", personagem.Imagem));
-                command.Parameters.Add(new SqlParameter("param_Nascimento", personagem.Nascimento));
+                command.Parameters.Add(new SqlParameter("param_Nascimento", personagem.Nascimento.ToString("dd/MM/yyyy")));
                 command.Parameters.Add(new SqlParameter("param_Altura", personagem.Altura));
                 command.Parameters.Add(new SqlParameter("param_Peso", personagem.Peso));
                 command.Parameters.Add(new SqlParameter("param_AbreviacaoPais", personagem.AbreviacaoPais));
@@ -120,7 +120,7 @@ namespace StreetFighter.Repositorio
 
                 if (filtroNome == null)
                 {
-                    sqlQuery = $"Select IDPersonaem,Nome,Imagem,Nascimento,Altura,Peso,AbreviacaoPais,GolpesEspeciais,PersonagemOculto From Personagens ";
+                    sqlQuery = $"Select Nome,IDPersonagem,Imagem,Nascimento,Altura,Peso,AbreviacaoPais,GolpesEspeciais,PersonagemOculto From Personagens ";
                 }
                 else
                 {

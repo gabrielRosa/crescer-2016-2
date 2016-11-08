@@ -1,0 +1,8 @@
+Ter chave ->
+	    Abrir Conexão ->
+			    Montar Comando ->
+					     parse ->
+						     Fechar ->
+							      Dispose.	
+Escolher primeira da blioteca configuration	
+Adicionar transaction     

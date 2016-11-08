@@ -64,9 +64,9 @@ namespace StreetFighter.Web.Controllers
             return View();
         }
 
-        [HttpPost]
+        /*[HttpPost]
         [ValidateAntiForgeryToken]
-        [CwiAutorizador]
+        [CwiAutorizador]*/
         public ActionResult Salvar(CadastroModel model)
         {
 

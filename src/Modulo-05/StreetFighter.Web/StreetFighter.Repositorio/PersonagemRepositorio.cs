@@ -10,7 +10,7 @@ namespace StreetFighter.Repositorio
 {
     public class PersonagemRepositorio : IPersonagemRepositorio
     {
-        private const string caminhoArquivo = @"C:\Users\Gabriel\Documents\GitHub\crescer-2016-2\src\Modulo-05\StreetFighter.Web\StreetFighter.Repositorio\Dados\Dados.txt";
+        private const string caminhoArquivo = @"C:\Users\rosa.gabriel\Documents\gitKraken\MEU\MEU\crescer-2016-2\src\Modulo-05\StreetFighter.Web\StreetFighter.Repositorio\Dados\Dados.txt";
 
         public List<Personagem> ListarPersonagens(string filtroNome = null)
         {
