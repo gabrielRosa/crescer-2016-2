@@ -19,7 +19,7 @@ namespace StreetFighter.Repositorio
             using (SqlConnection conexao = new SqlConnection(connectionString))
             {
                 conexao.Open();
-                string sqlQuery = $"Select IDPersonagem From Personagens Where IDPersonagem == @param_Id";//nao usar na ordem errada
+                string sqlQuery = $"Select IDPersonaem,Nome,Imagem,Nascimento,Altura,Peso,AbreviacaoPais,GolpesEspeciais,PersonagemOculto From Personagens Where IDPersonagem == @param_Id";//nao usar na ordem errada
                 var command = new SqlCommand(sqlQuery, conexao);
                 command.Parameters.Add(new SqlParameter("param_Id", id));
 
@@ -38,17 +38,70 @@ namespace StreetFighter.Repositorio
 
         public void EditarPersonagem(Personagem personagem)
         {
-            throw new NotImplementedException();
+            string connectionString = ConfigurationManager
+                                  .ConnectionStrings["ConexaoPersonagens"]
+                                  .ConnectionString;
+
+            using (SqlConnection conexao = new SqlConnection(connectionString))
+            {
+                conexao.Open();
+                string sqlQuery = $"UPDATE Personagens SET ID Nome = @param_Nome ,Imagem = @param_Imagem ,Nascimento = @param_Nascimento,Altura = @param_Altura,Peso = @param_Peso,AbreviacaoPais = @param_AbreviacaoPais ,GolpesEspeciais = @param_GolpesEspeciais,PersonagemOculto = @param_PersonagemOculto WHERE IDPersonagem == @param_IDPersonagem";//nao usar na ordem errada
+                var command = new SqlCommand(sqlQuery, conexao);
+                command.Parameters.Add(new SqlParameter("param_IDPersonagem", personagem.Id));
+                command.Parameters.Add(new SqlParameter("param_Nome", personagem.Nome));
+                command.Parameters.Add(new SqlParameter("param_Imagem", personagem.Imagem));
+                command.Parameters.Add(new SqlParameter("param_Nascimento", personagem.Nascimento));
+                command.Parameters.Add(new SqlParameter("param_Altura", personagem.Altura));
+                command.Parameters.Add(new SqlParameter("param_Peso", personagem.Peso));
+                command.Parameters.Add(new SqlParameter("param_AbreviacaoPais", personagem.AbreviacaoPais));
+                command.Parameters.Add(new SqlParameter("param_GolpesEspeciais", personagem.GolpesEspeciais));
+                command.Parameters.Add(new SqlParameter("param_PersonagemOculto", personagem.PersonagemOculto));
+
+                SqlDataReader reader = command.ExecuteReader();
+                conexao.Close();
+            }
         }
 
         public void ExcluirPersonagem(Personagem personagem)
         {
-            throw new NotImplementedException();
+            string connectionString = ConfigurationManager
+                      .ConnectionStrings["ConexaoPersonagens"]
+                      .ConnectionString;
+
+            using (SqlConnection conexao = new SqlConnection(connectionString))
+            {
+                conexao.Open();
+                string sqlQuery = $"DELETE FROM Personagens WHERE IDPersonagem == @param_IDPersonagem";//nao usar na ordem errada
+                var command = new SqlCommand(sqlQuery, conexao);
+                command.Parameters.Add(new SqlParameter("param_IDPersonagem", personagem.Id));
+                SqlDataReader reader = command.ExecuteReader();
+                conexao.Close();
+            }
         }
 
         public void IncluirPersonagem(Personagem personagem)
         {
-            throw new NotImplementedException();
+            string connectionString = ConfigurationManager
+                      .ConnectionStrings["ConexaoPersonagens"]
+                      .ConnectionString;
+
+            using (SqlConnection conexao = new SqlConnection(connectionString))
+            {
+                conexao.Open();
+                string sqlQuery = $"INSERT INTO Personagens Nome,Imagem,Nascimento,Altura,Peso,AbreviacaoPais,GolpesEspeciais,PersonagemOculto values @param_Nome, @param_Imagem , @param_Nascimento, @param_Altura, @param_Peso, @param_AbreviacaoPais , @param_GolpesEspeciais, @param_PersonagemOculto";//nao usar na ordem errada
+                var command = new SqlCommand(sqlQuery, conexao);
+                command.Parameters.Add(new SqlParameter("param_Nome", personagem.Nome));
+                command.Parameters.Add(new SqlParameter("param_Imagem", personagem.Imagem));
+                command.Parameters.Add(new SqlParameter("param_Nascimento", personagem.Nascimento));
+                command.Parameters.Add(new SqlParameter("param_Altura", personagem.Altura));
+                command.Parameters.Add(new SqlParameter("param_Peso", personagem.Peso));
+                command.Parameters.Add(new SqlParameter("param_AbreviacaoPais", personagem.AbreviacaoPais));
+                command.Parameters.Add(new SqlParameter("param_GolpesEspeciais", personagem.GolpesEspeciais));
+                command.Parameters.Add(new SqlParameter("param_PersonagemOculto", personagem.PersonagemOculto));
+
+                SqlDataReader reader = command.ExecuteReader();
+                conexao.Close();
+            }
         }
 
         public List<Personagem> ListarPersonagens(string filtroNome)
@@ -62,12 +115,12 @@ namespace StreetFighter.Repositorio
             using (SqlConnection conexao = new SqlConnection(connectionString))
             {
                 conexao.Open();
-                string sqlQuery = "" ;//nao usar na ordem errada
+                string sqlQuery = "";//nao usar na ordem errada
                 var command = new SqlCommand(sqlQuery, conexao);
 
                 if (filtroNome == null)
                 {
-                    sqlQuery = $"Select Nome,Imagem,Nascimento,Altura,Peso,AbreviacaoPais,GolpesEspeciais,PersonagemOculto From Personagens ";
+                    sqlQuery = $"Select IDPersonaem,Nome,Imagem,Nascimento,Altura,Peso,AbreviacaoPais,GolpesEspeciais,PersonagemOculto From Personagens ";
                 }
                 else
                 {
@@ -99,7 +152,7 @@ namespace StreetFighter.Repositorio
             decimal pesoRow = Convert.ToDecimal(reader["Peso"]);
             string abreviacaoPaisRow = reader["AbreviacaoPais"].ToString();
             string golpesEspeciaisRow = reader["GolpesEspeciais"].ToString();
-            bool personagemOcultoRow = reader["PersonagemOculto"].ToString().Equals(0)? false : true;
+            bool personagemOcultoRow = reader["PersonagemOculto"].ToString().Equals(0) ? false : true;
 
             Personagem retorno = new Personagem(
                 imagemRow,
