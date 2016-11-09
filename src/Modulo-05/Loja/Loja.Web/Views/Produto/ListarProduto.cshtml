@@ -1,0 +1,32 @@
+﻿@model Loja.Web.Models.ListaDeProdutosModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "ListarPersonagem";
+}
+
+<h2>Lista de Produtos</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Produtos</th>
+            <th style="width: 40px;">Editar</th>
+            <th style="width: 40px;">Excluir</th>
+        </tr>
+    </thead>
+    @foreach (var produto in Model.Lista)
+    {
+        <tr>
+
+            <td>
+                @produto.Nome
+            </td>
+            <td>
+                <a class="glyphicon glyphicon-pencil" href="~/Produto/EditarProduto?Id=@produto.Id"></a>
+            </td>
+            <td>
+                <a class="glyphicon glyphicon-trash" href="~/Produto/Excluir?Id=@produto.Id"></a>
+            </td>
+        </tr>
+    }
+</table>

@@ -11,7 +11,7 @@ namespace StreetFighter.Repositorio
 
         }
 
-        public DbSet<Personagem> User { get; set; }
+        public DbSet<Personagem> Personagem { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

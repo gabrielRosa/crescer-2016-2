@@ -14,14 +14,21 @@ namespace StreetFighter.Repositorio
         {
             using(var context = new DatabaseContext())
             {
-                Personagem personagemFound = context.User.FirstOrDefault(personagem => personagem.Id == id);
+                Personagem personagemFound = context.Personagem.FirstOrDefault(personagem => personagem.Id == id);
                 return personagemFound;
             }
         }
 
         public void EditarPersonagem(Personagem personagem)
         {
-            throw new NotImplementedException();
+        
+        
+            using (var context = new DatabaseContext())
+            {
+                context.Entry<Personagem>(personagem).State = EntityState.Modified;
+                context.SaveChanges();
+            }
+        
         }
 
         public void ExcluirPersonagem(Personagem personagem)
@@ -41,10 +48,10 @@ namespace StreetFighter.Repositorio
             {
                 if(filtroNome == null)
                 {
-                    personagens = context.User.ToList();
+                    personagens = context.Personagem.ToList();
                 }else
                 {
-                    personagens = context.User.Where(personagem => personagem.Nome.Equals(filtroNome)).ToList();
+                    personagens = context.Personagem.Where(personagem => personagem.Nome.Equals(filtroNome)).ToList();
                 }
                 
                 return personagens;

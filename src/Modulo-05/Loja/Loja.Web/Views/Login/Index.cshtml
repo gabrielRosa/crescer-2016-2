@@ -1,0 +1,16 @@
+﻿@model Loja.Web.Models.IndexModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Login</h2>
+@ViewBag.MessagemErro
+@using (Html.BeginForm("Entrar", "Login", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.TextBoxFor(model => model.Email , "" , new { placeholder = "email" })
+    @Html.PasswordFor(model => model.Senha , new { placeholder = "senha" })
+
+    <button type="submit">Entrar</button>
+}
