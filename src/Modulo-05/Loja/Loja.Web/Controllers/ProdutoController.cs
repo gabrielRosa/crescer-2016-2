@@ -26,10 +26,31 @@ namespace Loja.Web.Controllers
             return View(editar);
         }
 
-        public ActionResult Salvar(int id)
+        [ValidateAntiForgeryToken]
+        public ActionResult Salvar(EditarProdutoModel model)
         {
-            ProdutoRepositorio produto = new ProdutoRepositorio();
-            produto.EditarProduto(id);
+            ProdutoRepositorio repositorio = new ProdutoRepositorio();
+            Produto produto = new Produto();
+
+            produto.Id = model.Id;
+            produto.Nome = model.Nome;
+            produto.Valor = model.Valor;
+
+            repositorio.EditarProduto(ServicoDeDependencias.ValidaProduto(produto));
+
+            return View("Concluido");
+        }
+
+        public ActionResult Excluir(EditarProdutoModel model)
+        {
+            ProdutoRepositorio repositorio = new ProdutoRepositorio();
+            Produto produto = new Produto();
+
+            produto.Id = model.Id;
+            produto.Nome = model.Nome;
+            produto.Valor = model.Valor;
+
+            repositorio.ExcluirProduto(produto);
 
             return View("Concluido");
         }

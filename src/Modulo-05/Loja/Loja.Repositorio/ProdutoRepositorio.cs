@@ -16,9 +16,13 @@ namespace Loja.Repositorio
             }
         }
 
-        public void ExcluirProduto(int id)
+        public void ExcluirProduto(Produto produto)
         {
-            throw new NotImplementedException();
+            using (var context = new ContextoDeDados())
+            {
+                context.Entry<Produto>(produto).State = EntityState.Deleted;
+                context.SaveChanges();
+            }
         }
 
         public List<Produto> ListarProdutos()
@@ -29,11 +33,11 @@ namespace Loja.Repositorio
             }
         }
 
-        public void EditarProduto(int id)
+        public void EditarProduto(Produto produto)
         {
             using (var context = new ContextoDeDados())
             {
-                context.Entry<Produto>(this.GetProdutoById(id)).State = EntityState.Modified;
+                context.Entry<Produto>(produto).State = EntityState.Modified;
                 context.SaveChanges();
             }
         }

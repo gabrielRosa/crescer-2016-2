@@ -1,8 +1,9 @@
 ﻿using Loja.Dominio;
 using Loja.Infraestrutura;
 using Loja.Repositorio;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Loja.Web.Servicos
 {
@@ -30,9 +31,13 @@ namespace Loja.Web.Servicos
             return produto.GetProdutoById(id);
         }
 
-         static void SalvarProduto(int id)
+        public static Produto ValidaProduto(Produto produto)
         {
-            throw new NotImplementedException();
+            ProdutoServico produtoServico = new ProdutoServico(new ProdutoRepositorio());
+            produtoServico.ValidarProduto(produto);
+
+            return produto;
         }
+
     }
 }
