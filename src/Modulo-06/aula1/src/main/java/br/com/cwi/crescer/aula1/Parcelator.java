@@ -15,7 +15,7 @@ public class Parcelator {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(dataPrimeiroVencimento);
              
-        for(int i=0; i<=numeroParcelas;i++){
+        for(int i=1; i<=numeroParcelas;i++){
             stringBuffer.append(calendar.get(Calendar.DAY_OF_MONTH));
             stringBuffer.append("/");
             stringBuffer.append(calendar.get(Calendar.MONTH));

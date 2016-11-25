@@ -19,20 +19,19 @@ public class MeuCalendarioUtil {
 
     public String getTempoDecorrido(Date data) {
         Calendar calendar1 = Calendar.getInstance();
-        Calendar calendar2 = Calendar.getInstance();
         
-        calendar1.setTime(data);
+        long tempoDecorrido = new Date().getTime() - data.getTime();
         
-        calendar2.setTime(new Date());
-        
-        calendar2.setTimeInMillis(calendar2.getTimeInMillis()-calendar1.getTimeInMillis());
+        calendar1.setTime(new Date(tempoDecorrido));
         
         StringBuffer sb = new StringBuffer();
-        sb.append(calendar2.get(Calendar.YEAR)-1970);
-        sb.append("-");
-        sb.append(calendar2.get(Calendar.MONTH));
-        sb.append("-");
-        sb.append(calendar2.get(Calendar.DAY_OF_MONTH));
+        sb.append(calendar1.get(Calendar.YEAR)-1970);
+        sb.append(" ano(s), ");
+        sb.append(calendar1.get(Calendar.MONTH));
+        sb.append(" mes(es) e ");
+        sb.append(calendar1.get(Calendar.DAY_OF_MONTH));
+        sb.append(" dia(s)");
+        
         return sb.toString();
     }
     
