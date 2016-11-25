@@ -51,3 +51,6 @@ bld/
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
+/src/Modulo-06/aula1/target/
+/src/Modulo-06/aula1/nbproject/
+/src/Modulo-06/aula2/target/
