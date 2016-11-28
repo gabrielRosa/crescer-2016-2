@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -22,7 +23,34 @@ public class MeuSQLUtils {
         List<String> instrucoes = new LinkedList<>();
 
         bufferReader.lines().forEach(i -> instrucoes.add(i));
+        
+        for(String linha:instrucoes){
+            if(linha.startsWith("Select")){
+                this.select(linha.substring(6).split(","));
+            }
+        }
+    }
 
+    private String[][] select(String[] colunas) {
+        ArrayList<String> resultado = new ArrayList<>();
+        for (String item : arquivo[0]) {
+            for (String coluna : colunas) {
+                if (item.equals(coluna)) {
+                    resultado.add(item);
+                }
+            }
+        }
+        String [][] retorno = new String[arquivo.length][resultado.size()];
+        
+        for(int i=0;i<arquivo.length;i++){
+            int cont=0;
+            for(int j=0;j<arquivo[i].length;j++){
+                if(resultado.contains(arquivo[0][j])){
+                    retorno[i][cont++] = arquivo[i][j];
+                }
+            }
+        }
+        return retorno;
     }
 
     public void importarCsv(String nomeArquivo) throws FileNotFoundException {

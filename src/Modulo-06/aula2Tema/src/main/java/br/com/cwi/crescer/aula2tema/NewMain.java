@@ -28,6 +28,7 @@ public class NewMain {
         MeuSQLUtils m4 = new MeuSQLUtils();
         m4.importarCsv("C:\\Users\\Gabriel\\Desktop\\sql.csv");
         m4.exportarCsv("C:\\Users\\Gabriel\\Desktop\\sqlExportado.csv");
+        m4.instrucao("C:\\Users\\Gabriel\\Desktop\\instrucao.sql");
     }
     
 }
