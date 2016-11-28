@@ -14,4 +14,10 @@ class ValidaçãoDeArquivo {
         final String arquivo = file.getAbsolutePath();
         return arquivo.endsWith(".txt");
     }
+
+    protected static boolean isSql(final String nome) {
+        final File file = new File(nome);
+        final String arquivo = file.getAbsolutePath();
+        return arquivo.endsWith(".sql");
+    }
 }
