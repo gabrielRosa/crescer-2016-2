@@ -1,55 +1,20 @@
 package br.com.cwi.crescer.aula3tema.repository;
 
 import br.com.cwi.crescer.aula3tema.entity.Servico;
-import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
-public class ServicoDAO implements IDAO<Servico, Long>{
-    final EntityManager entityManager;
+public class ServicoDAO extends AbstractDAO<Servico, Long> {
 
-    public ServicoDAO(EntityManager entityManager) {
-        this.entityManager = entityManager;
+    @PersistenceContext(unitName = "crescer")
+    private EntityManager entityManager;
+
+    public ServicoDAO() {
+        super(Servico.class);
     }
 
     @Override
-    public void insert(Servico t) {
-        try {
-            entityManager.getTransaction().begin();
-            if (t.getIdServico() == null) {
-                entityManager.persist(t);
-            }
-            entityManager.getTransaction().commit();
-        } catch (Exception e) {
-            entityManager.getTransaction().rollback();
-        }
-    }
-
-    @Override
-    public void delete(Servico t) {
-        try {
-            entityManager.getTransaction().begin();
-            entityManager.remove(t);
-            entityManager.getTransaction().commit();
-        } catch (Exception e) {
-            entityManager.getTransaction().rollback();
-        }
-    }
-
-    @Override
-    public void update(Servico t) {
-        try {
-            entityManager.getTransaction().begin();
-            if (t.getIdServico() != null) {
-                entityManager.merge(t);
-            }
-            entityManager.getTransaction().commit();
-        } catch (Exception e) {
-            entityManager.getTransaction().rollback();
-        }
-    }
-
-    @Override
-    public List<Servico> list() {
-        return entityManager.createQuery("select * from SERVICO ").getResultList();
+    public EntityManager getEntityManager() {
+        return this.entityManager;
     }
 }

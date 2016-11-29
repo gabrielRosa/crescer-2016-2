@@ -1,57 +1,21 @@
 package br.com.cwi.crescer.aula3tema.repository;
 
 import br.com.cwi.crescer.aula3tema.entity.Contract;
-import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
-public class ContractDAO implements IDAO<Contract, Long> {
+public class ContractDAO extends AbstractDAO<Contract, Long> {
 
-    final EntityManager entityManager;
+    @PersistenceContext(unitName = "crescer")
+    private EntityManager entityManager;
 
-    public ContractDAO(EntityManager entityManager) {
-        this.entityManager = entityManager;
+    public ContractDAO() {
+        super(Contract.class);
     }
 
     @Override
-    public void insert(Contract t) {
-        try {
-            entityManager.getTransaction().begin();
-            if (t.getIdContract() == null) {
-                entityManager.persist(t);
-            }
-            entityManager.getTransaction().commit();
-        } catch (Exception e) {
-            entityManager.getTransaction().rollback();
-        }
-    }
-
-    @Override
-    public void delete(Contract t) {
-        try {
-            entityManager.getTransaction().begin();
-            entityManager.remove(t);
-            entityManager.getTransaction().commit();
-        } catch (Exception e) {
-            entityManager.getTransaction().rollback();
-        }
-    }
-
-    @Override
-    public void update(Contract t) {
-        try {
-            entityManager.getTransaction().begin();
-            if (t.getIdContract() != null) {
-                entityManager.merge(t);
-            }
-            entityManager.getTransaction().commit();
-        } catch (Exception e) {
-            entityManager.getTransaction().rollback();
-        }
-    }
-
-    @Override
-    public List<Contract> list() {
-        return entityManager.createQuery("select * from CONTRACT ").getResultList();
+    public EntityManager getEntityManager() {
+        return this.entityManager;
     }
 
 }
