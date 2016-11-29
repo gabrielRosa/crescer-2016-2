@@ -53,6 +53,6 @@ public class CotacaoDAO implements IDAO<Cotacao, Long>{
 
     @Override
     public List<Cotacao> list() {
-        return entityManager.createQuery("select p from COTACAO p").getResultList();
+        return entityManager.createQuery("select * from COTACAO ").getResultList();
     }
 }

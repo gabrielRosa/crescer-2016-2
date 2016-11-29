@@ -51,6 +51,6 @@ public class UsuarioDAO implements IDAO<Usuario, Long> {
 
     @Override
     public List<Usuario> list() {
-        return entityManager.createQuery("select p from USUARIO p").getResultList();
+        return entityManager.createQuery("select * from USUARIO ").getResultList();
     }
 }

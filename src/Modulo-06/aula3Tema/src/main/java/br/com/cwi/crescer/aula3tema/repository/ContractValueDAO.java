@@ -50,6 +50,6 @@ public class ContractValueDAO implements IDAO<ContractValue, Long>{
 
     @Override
     public List<ContractValue> list() {
-        return entityManager.createQuery("select p from CONTRACT_VALUE p").getResultList();
+        return entityManager.createQuery("select * from CONTRACT_VALUE ").getResultList();
     }
 }

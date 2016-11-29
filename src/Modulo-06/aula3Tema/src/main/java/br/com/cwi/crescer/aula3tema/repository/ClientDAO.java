@@ -51,6 +51,43 @@ public class ClientDAO implements IDAO<Client, Long> {
 
     @Override
     public List<Client> list() {
-        return entityManager.createQuery("select p from Client p").getResultList();
+        return entityManager.createQuery("select * from Client ").getResultList();
     }
+
+//    public void exportarCsv(final String nomeArquivoDestino, final String nomeTabela) throws IOException, SQLException {
+//        HashMap<String, String> buscado = (HashMap<String, String>) this.busca("Select * from " + nomeTabela);
+//        this.montarCsvParaArquivo(buscado, nomeArquivoDestino);
+//    }
+//
+//    private void montarCsvParaArquivo(Map<String, String> dados, String nomeArquivo) throws IOException {
+//        File file = new File(nomeArquivo);
+//        try (final Writer writer = new FileWriter(nomeArquivo, false);
+//                final BufferedWriter bufferedWriter = new BufferedWriter(writer);) {
+//            for (Map.Entry entry : dados.entrySet()) {
+//                bufferedWriter.append(entry.getKey().toString());
+//                bufferedWriter.append(";");
+//                bufferedWriter.append(entry.getValue().toString());
+//                bufferedWriter.newLine();
+//            }
+//            file.createNewFile();
+//            bufferedWriter.flush();
+//        }
+//    }
+//
+//    private Map<String, String> busca(final String instrucao) throws SQLException {
+//        HashMap<String, String> retorno = null;
+//        try (final Connection connection = ConnectionUtils.getConnection();
+//                final Statement statement = connection.createStatement();) {
+//            ResultSet resultado = statement.executeQuery(instrucao);
+//            ResultSetMetaData cabecalho = resultado.getMetaData();
+//
+//            retorno = new HashMap<>();
+//            retorno.put(cabecalho.getColumnName(1), cabecalho.getColumnName(2));
+//
+//            while (resultado.next()) {
+//                retorno.put(Long.toString(resultado.getLong(1)), resultado.getString(2));
+//            }
+//        }
+//        return retorno;
+//    }
 }

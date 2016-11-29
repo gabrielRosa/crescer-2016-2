@@ -51,7 +51,7 @@ public class ContractDAO implements IDAO<Contract, Long> {
 
     @Override
     public List<Contract> list() {
-        return entityManager.createQuery("select p from CONTRACT p").getResultList();
+        return entityManager.createQuery("select * from CONTRACT ").getResultList();
     }
 
 }

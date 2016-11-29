@@ -50,6 +50,6 @@ public class ServicoDAO implements IDAO<Servico, Long>{
 
     @Override
     public List<Servico> list() {
-        return entityManager.createQuery("select p from SERVICO p").getResultList();
+        return entityManager.createQuery("select * from SERVICO ").getResultList();
     }
 }

@@ -53,6 +53,6 @@ public class CurrencyExchangeDAO implements IDAO<CurrencyExchange, Long> {
 
     @Override
     public List<CurrencyExchange> list() {
-        return entityManager.createQuery("select p from CURRENCY_EXCHANGE p").getResultList();
+        return entityManager.createQuery("select * from CURRENCY_EXCHANGE ").getResultList();
     }
 }
