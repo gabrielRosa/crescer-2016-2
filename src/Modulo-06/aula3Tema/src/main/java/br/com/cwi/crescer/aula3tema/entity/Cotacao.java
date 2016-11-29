@@ -1,142 +1,200 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package br.com.cwi.crescer.aula3tema.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.SEQUENCE;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.Lob;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
-
+/**
+ *
+ * @author Gabriel
+ */
 @Entity
 @Table(name = "COTACAO")
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "Cotacao.findAll", query = "SELECT c FROM Cotacao c")
+    , @NamedQuery(name = "Cotacao.findByIdCotacao", query = "SELECT c FROM Cotacao c WHERE c.idCotacao = :idCotacao")
+    , @NamedQuery(name = "Cotacao.findByDsCotacaoDollarAustraliano", query = "SELECT c FROM Cotacao c WHERE c.dsCotacaoDollarAustraliano = :dsCotacaoDollarAustraliano")
+    , @NamedQuery(name = "Cotacao.findByDsCotacaoDollarCanadense", query = "SELECT c FROM Cotacao c WHERE c.dsCotacaoDollarCanadense = :dsCotacaoDollarCanadense")
+    , @NamedQuery(name = "Cotacao.findByDsCotacaoEuro", query = "SELECT c FROM Cotacao c WHERE c.dsCotacaoEuro = :dsCotacaoEuro")
+    , @NamedQuery(name = "Cotacao.findByDsCotacaoFrancoSuico", query = "SELECT c FROM Cotacao c WHERE c.dsCotacaoFrancoSuico = :dsCotacaoFrancoSuico")
+    , @NamedQuery(name = "Cotacao.findByDsCotacaoLibra", query = "SELECT c FROM Cotacao c WHERE c.dsCotacaoLibra = :dsCotacaoLibra")
+    , @NamedQuery(name = "Cotacao.findByDsCotacaoReal", query = "SELECT c FROM Cotacao c WHERE c.dsCotacaoReal = :dsCotacaoReal")
+    , @NamedQuery(name = "Cotacao.findByDsCotacaoYen", query = "SELECT c FROM Cotacao c WHERE c.dsCotacaoYen = :dsCotacaoYen")
+    , @NamedQuery(name = "Cotacao.findByDsCotacaoYuan", query = "SELECT c FROM Cotacao c WHERE c.dsCotacaoYuan = :dsCotacaoYuan")})
 public class Cotacao implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Id
-    @GeneratedValue(strategy = SEQUENCE, generator = "SEQ_COTACAO")
-    @SequenceGenerator(name = "SEQ_COTACAO", sequenceName = "SEQ_COTACAO", allocationSize = 1)
     @Basic(optional = false)
     @Column(name = "ID_COTACAO")
-    private Long idCotacao;
-
+    private BigDecimal idCotacao;
     @Basic(optional = false)
     @Column(name = "DS_COTACAO_DOLLAR_AUSTRALIANO")
-    private Long dsCotacaoDollarAustraliano;
-
+    private BigDecimal dsCotacaoDollarAustraliano;
     @Basic(optional = false)
     @Column(name = "DS_COTACAO_DOLLAR_CANADENSE")
-    private Long dsCotacaoDollarCanadense;
-
+    private BigDecimal dsCotacaoDollarCanadense;
     @Basic(optional = false)
     @Column(name = "DS_COTACAO_EURO")
-    private Long dsCotacaoDollarEuro;
-
+    private BigDecimal dsCotacaoEuro;
     @Basic(optional = false)
     @Column(name = "DS_COTACAO_FRANCO_SUICO")
-    private Long dsCotacaoDollarFrancoSuico;
-
+    private BigDecimal dsCotacaoFrancoSuico;
     @Basic(optional = false)
     @Column(name = "DS_COTACAO_LIBRA")
-    private Long dsCotacaoDollarLibra;
-
+    private BigDecimal dsCotacaoLibra;
     @Basic(optional = false)
     @Column(name = "DS_COTACAO_REAL")
-    private Long dsCotacaoDollarReal;
-
+    private BigDecimal dsCotacaoReal;
     @Basic(optional = false)
     @Column(name = "DS_COTACAO_YEN")
-    private Long dsCotacaoDollarYen;
-
+    private BigDecimal dsCotacaoYen;
     @Basic(optional = false)
     @Column(name = "DS_COTACAO_YUAN")
-    private Long dsCotacaoDollarYuan;
-
+    private BigDecimal dsCotacaoYuan;
     @Basic(optional = false)
+    @Lob
     @Column(name = "DT_COTACAO")
-    private String dtCotacao;
+    private byte[] dtCotacao;
 
-    public Long getIdCotacao() {
-        return idCotacao;
+    public Cotacao() {
     }
 
-    public void setIdCotacao(Long idCotacao) {
+    public Cotacao(BigDecimal idCotacao) {
         this.idCotacao = idCotacao;
     }
 
-    public Long getDsCotacaoDollarAustraliano() {
+    public Cotacao(BigDecimal idCotacao, BigDecimal dsCotacaoDollarAustraliano, BigDecimal dsCotacaoDollarCanadense, BigDecimal dsCotacaoEuro, BigDecimal dsCotacaoFrancoSuico, BigDecimal dsCotacaoLibra, BigDecimal dsCotacaoReal, BigDecimal dsCotacaoYen, BigDecimal dsCotacaoYuan, byte[] dtCotacao) {
+        this.idCotacao = idCotacao;
+        this.dsCotacaoDollarAustraliano = dsCotacaoDollarAustraliano;
+        this.dsCotacaoDollarCanadense = dsCotacaoDollarCanadense;
+        this.dsCotacaoEuro = dsCotacaoEuro;
+        this.dsCotacaoFrancoSuico = dsCotacaoFrancoSuico;
+        this.dsCotacaoLibra = dsCotacaoLibra;
+        this.dsCotacaoReal = dsCotacaoReal;
+        this.dsCotacaoYen = dsCotacaoYen;
+        this.dsCotacaoYuan = dsCotacaoYuan;
+        this.dtCotacao = dtCotacao;
+    }
+
+    public BigDecimal getIdCotacao() {
+        return idCotacao;
+    }
+
+    public void setIdCotacao(BigDecimal idCotacao) {
+        this.idCotacao = idCotacao;
+    }
+
+    public BigDecimal getDsCotacaoDollarAustraliano() {
         return dsCotacaoDollarAustraliano;
     }
 
-    public void setDsCotacaoDollarAustraliano(Long dsCotacaoDollarAustraliano) {
+    public void setDsCotacaoDollarAustraliano(BigDecimal dsCotacaoDollarAustraliano) {
         this.dsCotacaoDollarAustraliano = dsCotacaoDollarAustraliano;
     }
 
-    public Long getDsCotacaoDollarCanadense() {
+    public BigDecimal getDsCotacaoDollarCanadense() {
         return dsCotacaoDollarCanadense;
     }
 
-    public void setDsCotacaoDollarCanadense(Long dsCotacaoDollarCanadense) {
+    public void setDsCotacaoDollarCanadense(BigDecimal dsCotacaoDollarCanadense) {
         this.dsCotacaoDollarCanadense = dsCotacaoDollarCanadense;
     }
 
-    public Long getDsCotacaoDollarEuro() {
-        return dsCotacaoDollarEuro;
+    public BigDecimal getDsCotacaoEuro() {
+        return dsCotacaoEuro;
     }
 
-    public void setDsCotacaoDollarEuro(Long dsCotacaoDollarEuro) {
-        this.dsCotacaoDollarEuro = dsCotacaoDollarEuro;
+    public void setDsCotacaoEuro(BigDecimal dsCotacaoEuro) {
+        this.dsCotacaoEuro = dsCotacaoEuro;
     }
 
-    public Long getDsCotacaoDollarFrancoSuico() {
-        return dsCotacaoDollarFrancoSuico;
+    public BigDecimal getDsCotacaoFrancoSuico() {
+        return dsCotacaoFrancoSuico;
     }
 
-    public void setDsCotacaoDollarFrancoSuico(Long dsCotacaoDollarFrancoSuico) {
-        this.dsCotacaoDollarFrancoSuico = dsCotacaoDollarFrancoSuico;
+    public void setDsCotacaoFrancoSuico(BigDecimal dsCotacaoFrancoSuico) {
+        this.dsCotacaoFrancoSuico = dsCotacaoFrancoSuico;
     }
 
-    public Long getDsCotacaoDollarLibra() {
-        return dsCotacaoDollarLibra;
+    public BigDecimal getDsCotacaoLibra() {
+        return dsCotacaoLibra;
     }
 
-    public void setDsCotacaoDollarLibra(Long dsCotacaoDollarLibra) {
-        this.dsCotacaoDollarLibra = dsCotacaoDollarLibra;
+    public void setDsCotacaoLibra(BigDecimal dsCotacaoLibra) {
+        this.dsCotacaoLibra = dsCotacaoLibra;
     }
 
-    public Long getDsCotacaoDollarReal() {
-        return dsCotacaoDollarReal;
+    public BigDecimal getDsCotacaoReal() {
+        return dsCotacaoReal;
     }
 
-    public void setDsCotacaoDollarReal(Long dsCotacaoDollarReal) {
-        this.dsCotacaoDollarReal = dsCotacaoDollarReal;
+    public void setDsCotacaoReal(BigDecimal dsCotacaoReal) {
+        this.dsCotacaoReal = dsCotacaoReal;
     }
 
-    public Long getDsCotacaoDollarYen() {
-        return dsCotacaoDollarYen;
+    public BigDecimal getDsCotacaoYen() {
+        return dsCotacaoYen;
     }
 
-    public void setDsCotacaoDollarYen(Long dsCotacaoDollarYen) {
-        this.dsCotacaoDollarYen = dsCotacaoDollarYen;
+    public void setDsCotacaoYen(BigDecimal dsCotacaoYen) {
+        this.dsCotacaoYen = dsCotacaoYen;
     }
 
-    public Long getDsCotacaoDollarYuan() {
-        return dsCotacaoDollarYuan;
+    public BigDecimal getDsCotacaoYuan() {
+        return dsCotacaoYuan;
     }
 
-    public void setDsCotacaoDollarYuan(Long dsCotacaoDollarYuan) {
-        this.dsCotacaoDollarYuan = dsCotacaoDollarYuan;
+    public void setDsCotacaoYuan(BigDecimal dsCotacaoYuan) {
+        this.dsCotacaoYuan = dsCotacaoYuan;
     }
 
-    public String getDtCotacao() {
+    public byte[] getDtCotacao() {
         return dtCotacao;
     }
 
-    public void setDtCotacao(String dtCotacao) {
+    public void setDtCotacao(byte[] dtCotacao) {
         this.dtCotacao = dtCotacao;
     }
-    
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (idCotacao != null ? idCotacao.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Cotacao)) {
+            return false;
+        }
+        Cotacao other = (Cotacao) object;
+        if ((this.idCotacao == null && other.idCotacao != null) || (this.idCotacao != null && !this.idCotacao.equals(other.idCotacao))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "br.com.cwi.crescer.aula3tema.entity.Cotacao[ idCotacao=" + idCotacao + " ]";
+    }
     
 }

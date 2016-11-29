@@ -1,51 +1,81 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package br.com.cwi.crescer.aula3tema.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.SEQUENCE;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.JoinColumn;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ *
+ * @author Gabriel
+ */
 @Entity
 @Table(name = "CONTRACT_VALUE")
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "ContractValue.findAll", query = "SELECT c FROM ContractValue c")
+    , @NamedQuery(name = "ContractValue.findByIdContractValue", query = "SELECT c FROM ContractValue c WHERE c.idContractValue = :idContractValue")
+    , @NamedQuery(name = "ContractValue.findByDsCoin", query = "SELECT c FROM ContractValue c WHERE c.dsCoin = :dsCoin")
+    , @NamedQuery(name = "ContractValue.findByDsPeriodicity", query = "SELECT c FROM ContractValue c WHERE c.dsPeriodicity = :dsPeriodicity")
+    , @NamedQuery(name = "ContractValue.findByVlAmountContractValue", query = "SELECT c FROM ContractValue c WHERE c.vlAmountContractValue = :vlAmountContractValue")
+    , @NamedQuery(name = "ContractValue.findByVlMonthlyUsd", query = "SELECT c FROM ContractValue c WHERE c.vlMonthlyUsd = :vlMonthlyUsd")})
 public class ContractValue implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Id
-    @GeneratedValue(strategy = SEQUENCE, generator = "SEQ_CONTRACT_VALUE")
-    @SequenceGenerator(name = "SEQ_CONTRACT_VALUE", sequenceName = "SEQ_CONTRACT_VALUE", allocationSize = 1)
     @Basic(optional = false)
     @Column(name = "ID_CONTRACT_VALUE")
-    private Long idContractValue;
-
+    private BigDecimal idContractValue;
     @Basic(optional = false)
     @Column(name = "DS_COIN")
     private String dsCoin;
-
     @Basic(optional = false)
     @Column(name = "DS_PERIODICITY")
     private String dsPeriodicity;
-
     @Basic(optional = false)
     @Column(name = "VL_AMOUNT_CONTRACT_VALUE")
-    private Long vlAmountContractValue;
-
+    private BigDecimal vlAmountContractValue;
     @Basic(optional = false)
     @Column(name = "VL_MONTHLY_USD")
-    private Long vlMonthlyUsd;
+    private BigDecimal vlMonthlyUsd;
+    @JoinColumn(name = "CONTRACT_ID_CONTRACT", referencedColumnName = "ID_CONTRACT")
+    @OneToOne(optional = false)
+    private Contract contractIdContract;
 
-    @Basic(optional = false)
-    @Column(name = "CONTRACT_ID_CONTRACT")
-    private Long contractIdContract;
+    public ContractValue() {
+    }
 
-    public Long getIdContractValue() {
+    public ContractValue(BigDecimal idContractValue) {
+        this.idContractValue = idContractValue;
+    }
+
+    public ContractValue(BigDecimal idContractValue, String dsCoin, String dsPeriodicity, BigDecimal vlAmountContractValue, BigDecimal vlMonthlyUsd) {
+        this.idContractValue = idContractValue;
+        this.dsCoin = dsCoin;
+        this.dsPeriodicity = dsPeriodicity;
+        this.vlAmountContractValue = vlAmountContractValue;
+        this.vlMonthlyUsd = vlMonthlyUsd;
+    }
+
+    public BigDecimal getIdContractValue() {
         return idContractValue;
     }
 
-    public void setIdContractValue(Long idContractValue) {
+    public void setIdContractValue(BigDecimal idContractValue) {
         this.idContractValue = idContractValue;
     }
 
@@ -65,28 +95,53 @@ public class ContractValue implements Serializable {
         this.dsPeriodicity = dsPeriodicity;
     }
 
-    public Long getVlAmountContractValue() {
+    public BigDecimal getVlAmountContractValue() {
         return vlAmountContractValue;
     }
 
-    public void setVlAmountContractValue(Long vlAmountContractValue) {
+    public void setVlAmountContractValue(BigDecimal vlAmountContractValue) {
         this.vlAmountContractValue = vlAmountContractValue;
     }
 
-    public Long getVlMonthlyUsd() {
+    public BigDecimal getVlMonthlyUsd() {
         return vlMonthlyUsd;
     }
 
-    public void setVlMonthlyUsd(Long vlMonthlyUsd) {
+    public void setVlMonthlyUsd(BigDecimal vlMonthlyUsd) {
         this.vlMonthlyUsd = vlMonthlyUsd;
     }
 
-    public Long getContractIdContract() {
+    public Contract getContractIdContract() {
         return contractIdContract;
     }
 
-    public void setContractIdContract(Long contractIdContract) {
+    public void setContractIdContract(Contract contractIdContract) {
         this.contractIdContract = contractIdContract;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (idContractValue != null ? idContractValue.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof ContractValue)) {
+            return false;
+        }
+        ContractValue other = (ContractValue) object;
+        if ((this.idContractValue == null && other.idContractValue != null) || (this.idContractValue != null && !this.idContractValue.equals(other.idContractValue))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "br.com.cwi.crescer.aula3tema.entity.ContractValue[ idContractValue=" + idContractValue + " ]";
+    }
+    
 }

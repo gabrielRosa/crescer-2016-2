@@ -1,59 +1,97 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package br.com.cwi.crescer.aula3tema.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.SEQUENCE;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
+/**
+ *
+ * @author Gabriel
+ */
 @Entity
-@Table(name = "Client")
+@Table(name = "CLIENT")
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "Client.findAll", query = "SELECT c FROM Client c")
+    , @NamedQuery(name = "Client.findByIdClient", query = "SELECT c FROM Client c WHERE c.idClient = :idClient")
+    , @NamedQuery(name = "Client.findByDsEmail", query = "SELECT c FROM Client c WHERE c.dsEmail = :dsEmail")
+    , @NamedQuery(name = "Client.findByDsPassword", query = "SELECT c FROM Client c WHERE c.dsPassword = :dsPassword")
+    , @NamedQuery(name = "Client.findByDsPreferredCoin", query = "SELECT c FROM Client c WHERE c.dsPreferredCoin = :dsPreferredCoin")
+    , @NamedQuery(name = "Client.findByDsState", query = "SELECT c FROM Client c WHERE c.dsState = :dsState")
+    , @NamedQuery(name = "Client.findByDsUserName", query = "SELECT c FROM Client c WHERE c.dsUserName = :dsUserName")
+    , @NamedQuery(name = "Client.findByNmClient", query = "SELECT c FROM Client c WHERE c.nmClient = :nmClient")
+    , @NamedQuery(name = "Client.findByTpPermission", query = "SELECT c FROM Client c WHERE c.tpPermission = :tpPermission")})
 public class Client implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Id
-    @GeneratedValue(strategy = SEQUENCE, generator = "SEQ_CLIENT")
-    @SequenceGenerator(name = "SEQ_CLIENT", sequenceName = "SEQ_CLIENT", allocationSize = 1)
     @Basic(optional = false)
     @Column(name = "ID_CLIENT")
-    private Long idClient;
-
+    private BigDecimal idClient;
     @Basic(optional = false)
     @Column(name = "DS_EMAIL")
     private String dsEmail;
-
     @Basic(optional = false)
     @Column(name = "DS_PASSWORD")
     private String dsPassword;
-
     @Basic(optional = false)
     @Column(name = "DS_PREFERRED_COIN")
     private String dsPreferredCoin;
-
     @Basic(optional = false)
     @Column(name = "DS_STATE")
     private String dsState;
-
     @Basic(optional = false)
     @Column(name = "DS_USER_NAME")
     private String dsUserName;
-
     @Basic(optional = false)
     @Column(name = "NM_CLIENT")
-    private String mnClient;
-
+    private String nmClient;
     @Basic(optional = false)
     @Column(name = "TP_PERMISSION")
     private String tpPermission;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "clientIdClient")
+    private List<Contract> contractList;
 
-    public Long getIdClient() {
+    public Client() {
+    }
+
+    public Client(BigDecimal idClient) {
+        this.idClient = idClient;
+    }
+
+    public Client(BigDecimal idClient, String dsEmail, String dsPassword, String dsPreferredCoin, String dsState, String dsUserName, String nmClient, String tpPermission) {
+        this.idClient = idClient;
+        this.dsEmail = dsEmail;
+        this.dsPassword = dsPassword;
+        this.dsPreferredCoin = dsPreferredCoin;
+        this.dsState = dsState;
+        this.dsUserName = dsUserName;
+        this.nmClient = nmClient;
+        this.tpPermission = tpPermission;
+    }
+
+    public BigDecimal getIdClient() {
         return idClient;
     }
 
-    public void setIdClient(Long idClient) {
+    public void setIdClient(BigDecimal idClient) {
         this.idClient = idClient;
     }
 
@@ -97,12 +135,12 @@ public class Client implements Serializable {
         this.dsUserName = dsUserName;
     }
 
-    public String getMnClient() {
-        return mnClient;
+    public String getNmClient() {
+        return nmClient;
     }
 
-    public void setMnClient(String mnClient) {
-        this.mnClient = mnClient;
+    public void setNmClient(String nmClient) {
+        this.nmClient = nmClient;
     }
 
     public String getTpPermission() {
@@ -113,4 +151,38 @@ public class Client implements Serializable {
         this.tpPermission = tpPermission;
     }
 
+    @XmlTransient
+    public List<Contract> getContractList() {
+        return contractList;
+    }
+
+    public void setContractList(List<Contract> contractList) {
+        this.contractList = contractList;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (idClient != null ? idClient.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Client)) {
+            return false;
+        }
+        Client other = (Client) object;
+        if ((this.idClient == null && other.idClient != null) || (this.idClient != null && !this.idClient.equals(other.idClient))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "br.com.cwi.crescer.aula3tema.entity.Client[ idClient=" + idClient + " ]";
+    }
+    
 }
