@@ -37,7 +37,7 @@ public abstract class AbstractDAO<T, ID> implements IDAO<T, ID> {
 
     @Override
     public List<T> list() {
-        return this.getEntityManager().createQuery("SELECT * FROM " + clazz).getResultList();
+        return this.getEntityManager().createQuery("SELECT p FROM " + clazz.getName() +" p").getResultList();
     }
 
     @Override
