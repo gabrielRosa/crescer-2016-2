@@ -1,6 +1,8 @@
 package br.com.cwi.crescer.aula2tema;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class NewMain {
 
@@ -8,7 +10,7 @@ public class NewMain {
      * @param args the command line arguments
      * @throws java.io.IOException
      */
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, FileNotFoundException, SQLException {
 //        MeuWriterUtils m = new MeuWriterUtils();
 //        List<String> conteudo = new LinkedList<>();
 //        conteudo.add("escrevi algo");
