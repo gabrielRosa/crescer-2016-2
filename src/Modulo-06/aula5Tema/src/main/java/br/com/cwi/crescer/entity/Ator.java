@@ -25,4 +25,20 @@ public class Ator implements Serializable {
     @Basic(optional = false)
     @Column(name = "NOME")
     private String nome;
+
+    public Long getIdAtor() {
+        return idAtor;
+    }
+
+    public void setIdAtor(Long idAtor) {
+        this.idAtor = idAtor;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }

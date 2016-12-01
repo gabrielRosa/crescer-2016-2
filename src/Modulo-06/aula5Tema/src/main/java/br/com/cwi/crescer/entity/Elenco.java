@@ -26,4 +26,20 @@ public class Elenco implements Serializable {
 
     @OneToMany(cascade = CascadeType.ALL)
     private Ator ator;
+
+    public Long getIdElenco() {
+        return idElenco;
+    }
+
+    public void setIdElenco(Long idElenco) {
+        this.idElenco = idElenco;
+    }
+
+    public Ator getAtor() {
+        return ator;
+    }
+
+    public void setAtor(Ator ator) {
+        this.ator = ator;
+    }
 }

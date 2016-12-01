@@ -12,26 +12,26 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "GENERO")
-public class Genero implements Serializable {
+@Table(name = "IDIOMA")
+public class Idioma implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = SEQUENCE, generator = "SEQ_GENERO")
-    @SequenceGenerator(name = "SEQ_GENERO", sequenceName = "SEQ_GENERO", allocationSize = 1)
+    @GeneratedValue(strategy = SEQUENCE, generator = "SEQ_IDIOMA")
+    @SequenceGenerator(name = "SEQ_IDIOMA", sequenceName = "SEQ_IDIOMA", allocationSize = 1)
     @Basic(optional = false)
-    @Column(name = "ID_GENERO")
-    private Long idGenero;
+    @Column(name = "ID_IDIOMA")
+    private Long idIdioma;
 
     @Basic(optional = false)
     @Column(name = "NOME")
     private String nome;
 
-    public Long getIdGenero() {
-        return idGenero;
+    public Long getIdIdioma() {
+        return idIdioma;
     }
 
-    public void setIdGenero(Long idGenero) {
-        this.idGenero = idGenero;
+    public void setIdIdioma(Long idIdioma) {
+        this.idIdioma = idIdioma;
     }
 
     public String getNome() {

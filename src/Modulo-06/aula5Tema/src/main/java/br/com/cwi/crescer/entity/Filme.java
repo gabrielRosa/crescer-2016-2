@@ -46,4 +46,12 @@ public class Filme implements Serializable {
     @JoinColumn(name = "ELENCO_ID_ELENCO", referencedColumnName = "ID_ELENCO")
     @ManyToOne(optional = false)
     private Elenco elenco;
+
+    @JoinColumn(name = "CLASSIFICACAO_ID_CLASSIFICACAO", referencedColumnName = "ID_CLASSIFICACAO")
+    @ManyToOne(optional = false)
+    private Classificacao classificacao;
+
+    @JoinColumn(name = "IDIOMA_ID_IDIOMA", referencedColumnName = "ID_IDIOMA")
+    @ManyToOne(optional = false)
+    private Idioma idioma;
 }
