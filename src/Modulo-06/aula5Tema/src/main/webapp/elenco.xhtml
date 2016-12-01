@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+
+    template="/templates/template.xhtml"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:define name="conteudo">
+
+        <div class="form-group"> 
+            <h:outputLabel for="nome_elenco" value="#{bundle.elenco_nome}"></h:outputLabel>
+            <h:inputText id="elenco_nome" value="#{elencoWeb.elenco.nome}" styleClass="form-control"/>
+        </div>
+        <h:messages id="messages">
+
+        </h:messages>
+        <h:commandButton type="submit" value="Enviar" styleClass="btn btn-success" action="#{elencoWeb.adicionar}">    
+            <f:ajax execute="@form" render="dropdown" />
+        </h:commandButton>
+
+        <h:selectOneMenu id="dropdown" value="#{bundle.elenco_nome}">
+            <f:selectItems value="#{elencoWeb.elencos}" var="elenco"
+                           itemLabel="#{elenco.nome}" itemValue="#{elenco.nome}" />
+        </h:selectOneMenu>
+
+    </ui:define>
+</ui:composition>

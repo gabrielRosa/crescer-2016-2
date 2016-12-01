@@ -9,7 +9,7 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class ClassificacaoBean extends AbstractDao<Classificacao, Long> {
 
-    @PersistenceContext(unitName = "tema5")
+    @PersistenceContext(unitName = "crescer")
     private EntityManager entityManager;
 
     public ClassificacaoBean() {

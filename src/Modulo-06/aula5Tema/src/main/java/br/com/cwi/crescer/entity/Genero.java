@@ -26,6 +26,10 @@ public class Genero implements Serializable {
     @Column(name = "NOME")
     private String nome;
 
+    @Basic(optional = false)
+    @Column(name = "DESCRICAO")
+    private String descricao;
+
     public Long getIdGenero() {
         return idGenero;
     }
@@ -40,5 +44,13 @@ public class Genero implements Serializable {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 }

@@ -9,7 +9,7 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class GeneroBean extends AbstractDao<Genero, Long> {
 
-    @PersistenceContext(unitName = "tema5")
+    @PersistenceContext(unitName = "crescer")
     private EntityManager entityManager;
 
     public GeneroBean() {

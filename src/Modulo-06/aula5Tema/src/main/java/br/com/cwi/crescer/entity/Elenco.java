@@ -2,6 +2,7 @@ package br.com.cwi.crescer.entity;
 
 // @author Gabriel
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -25,7 +26,11 @@ public class Elenco implements Serializable {
     private Long idElenco;
 
     @OneToMany(cascade = CascadeType.ALL)
-    private Ator ator;
+    private List<Ator> ator;
+
+    @Basic(optional = false)
+    @Column(name = "NOME")
+    private String nome;
 
     public Long getIdElenco() {
         return idElenco;
@@ -35,11 +40,20 @@ public class Elenco implements Serializable {
         this.idElenco = idElenco;
     }
 
-    public Ator getAtor() {
+    public List<Ator> getAtor() {
         return ator;
     }
 
-    public void setAtor(Ator ator) {
+    public void setAtor(List<Ator> ator) {
         this.ator = ator;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
 }

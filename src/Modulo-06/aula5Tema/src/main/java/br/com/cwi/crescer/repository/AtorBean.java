@@ -9,7 +9,7 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class AtorBean extends AbstractDao<Ator, Long> {
 
-    @PersistenceContext(unitName = "tema5")
+    @PersistenceContext(unitName = "crescer")
     private EntityManager entityManager;
 
     public AtorBean() {
@@ -20,5 +20,4 @@ public class AtorBean extends AbstractDao<Ator, Long> {
     public EntityManager getEntityManager() {
         return this.entityManager;
     }
-
 }

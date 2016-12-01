@@ -36,7 +36,7 @@ public abstract class AbstractDao<T, ID> implements IDao<T, ID> {
 
     @Override
     public List<T> findAll() {
-        return this.getEntityManager().createQuery("select p from" + clazz.getName() + "p").getResultList();
+        return this.getEntityManager().createQuery("SELECT p FROM " + clazz.getName() + " p").getResultList();
     }
 
 }
