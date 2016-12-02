@@ -16,7 +16,7 @@
             <h:inputText id="filme_titulo" value="#{filmeWeb.filme.titulo}" styleClass="form-control"/>
         </div>
         <div class="form-group"> 
-            <h:outputLabel for="filme_data_lancamento" value="#{bundle.filme_genero}"></h:outputLabel>
+            <h:outputLabel for="filme_genero" value="#{bundle.filme_genero}"></h:outputLabel>
             <div class="dropdown">
                 <h:selectOneMenu id="dropdown_genero" value="#{bundle.filme_genero}" class="btn btn-default dropdown-toggle">
                     <f:selectItems value="#{filmeWeb.filme.genero}" var="genero"
@@ -34,7 +34,7 @@
             <h:inputText id="filme_data_lancamento" value="#{filmeWeb.filme.dataDeLancamento}" styleClass="form-control"/>
         </div>
         <div class="form-group"> 
-            <h:outputLabel for="filme_data_lancamento" value="#{bundle.filme_elenco}"></h:outputLabel>
+            <h:outputLabel for="filme_elenco" value="#{bundle.filme_elenco}"></h:outputLabel>
             <div class="dropdown">
                 <h:selectOneMenu id="dropdown_elenco" value="#{bundle.filme_elenco}" class="btn btn-default dropdown-toggle">
                     <f:selectItems value="#{filmeWeb.filme.elenco}" var="elenco"
@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="form-group"> 
-            <h:outputLabel for="filme_data_lancamento" value="#{bundle.filme_idioma}"></h:outputLabel>
+            <h:outputLabel for="filme_idioma" value="#{bundle.filme_idioma}"></h:outputLabel>
             <div class="dropdown">
                 <h:selectOneMenu id="dropdown_idioma" value="#{bundle.filme_idioma}" class="btn btn-default dropdown-toggle">
                     <f:selectItems value="#{filmeWeb.filme.idioma}" var="idioma"

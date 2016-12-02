@@ -16,14 +16,17 @@
         <h:messages id="messages">
 
         </h:messages>
+        <div class="form-group"> 
+            <h:outputLabel for="atores" value="#{bundle.elenco_atores}"></h:outputLabel>
+            <div class="dropdown">
+                <h:selectOneMenu id="dropdown" value="#{bundle.elenco_nome}" class="btn btn-default dropdown-toggle">
+                    <f:selectItems value="#{elencoWeb.elencos}" var="elenco"
+                                   itemLabel="#{elenco.nome}" itemValue="#{elenco.nome}" class="dropdown-menu" />
+                </h:selectOneMenu>
+            </div>
+        </div>
         <h:commandButton type="submit" value="Enviar" styleClass="btn btn-success" action="#{elencoWeb.adicionar}">    
             <f:ajax execute="@form" render="dropdown" />
         </h:commandButton>
-
-        <h:selectOneMenu id="dropdown" value="#{bundle.elenco_nome}">
-            <f:selectItems value="#{elencoWeb.elencos}" var="elenco"
-                           itemLabel="#{elenco.nome}" itemValue="#{elenco.nome}" />
-        </h:selectOneMenu>
-
     </ui:define>
 </ui:composition>
