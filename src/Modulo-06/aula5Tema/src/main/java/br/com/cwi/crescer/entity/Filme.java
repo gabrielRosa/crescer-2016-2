@@ -54,4 +54,69 @@ public class Filme implements Serializable {
     @JoinColumn(name = "IDIOMA_ID_IDIOMA", referencedColumnName = "ID_IDIOMA")
     @ManyToOne(optional = false)
     private Idioma idioma;
+
+    public Long getIdFilme() {
+        return idFilme;
+    }
+
+    public void setIdFilme(Long idFilme) {
+        this.idFilme = idFilme;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public Genero getGenero() {
+        return genero;
+    }
+
+    public void setGenero(Genero genero) {
+        this.genero = genero;
+    }
+
+    public String getDiretor() {
+        return diretor;
+    }
+
+    public void setDiretor(String diretor) {
+        this.diretor = diretor;
+    }
+
+    public Date getDataDeLancamento() {
+        return dataDeLancamento;
+    }
+
+    public void setDataDeLancamento(Date dataDeLancamento) {
+        this.dataDeLancamento = dataDeLancamento;
+    }
+
+    public Elenco getElenco() {
+        return elenco;
+    }
+
+    public void setElenco(Elenco elenco) {
+        this.elenco = elenco;
+    }
+
+    public Classificacao getClassificacao() {
+        return classificacao;
+    }
+
+    public void setClassificacao(Classificacao classificacao) {
+        this.classificacao = classificacao;
+    }
+
+    public Idioma getIdioma() {
+        return idioma;
+    }
+
+    public void setIdioma(Idioma idioma) {
+        this.idioma = idioma;
+    }
+
 }
