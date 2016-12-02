@@ -3,7 +3,6 @@ package br.com.cwi.crescer.web;
 // @author Gabriel
 import br.com.cwi.crescer.entity.Idioma;
 import br.com.cwi.crescer.repository.IdiomaBean;
-import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
@@ -24,14 +23,8 @@ public class IdiomaWeb {
     @PostConstruct
     public void init() {
         this.idioma = new Idioma();
-    }
-
-    public IdiomaBean getIdiomaBean() {
-        return idiomaBean;
-    }
-
-    public void setIdiomaBean(IdiomaBean idiomaBean) {
-        this.idiomaBean = idiomaBean;
+        this.idiomas = idiomaBean.findAll();
+        this.idiomas.sort((a, b) -> a.getNome().compareTo(b.getNome()));
     }
 
     public Idioma getIdioma() {
@@ -51,10 +44,9 @@ public class IdiomaWeb {
     }
 
     public void adicionar() {
-//        atorBean.insert(ator);
-        idiomas = new ArrayList<>();
-        idiomas.add(new Idioma());
+        idiomaBean.insert(this.idioma);
+        String nome = this.getIdioma().getNome();
         this.init();
-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Teste", "teste"));
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "O idioma " + nome + " foi inserido com sucesso!", "teste"));
     }
 }

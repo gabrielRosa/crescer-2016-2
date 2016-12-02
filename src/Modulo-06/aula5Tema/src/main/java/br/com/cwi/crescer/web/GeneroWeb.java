@@ -3,7 +3,6 @@ package br.com.cwi.crescer.web;
 // @author Gabriel
 import br.com.cwi.crescer.entity.Genero;
 import br.com.cwi.crescer.repository.GeneroBean;
-import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
@@ -24,14 +23,8 @@ public class GeneroWeb {
     @PostConstruct
     public void init() {
         this.genero = new Genero();
-    }
-
-    public GeneroBean getGeneroBean() {
-        return generoBean;
-    }
-
-    public void setGeneroBean(GeneroBean generoBean) {
-        this.generoBean = generoBean;
+        this.generos = generoBean.findAll();
+        this.generos.sort((a, b) -> a.getNome().compareTo(b.getNome()));
     }
 
     public Genero getGenero() {
@@ -51,10 +44,9 @@ public class GeneroWeb {
     }
 
     public void adicionarDescricao() {
-//        atorBean.insert(ator);
-        generos = new ArrayList<Genero>();
-        generos.add(new Genero());
+        generoBean.insert(this.genero);
+        String nome = this.getGenero().getNome();
         this.init();
-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Teste", "teste"));
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "O gênero " + nome + " foi inserido com sucesso!", "teste"));
     }
 }
