@@ -61,4 +61,12 @@ public class ElencoWeb {
     public void setAtores(List<Ator> atores) {
         this.atores = atores;
     }
+
+    public List<Elenco> getElencos() {
+        return elencos;
+    }
+
+    public void setElencos(List<Elenco> elencos) {
+        this.elencos = elencos;
+    }
 }

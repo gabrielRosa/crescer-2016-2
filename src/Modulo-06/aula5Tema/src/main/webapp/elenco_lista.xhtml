@@ -8,14 +8,14 @@
     xmlns:f="http://java.sun.com/jsf/core">
 
     <ui:define name="conteudo">
-        <div class="form-group"> 
-            <h:outputLabel for="atores" value="#{bundle.elenco_atores}"></h:outputLabel>
-            <div class="dropdown">
-                <h:selectManyMenu id="dropdown" value="#{bundle.elenco_nome}" class="btn btn-default dropdown-toggle">
-                    <f:selectItems value="#{elencoWeb.elencos}" var="elenco"
-                                   itemLabel="#{elenco.nome}" itemValue="#{elenco.nome}" class="dropdown-menu" />
-                </h:selectManyMenu>
-            </div>
-        </div>
+        <h:dataTable id="idiomas" value="#{elencoWeb.elencos}" var="elenco" styleClass="table table-hover">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="#{bundle.elenco_nome}"/>
+                </f:facet>
+                <h:outputText value="#{elenco.nome}"/>
+            </h:column>
+
+        </h:dataTable>
     </ui:define>
 </ui:composition>
