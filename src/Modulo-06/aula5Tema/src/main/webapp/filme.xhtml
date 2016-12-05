@@ -59,18 +59,9 @@
                 </h:selectOneMenu>
             </div>
         </div>
-        <h:commandButton type="submit" value="Enviar" styleClass="btn btn-success" action="#{atorWeb.adicionar}">    
+        <h:commandButton type="submit" value="Enviar" styleClass="btn btn-success" action="#{filmeWeb.adicionar()}">    
             <f:ajax execute="@form" render="@form" />
         </h:commandButton>
 
-        <h:dataTable id="filmes" value="#{filmeWeb.filmes}" var="filme" styleClass="table table-hover">
-            <h:column>
-                <f:facet name="header">
-                    <h:outputText value="#{bundle.filme_titulos}"/>
-                </f:facet>
-                <h:outputText value="#{filme.titulo}"/>
-            </h:column>
-
-        </h:dataTable>
     </ui:define>
 </ui:composition>

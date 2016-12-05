@@ -4,7 +4,6 @@ package br.com.cwi.crescer.web;
 import br.com.cwi.crescer.entity.Login;
 import br.com.cwi.crescer.repository.LoginBean;
 import br.com.cwi.crescer.util.FacesUtils;
-import br.com.cwi.crescer.util.UserDetails;
 import static br.com.cwi.crescer.util.UserDetails.USER_AUTH;
 import br.com.cwi.crescer.validador.LoginCriacaoValidador;
 import javax.annotation.PostConstruct;
@@ -27,9 +26,9 @@ public class LoginWeb {
     }
 
     public String getLoggedUsername() {
-        final UserDetails userDetails;
-        userDetails = (UserDetails) FacesUtils.getSession().getAttribute(USER_AUTH);
-        return userDetails == null ? null : userDetails.getUsername();
+        final Login logon;
+        logon = (Login) FacesUtils.getSession().getAttribute(USER_AUTH);
+        return logon == null ? null : logon.getNome();
     }
 
     public String logon() {

@@ -1,6 +1,7 @@
 package br.com.cwi.crescer.entity;
 
 // @author Gabriel
+import br.com.cwi.crescer.util.UserDetails;
 import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -13,7 +14,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "ATOR")
-public class Ator implements Serializable {
+public class Ator implements Serializable, UserDetails {
 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "SEQ_ATOR")
