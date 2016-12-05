@@ -21,4 +21,9 @@ public class ElencoBean extends AbstractDao<Elenco, Long> {
         return this.entityManager;
     }
 
+    public void limpar() {
+        this.setEntity(new Elenco());
+        this.setList(this.findAll());
+    }
+
 }

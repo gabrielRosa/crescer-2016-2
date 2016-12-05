@@ -21,4 +21,9 @@ public class FilmeBean extends AbstractDao<Filme, Long> {
         return this.entityManager;
     }
 
+    public void limpar() {
+        this.setEntity(new Filme());
+        this.setList(this.findAll());
+    }
+
 }

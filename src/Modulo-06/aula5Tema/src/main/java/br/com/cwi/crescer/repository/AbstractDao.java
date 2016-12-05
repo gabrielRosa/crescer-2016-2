@@ -12,7 +12,8 @@ import javax.persistence.EntityManager;
 public abstract class AbstractDao<T, ID> implements IDao<T, ID> {
 
     public abstract EntityManager getEntityManager();
-
+    private T entity;
+    private List<T> list;
     private final Class<T> clazz;
 
     public AbstractDao(Class<T> clazz) {
@@ -37,6 +38,18 @@ public abstract class AbstractDao<T, ID> implements IDao<T, ID> {
     @Override
     public List<T> findAll() {
         return this.getEntityManager().createQuery("SELECT p FROM " + clazz.getName() + " p").getResultList();
+    }
+
+    public void setEntity(T entity) {
+        this.entity = entity;
+    }
+
+    public List<T> getList() {
+        return list;
+    }
+
+    public void setList(List<T> list) {
+        this.list = list;
     }
 
 }

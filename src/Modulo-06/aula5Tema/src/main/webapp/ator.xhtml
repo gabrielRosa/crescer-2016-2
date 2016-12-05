@@ -8,16 +8,15 @@
     xmlns:f="http://java.sun.com/jsf/core">
 
     <ui:define name="conteudo">
+                <div class="mdl-textfield mdl-js-textfield"> 
+                    <h:outputLabel for="nome_ator" value="#{bundle.ator_nome}"></h:outputLabel>
+                    <h:inputText id="ator_nome" value="#{atorWeb.ator.nome}" styleClass="mdl-textfield__input"/>
+                </div>
+                <h:messages id="messages">
 
-        <div class="mdl-textfield mdl-js-textfield"> 
-            <h:outputLabel for="nome_ator" value="#{bundle.ator_nome}"></h:outputLabel>
-            <h:inputText id="ator_nome" value="#{atorWeb.ator.nome}" styleClass="mdl-textfield__input"/>
-        </div>
-        <h:messages id="messages">
-
-        </h:messages>
-        <h:commandButton type="submit" value="Enviar" styleClass="mdl-button mdl-js-button mdl-button--raised" action="#{atorWeb.adicionar}">    
-            <f:ajax execute="@form" render="@form" />
-        </h:commandButton>
+                </h:messages>
+                <h:commandButton type="submit" value="Enviar" styleClass="mdl-button mdl-js-button mdl-button--raised" action="#{atorWeb.adicionar}">    
+                    <f:ajax execute="@form" render="@form" />
+                </h:commandButton>
     </ui:define>
 </ui:composition>

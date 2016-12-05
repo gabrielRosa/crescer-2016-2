@@ -18,9 +18,9 @@
         <div class="form-group"> 
             <h:outputLabel for="filme_genero" value="#{bundle.filme_genero}"></h:outputLabel>
             <div class="dropdown">
-                <h:selectOneMenu id="dropdown_genero" value="#{bundle.filme_genero}" class="btn btn-default dropdown-toggle">
-                    <f:selectItems value="#{filmeWeb.filme.genero}" var="genero"
-                                   itemLabel="#{genero.nome}" itemValue="#{genero.nome}" class="dropdown-menu" />
+                <h:selectOneMenu id="dropdown_genero" value="#{filmeWeb.filme.genero}" class="btn btn-default dropdown-toggle"  converter="generoConverter">
+                    <f:selectItems value="#{filmeWeb.generos}" var="genero"
+                                   itemLabel="#{genero.nome}" class="dropdown-menu" />
                 </h:selectOneMenu>
             </div>
         </div>
@@ -31,23 +31,31 @@
 
         <div class="form-group"> 
             <h:outputLabel for="filme_data_lancamento" value="#{bundle.filme_data_lancamento}"></h:outputLabel>
-            <h:inputText id="filme_data_lancamento" value="#{filmeWeb.filme.dataDeLancamento}" styleClass="form-control"/>
+            <h:inputText id="filme_data_lancamento_input" value="#{filmeWeb.filme.dataDeLancamento}" styleClass="form-control" converter="dateConverter">
+                <f:passThroughAttribute name="type" value="date"/>
+            </h:inputText>
+        </div>
+        <div class="form-group"> 
+            <h:outputLabel for="classificacao" value="#{bundle.filme_classificacao}"></h:outputLabel>
+            <h:selectOneMenu id="classificacao" value="#{filmeWeb.filme.classificacao}" styleClass="form-control" converter="classificacaoConverter">
+                <f:selectItems value="#{filmeWeb.classificacoes}" var="classificacao" itemLabel="#{classificacao.idade}"/>
+            </h:selectOneMenu>
         </div>
         <div class="form-group"> 
             <h:outputLabel for="filme_elenco" value="#{bundle.filme_elenco}"></h:outputLabel>
             <div class="dropdown">
-                <h:selectOneMenu id="dropdown_elenco" value="#{bundle.filme_elenco}" class="btn btn-default dropdown-toggle">
-                    <f:selectItems value="#{filmeWeb.filme.elenco}" var="elenco"
-                                   itemLabel="#{elenco.nome}" itemValue="#{elenco.nome}" class="dropdown-menu" />
+                <h:selectOneMenu id="dropdown_elenco" value="#{filmeWeb.filme.elenco}" class="btn btn-default dropdown-toggle" converter="elencoConverter">
+                    <f:selectItems value="#{filmeWeb.elencos}" var="elenco"
+                                   itemLabel="#{elenco.nome}" class="dropdown-menu" />
                 </h:selectOneMenu>
             </div>
         </div>
         <div class="form-group"> 
             <h:outputLabel for="filme_idioma" value="#{bundle.filme_idioma}"></h:outputLabel>
             <div class="dropdown">
-                <h:selectOneMenu id="dropdown_idioma" value="#{bundle.filme_idioma}" class="btn btn-default dropdown-toggle">
-                    <f:selectItems value="#{filmeWeb.filme.idioma}" var="idioma"
-                                   itemLabel="#{idioma.nome}" itemValue="#{idioma.nome}" class="dropdown-menu"/>
+                <h:selectOneMenu id="dropdown_idioma" value="#{filmeWeb.filme.idioma}" class="btn btn-default dropdown-toggle" converter="idiomaConverter">
+                    <f:selectItems value="#{filmeWeb.idiomas}" var="idioma"
+                                   itemLabel="#{idioma.nome}" class="dropdown-menu"/>
                 </h:selectOneMenu>
             </div>
         </div>

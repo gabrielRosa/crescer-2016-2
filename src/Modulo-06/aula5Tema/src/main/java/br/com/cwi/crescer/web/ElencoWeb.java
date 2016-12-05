@@ -1,7 +1,9 @@
 package br.com.cwi.crescer.web;
 
 // @author Gabriel
+import br.com.cwi.crescer.entity.Ator;
 import br.com.cwi.crescer.entity.Elenco;
+import br.com.cwi.crescer.repository.AtorBean;
 import br.com.cwi.crescer.repository.ElencoBean;
 import java.util.List;
 import javax.annotation.PostConstruct;
@@ -17,6 +19,10 @@ public class ElencoWeb {
 
     @EJB
     private ElencoBean elencoBean;
+
+    @EJB
+    private AtorBean atorBean;
+    private List<Ator> atores;
     private Elenco elenco;
     private List<Elenco> elencos;
 
@@ -25,6 +31,8 @@ public class ElencoWeb {
         this.elenco = new Elenco();
         this.elencos = elencoBean.findAll();
         this.elencos.sort((a, b) -> a.getNome().compareTo(b.getNome()));
+        this.elencoBean.limpar();
+        this.setAtores(atorBean.findAll());
     }
 
     public Elenco getElenco() {
@@ -42,4 +50,15 @@ public class ElencoWeb {
         FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "O elenco " + nome + " foi inserido com sucesso!:)", "teste"));
     }
 
+    public ElencoBean getBean() {
+        return elencoBean;
+    }
+
+    public List<Ator> getAtores() {
+        return atores;
+    }
+
+    public void setAtores(List<Ator> atores) {
+        this.atores = atores;
+    }
 }
