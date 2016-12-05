@@ -23,14 +23,7 @@ public class ClassificacaoWeb {
     @PostConstruct
     public void init() {
         this.classificacao = new Classificacao();
-    }
-
-    public ClassificacaoBean getClassificacaoBean() {
-        return classificacaoBean;
-    }
-
-    public void setClassificacaoBean(ClassificacaoBean classificacaoBean) {
-        this.classificacaoBean = classificacaoBean;
+        this.classificacoes = classificacaoBean.findAll();
     }
 
     public Classificacao getClassificacao() {

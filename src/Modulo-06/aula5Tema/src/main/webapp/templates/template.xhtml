@@ -3,20 +3,85 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets">
-    
+
     <h:head>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css"/>
+        <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-        <title>Aula 6</title>
+        <link rel="stylesheet" href="css/styles.css"/>
+        <link rel="stylesheet" href="css/view_source.css"/>
+        <style>
+
+        </style>
+        <title>Mega Locadora</title>
     </h:head>
-    
+
     <h:body>
-        <div class="container">
-            <div class="col-md-12">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+            <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+                <div class="mdl-layout__header-row">
+                    <span class="android-title mdl-layout-title">
+                        <img class="android-logo-image" src="http://www.cinesystem.com.br/popcornClub/images/logoClubePipoca.gif"></img>
+                    </span>
+                    <!-- Add spacer, to align navigation to the right in desktop -->
+                    <div class="android-header-spacer mdl-layout-spacer"></div>
+                    <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+                        <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+                            <i class="material-icons">search</i>
+                        </label>
+                        <div class="mdl-textfield__expandable-holder">
+                            <input class="mdl-textfield__input" type="text" id="search-field"></input>
+                        </div>
+                    </div>
+                    <!-- Navigation -->
+                    <div class="android-navigation-container">
+                        <nav class="android-navigation mdl-navigation">
+                            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="faces/ator_lista.xhtml">Ator</a>
+                            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="faces/genero_lista.xhtml">Genero</a>
+                            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="faces/classificacao_lista.xhtml">Classificação</a>
+                            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="faces/idioma_lista.xhtml">Idioma</a>
+                            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="faces/elenco_lista.xhtml">Elenco</a>
+                            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="faces/filme_lista.xhtml">Filme</a>
+                        </nav>
+                    </div>
+                    <span class="android-mobile-title mdl-layout-title">
+                        <img class="android-logo-image" src="http://www.cinesystem.com.br/popcornClub/images/logoClubePipoca.gif"></img>
+                    </span>
+                    <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+                        <i class="material-icons">more_vert</i>
+                    </button>
+                    <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+                        <a class="mdl-menu__item" href="faces/login.xhtml">Login</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="android-drawer mdl-layout__drawer">
+                <span class="mdl-layout-title">
+                    <img class="android-logo-image" src="http://www.cinesystem.com.br/popcornClub/images/logoClubePipoca.gif"></img>
+                </span>
+                <nav class="mdl-navigation">
+                    <span class="mdl-navigation__link" href="">Cadrastar</span>
+                    <a class="mdl-navigation__link" href="faces/ator.xhtml">Ator</a>
+                    <div class="android-drawer-separator"></div>
+                    <span class="mdl-navigation__link" href="">Usuário</span>
+                    <a class="mdl-navigation__link" href="faces/criar_login.xhtml">Criar conta</a>
+                    <div class="android-drawer-separator"></div>
+                    <span class="mdl-navigation__link" href="">Sobre</span>
+                    <a class="mdl-navigation__link" href="">Sobre</a>
+                </nav>
+            </div>
+
+            <div class="android-content mdl-layout__content">
 
                 <h:form>
 
@@ -25,7 +90,54 @@
                     </ui:insert>            
 
                 </h:form>
+
+                <footer class="android-footer mdl-mega-footer">
+                    <div class="mdl-mega-footer--top-section">
+                        <div class="mdl-mega-footer--right-section">
+                            <a class="mdl-typography--font-light" href="#top">
+                                Topo 
+                                <i class="material-icons">expand_less</i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mdl-mega-footer--middle-section">
+                        <p class="mdl-typography--font-light">Crescer © 2016 </p>
+                    </div>
+
+                    <div class="mdl-mega-footer--bottom-section">
+                        <a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
+                            Versões
+                            <i class="material-icons">arrow_drop_up</i>
+                        </a>
+                        <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
+                            <li class="mdl-menu__item">0.0000001 ALPHA</li>
+                        </ul>
+                        <a class="android-link android-link-menu mdl-typography--font-light" id="developers-dropdown">
+                            For Developers
+                            <i class="material-icons">arrow_drop_up</i>
+                        </a>
+                        <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
+                            <li class="mdl-menu__item">Gabriel</li>
+                        </ul>
+                        <a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
+                    </div>
+
+                </footer>
             </div>
         </div>
+        <a href="https://gist.github.com/nonnemacher/9844c82d0c83fda3669ff7c871c9546e" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
+        <!--<div class="container">
+            <div class="col-md-12">
+                <h:form>
+
+                    <ui:insert name="conteudo">
+                        Aqui vai o conteudo do form
+                    </ui:insert>            
+
+                </h:form>
+            </div>
+        </div>-->
+        <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     </h:body>
 </html>

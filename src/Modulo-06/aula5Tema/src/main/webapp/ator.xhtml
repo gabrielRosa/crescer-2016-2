@@ -9,25 +9,15 @@
 
     <ui:define name="conteudo">
 
-        <div class="form-group"> 
+        <div class="mdl-textfield mdl-js-textfield"> 
             <h:outputLabel for="nome_ator" value="#{bundle.ator_nome}"></h:outputLabel>
-            <h:inputText id="ator_nome" value="#{atorWeb.ator.nome}" styleClass="form-control"/>
+            <h:inputText id="ator_nome" value="#{atorWeb.ator.nome}" styleClass="mdl-textfield__input"/>
         </div>
         <h:messages id="messages">
 
         </h:messages>
-        <h:commandButton type="submit" value="Enviar" styleClass="btn btn-success" action="#{atorWeb.adicionar}">    
+        <h:commandButton type="submit" value="Enviar" styleClass="mdl-button mdl-js-button mdl-button--raised" action="#{atorWeb.adicionar}">    
             <f:ajax execute="@form" render="@form" />
         </h:commandButton>
-
-        <h:dataTable id="atores" value="#{atorWeb.atores}" var="ator" styleClass="table table-hover">
-            <h:column>
-                <f:facet name="header">
-                    <h:outputText value="#{bundle.atores_nome}"/>
-                </f:facet>
-                <h:outputText value="#{ator.nome}"/>
-            </h:column>
-
-        </h:dataTable>
     </ui:define>
 </ui:composition>

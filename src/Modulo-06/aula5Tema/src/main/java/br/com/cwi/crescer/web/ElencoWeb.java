@@ -3,6 +3,7 @@ package br.com.cwi.crescer.web;
 // @author Gabriel
 import br.com.cwi.crescer.entity.Elenco;
 import br.com.cwi.crescer.repository.ElencoBean;
+import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
@@ -17,10 +18,13 @@ public class ElencoWeb {
     @EJB
     private ElencoBean elencoBean;
     private Elenco elenco;
+    private List<Elenco> elencos;
 
     @PostConstruct
     public void init() {
         this.elenco = new Elenco();
+        this.elencos = elencoBean.findAll();
+        this.elencos.sort((a, b) -> a.getNome().compareTo(b.getNome()));
     }
 
     public Elenco getElenco() {
@@ -35,7 +39,7 @@ public class ElencoWeb {
         elencoBean.insert(elenco);
         String nome = this.getElenco().getNome();
         this.init();
-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "O elenco "+nome+" foi inserido com sucesso!:)", "teste"));
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "O elenco " + nome + " foi inserido com sucesso!:)", "teste"));
     }
 
 }

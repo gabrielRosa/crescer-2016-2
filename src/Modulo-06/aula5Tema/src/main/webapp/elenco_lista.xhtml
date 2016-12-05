@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+
+    template="/templates/template.xhtml"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:define name="conteudo">
+        <div class="form-group"> 
+            <h:outputLabel for="atores" value="#{bundle.elenco_atores}"></h:outputLabel>
+            <div class="dropdown">
+                <h:selectManyMenu id="dropdown" value="#{bundle.elenco_nome}" class="btn btn-default dropdown-toggle">
+                    <f:selectItems value="#{elencoWeb.elencos}" var="elenco"
+                                   itemLabel="#{elenco.nome}" itemValue="#{elenco.nome}" class="dropdown-menu" />
+                </h:selectManyMenu>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
