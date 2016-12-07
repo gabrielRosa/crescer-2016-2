@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <div class="android-header mdl-layout__header mdl-layout__header--waterfall" th:fragment="menu">
+            <div class="mdl-layout__header-row">
+                <span class="android-title mdl-layout-title">
+                    <img class="android-logo-image" src="http://www.cinesystem.com.br/popcornClub/images/logoClubePipoca.gif"></img>
+                </span>
+                <!-- Add spacer, to align navigation to the right in desktop -->
+                <div class="android-header-spacer mdl-layout-spacer"></div>
+                <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" id="search-field"></input>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <div class="android-navigation-container">
+                    <nav class="android-navigation mdl-navigation">
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="faces/ator_lista.xhtml">Ator</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="faces/genero_lista.xhtml">Genero</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="faces/classificacao_lista.xhtml">Classificação</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="faces/idioma_lista.xhtml">Idioma</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="faces/elenco_lista.xhtml">Elenco</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="faces/filme_lista.xhtml">Filme</a>
+                    </nav>
+                </div>
+                <span class="android-mobile-title mdl-layout-title">
+                    <img class="android-logo-image" src="http://www.cinesystem.com.br/popcornClub/images/logoClubePipoca.gif"></img>
+                </span>
+                <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+                    <i class="material-icons">more_vert</i>
+                </button>
+                <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+                    <a class="mdl-menu__item" href="faces/login.xhtml">Login</a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="android-drawer mdl-layout__drawer" th:fragment="menu_esquerda">
+            <span class="mdl-layout-title">
+                <img class="android-logo-image" src="http://www.cinesystem.com.br/popcornClub/images/logoClubePipoca.gif"></img>
+            </span>
+            <nav class="mdl-navigation">
+                <span class="mdl-navigation__link" href="">Cadrastar</span>
+                <a class="mdl-navigation__link" href="/ator">Ator</a>
+                <a class="mdl-navigation__link" href="/classificacao">Classificação</a>
+                <a class="mdl-navigation__link" href="/elenco">Elenco</a>
+                <a class="mdl-navigation__link" href="/filme">Filme</a>
+                <a class="mdl-navigation__link" href="/genero">Genero</a>
+                <a class="mdl-navigation__link" href="/idioma">Idioma</a>
+                <div class="android-drawer-separator"></div>
+                <span class="mdl-navigation__link" href="">Usuário</span>
+                <a class="mdl-navigation__link" href="faces/criar_login.xhtml">Criar conta</a>
+                <div class="android-drawer-separator"></div>
+                <span class="mdl-navigation__link" href="">Sobre</span>
+                <a class="mdl-navigation__link" href="">Sobre</a>
+            </nav>
+        </div>
+    </body>
+</html>

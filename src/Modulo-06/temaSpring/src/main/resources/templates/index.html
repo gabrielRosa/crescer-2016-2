@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-blue.min.css"/>
+        <link rel="stylesheet" th:href="@{css/styles.css}"/>
+        <link rel="stylesheet" th:href="@{css/view_source.css}"/>
+        <title>Mega Locadora</title>
+    </head>
+    <body>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
+
+            <div th:replace="menus :: menu">
+                <!-- pega do templates/menus.html o frament:menu -->
+            </div>
+
+            <div th:replace="menus :: menu_esquerda">
+                <!-- pega do templates/menus.html o frament:menu_esquerda -->
+            </div>
+
+            <div class="android-content mdl-layout__content">
+
+                <a name="top"></a>
+                <div class="android-wear-section">
+                    <div class="android-wear-band">
+                        <div class="android-wear-band-text">
+                            <div class="mdl-typography--display-2 mdl-typography--font-thin">O melhores filmes</div>
+                            <p class="mdl-typography--headline mdl-typography--font-thin">
+                                Lançamentos de 2016!!!
+                            </p>
+                            <p>
+                                <a class="mdl-typography--font-regular mdl-typography--text-uppercase android-alt-link" href="faces/filme_lista.xhtml">
+                                    Veja a Lista<i class="material-icons">chevron_right</i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="android-more-section">
+                    <div class="android-section-title mdl-typography--display-1-color-contrast">Colaboradores</div>
+                    <div class="android-card-container mdl-grid">
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                            <div class="mdl-card__media">
+                                <img src="https://image.freepik.com/icones-gratis/sinal-proibido_318-48450.jpg"></img>
+                            </div>
+                            <div class="mdl-card__title">
+                                <h4 class="mdl-card__title-text">Sem colaboradores no momento</h4>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                <span class="mdl-typography--font-light mdl-typography--subhead">Site com bilhões de acessos diários</span>
+                            </div>
+                            <div class="mdl-card__actions">
+                                <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                                    Torne-se Um
+                                    <i class="material-icons">chevron_right</i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                            <div class="mdl-card__media">
+                                <img src="https://image.freepik.com/icones-gratis/sinal-proibido_318-48450.jpg"></img>
+                            </div>
+                            <div class="mdl-card__title">
+                                <h4 class="mdl-card__title-text">Sem colaboradores no momento</h4>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                <span class="mdl-typography--font-light mdl-typography--subhead">Site com bilhões de acessos diários</span>
+                            </div>
+                            <div class="mdl-card__actions">
+                                <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                                    Torne-se Um
+                                    <i class="material-icons">chevron_right</i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                            <div class="mdl-card__media">
+                                <img src="https://image.freepik.com/icones-gratis/sinal-proibido_318-48450.jpg"></img>
+                            </div>
+                            <div class="mdl-card__title">
+                                <h4 class="mdl-card__title-text">Sem colaboradores no momento</h4>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                <span class="mdl-typography--font-light mdl-typography--subhead">Site com bilhões de acessos diários</span>
+                            </div>
+                            <div class="mdl-card__actions">
+                                <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                                    Torne-se Um
+                                    <i class="material-icons">chevron_right</i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                            <div class="mdl-card__media">
+                                <img src="https://image.freepik.com/icones-gratis/sinal-proibido_318-48450.jpg"></img>
+                            </div>
+                            <div class="mdl-card__title">
+                                <h4 class="mdl-card__title-text">Sem colaboradores no momento</h4>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                <span class="mdl-typography--font-light mdl-typography--subhead">Site com bilhões de acessos diários</span>
+                            </div>
+                            <div class="mdl-card__actions">
+                                <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                                    Torne-se Um
+                                    <i class="material-icons">chevron_right</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div th:replace="footers :: footer">
+                    <!-- pega do templates/footers.html o frament:footer -->
+                </div>
+            </div>
+        </div>
+        <a th:replace="footers :: footer_postar">
+            <!-- pega do templates/footers.html o frament:footer_postar -->
+        </a>
+        <div th:replace="footers :: footer_scripts">
+            <!-- pega do templates/footers.html o frament:footer_scripts -->
+        </div>
+    </body>
+
+</html>

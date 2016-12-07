@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-blue.min.css"/>
+        <link rel="stylesheet" th:href="@{css/styles.css}"/>
+        <link rel="stylesheet" th:href="@{css/view_source.css}"/>
+
+            <title>Mega Locadora</title>
+    </head>
+    <body>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
+
+            <div th:replace="menus :: menu">
+                <!-- pega do templates/menus.html o frament:menu -->
+            </div>
+
+            <div th:replace="menus :: menu_esquerda">
+                <!-- pega do templates/menus.html o frament:menu_esquerda -->
+            </div>
+
+            <div class="android-content mdl-layout__content">
+
+                <form action="#" th:classappend="@{/ator}" th:object="${ator}" method="POST">
+                    <div class="mdl-textfield mdl-js-textfield"> 
+                        <label for="nome_ator" th:text="Nome"></label>
+                        <input type="text" th:field="*{nome}" autofocus="true" styleClass="mdl-textfield__input"/>
+                        <span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" class="help-block"></span>
+                    </div>
+                    <input class="btn btn-success" type="submit" th:value="Salvar"/>
+
+                </form>
+
+                <div th:replace="footers :: footer">
+                    <!-- pega do templates/footers.html o frament:footer -->
+                </div>
+            </div>
+        </div>
+        <a th:replace="footers :: footer_postar">
+            <!-- pega do templates/footers.html o frament:footer_postar -->
+        </a>
+        <div th:replace="footers :: footer_scripts">
+            <!-- pega do templates/footers.html o frament:footer_scripts -->
+        </div>
+    </body>
+
+</html>

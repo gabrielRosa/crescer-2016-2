@@ -12,7 +12,7 @@
         <class>br.com.cwi.crescer.entity.Login</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
-            <!--<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>-->
+            <property name="javax.persistence.schema-generation.database.action" value="drop"/>
         </properties>
     </persistence-unit>
 </persistence>
